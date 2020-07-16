@@ -1,13 +1,13 @@
 import React from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import Nav from "./components/Nav";
 
 function App() {
     return (
-        <React.Fragment>
+        <div className="row">
             <Nav />
-        </React.Fragment>
+        </div>
     );
 }
 

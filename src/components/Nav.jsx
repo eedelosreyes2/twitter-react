@@ -1,96 +1,95 @@
 import React, { Component } from "react";
+import NavItem from "./NavItem";
 
 export class Nav extends Component {
+    state = {
+        navItems: [
+            {
+                id: "navItem-home",
+                title: "Home",
+                href: "#home",
+                isActive: "true",
+            },
+            {
+                id: "navItem-explore",
+                title: "Explore",
+                href: "#explore",
+                isActive: "false",
+            },
+            {
+                id: "navItem-notifications",
+                title: "Notifications",
+                href: "#notifications",
+                isActive: "false",
+            },
+            {
+                id: "navItem-messages",
+                title: "Messages",
+                href: "#messages",
+                isActive: "false",
+            },
+            {
+                id: "navItem-bookmarks",
+                title: "Bookmarks",
+                href: "#bookmarks",
+                isActive: "false",
+            },
+            {
+                id: "navItem-lists",
+                title: "Lists",
+                href: "#lists",
+                isActive: "false",
+            },
+            {
+                id: "navItem-profile",
+                title: "Profile",
+                href: "#profile",
+                isActive: "false",
+            },
+            {
+                id: "navItem-more",
+                title: "More",
+                href: "#more",
+                isActive: "false",
+            },
+        ],
+    };
+
+    handleActive = (id) => {
+        console.log(id);
+        const navItems = [
+            ...this.state.navItems.map((navItem) => {
+                if (navItem.id === id) {
+                    navItem.isActive = "true";
+                } else {
+                    navItem.isActive = "false";
+                }
+                return navItem;
+            }),
+        ];
+
+        this.setState({ navItems });
+    };
+
     render() {
         return (
-            <div className="row">
-                <div className="col-3">
-                    <div
-                        className="nav flex-column nav-pills"
-                        id="v-pills-tab"
-                        role="tablist"
-                        aria-orientation="vertical"
-                    >
-                        <a
-                            className="nav-link active"
-                            id="v-pills-home-tab"
-                            data-toggle="pill"
-                            href="#v-pills-home"
-                            role="tab"
-                            aria-controls="v-pills-home"
-                            aria-selected="true"
-                        >
-                            Home
-                        </a>
-                        <a
-                            className="nav-link"
-                            id="v-pills-profile-tab"
-                            data-toggle="pill"
-                            href="#v-pills-profile"
-                            role="tab"
-                            aria-controls="v-pills-profile"
-                            aria-selected="false"
-                        >
-                            Profile
-                        </a>
-                        <a
-                            className="nav-link"
-                            id="v-pills-messages-tab"
-                            data-toggle="pill"
-                            href="#v-pills-messages"
-                            role="tab"
-                            aria-controls="v-pills-messages"
-                            aria-selected="false"
-                        >
-                            Messages
-                        </a>
-                        <a
-                            className="nav-link"
-                            id="v-pills-settings-tab"
-                            data-toggle="pill"
-                            href="#v-pills-settings"
-                            role="tab"
-                            aria-controls="v-pills-settings"
-                            aria-selected="false"
-                        >
-                            Settings
-                        </a>
-                    </div>
+            <div className="col-2 m-2">
+                <span> </span>
+                <div className="nav flex-column nav-pills">
+                    {this.state.navItems.map((navItem) => (
+                        <NavItem
+                            onActive={this.handleActive}
+                            key={navItem.id}
+                            navItem={navItem}
+                        />
+                    ))}
                 </div>
-                <div className="col-9">
-                    <div className="tab-content" id="v-pills-tabContent">
-                        <div
-                            className="tab-pane fade show active"
-                            id="v-pills-home"
-                            role="tabpanel"
-                            aria-labelledby="v-pills-home-tab"
-                        >
-                            ...
-                        </div>
-                        <div
-                            className="tab-pane fade"
-                            id="v-pills-profile"
-                            role="tabpanel"
-                            aria-labelledby="v-pills-profile-tab"
-                        >
-                            ...
-                        </div>
-                        <div
-                            className="tab-pane fade"
-                            id="v-pills-messages"
-                            role="tabpanel"
-                            aria-labelledby="v-pills-messages-tab"
-                        >
-                            ...
-                        </div>
-                        <div
-                            className="tab-pane fade"
-                            id="v-pills-settings"
-                            role="tabpanel"
-                            aria-labelledby="v-pills-settings-tab"
-                        ></div>
-                    </div>
-                </div>
+                <button
+                    type="button"
+                    className="btn btn-block btn-primary rounded-pill m-2"
+                >
+                    Tweet
+                </button>
             </div>
         );
     }
