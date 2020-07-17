@@ -19,6 +19,7 @@ export class NavItem extends Component {
     }
 
     getClasses = () => {
+        console.log("what");
         let className = "h5 nav-link font-weight-bold text-";
         if (this.props.navItem.isActive === "true") {
             className += "primary";

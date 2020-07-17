@@ -7,43 +7,43 @@ export class Nav extends Component {
             {
                 id: "navItem-home",
                 title: "Home",
-                href: "#home",
+                href: "/home",
                 isActive: "true",
             },
             {
                 id: "navItem-explore",
                 title: "Explore",
-                href: "#explore",
+                href: "/explore",
                 isActive: "false",
             },
             {
                 id: "navItem-notifications",
                 title: "Notifications",
-                href: "#notifications",
+                href: "/notifications",
                 isActive: "false",
             },
             {
                 id: "navItem-messages",
                 title: "Messages",
-                href: "#messages",
+                href: "/messages",
                 isActive: "false",
             },
             {
                 id: "navItem-bookmarks",
                 title: "Bookmarks",
-                href: "#bookmarks",
+                href: "/bookmarks",
                 isActive: "false",
             },
             {
                 id: "navItem-lists",
                 title: "Lists",
-                href: "#lists",
+                href: "/lists",
                 isActive: "false",
             },
             {
                 id: "navItem-profile",
                 title: "Profile",
-                href: "#profile",
+                href: "/profile",
                 isActive: "false",
             },
             {
@@ -73,8 +73,10 @@ export class Nav extends Component {
 
     render() {
         return (
-            <div className="col-2 m-2">
-                <span> </span>
+            <div
+                className="col border-right position-sticky"
+                style={{ height: "100vh", maxWidth: "23.25%" }}
+            >
                 <div className="nav flex-column nav-pills">
                     {this.state.navItems.map((navItem) => (
                         <NavItem
