@@ -28,6 +28,20 @@
     color: #61dafb;
 }
 
+.story-hr {
+    margin-bottom: 3px;
+    margin-top: 8px;
+}
+
+.story-sub {
+    color: #6b7b8a;
+    font-size: 14px;
+}
+
+.story-title {
+    font-weight: bold;
+}
+
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);

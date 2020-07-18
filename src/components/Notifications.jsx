@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import { Pane1 } from "./Pane1";
 
 export class Notifications extends Component {
     render() {
-        return <div></div>;
+        return (
+            <div>
+                <Pane1 />
+            </div>
+        );
     }
 }
 

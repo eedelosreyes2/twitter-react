@@ -1,58 +1,86 @@
 import React, { Component } from "react";
-import { IconContext } from "react-icons";
-import { AiOutlineGif } from "react-icons/ai";
-import { BsImage } from "react-icons/bs";
-import { GrEmoji } from "react-icons/gr";
-import { RiBarChart2Line, RiCalendarLine } from "react-icons/ri";
 
 export class WhatsHappening extends Component {
+    state = {
+        stories: [
+            {
+                id: 0,
+                title:
+                    "Ghost of Tsushima's photo mode has players impressed 📸",
+                category: "Gaming",
+                status: "Last night",
+                tweets: null,
+                image: "/img-src.jpg",
+            },
+            {
+                id: 1,
+                title: "kali uchis",
+                category: "R&B and soul",
+                status: "Trending",
+                tweets: 8267,
+                image: null,
+            },
+            {
+                id: 2,
+                title: "Rapper Logic announces retirement and final album",
+                category: "Music",
+                status: "Last Night",
+                tweets: null,
+                image: "/img-src.jpg",
+            },
+            {
+                id: 3,
+                title: "DDoS",
+                category: null,
+                status: "Trending in California",
+                tweets: 13100,
+                image: null,
+            },
+        ],
+    };
+
     render() {
         return (
-            <div className="border-bottom" style={{ height: "110px" }}>
-                <div className="input-group mb-3 pl-3">
-                    <img
-                        src="https://pbs.twimg.com/profile_images/857089270414233601/H5OtJMkD_400x400.jpg"
-                        alt="User"
-                        style={{
-                            borderRadius: "50%",
-                            height: "50px",
-                            marginLeft: "2px",
-                            marginRight: "2px",
-                            width: "50px",
-                        }}
-                    />
-                    <input
-                        type="text"
-                        className="form-control-lg border-0"
-                        placeholder="What's happening?"
-                    />
+            <div
+                className="ml-4 mt-3"
+                style={{
+                    backgroundColor: "#f5f8fa",
+                    borderRadius: "15px",
+                    maxHeight: "450px",
+                    width: "350px",
+                }}
+            >
+                <div className="h5 font-weight-bold pl-3 pt-2">
+                    What's Happening
                 </div>
-                <div style={{ paddingLeft: "72.5px" }}>
-                    <IconContext.Provider
-                        value={{
-                            color: "DodgerBlue",
-                            size: "1.5em",
-                            style: { float: "left", marginLeft: "13px" },
-                        }}
-                    >
-                        <BsImage />
-                        <AiOutlineGif />
-                        <RiBarChart2Line />
-                        <GrEmoji />
-                        <RiCalendarLine />
-                    </IconContext.Provider>
-                    <button
-                        type="button"
-                        className="btn btn-block btn-primary rounded-pill mr-3 mt-n1"
-                        style={{
-                            float: "right",
-                            height: "37.5px",
-                            width: "75px",
-                        }}
-                    >
-                        Tweet
-                    </button>
-                </div>
+                <hr className="story-hr" />
+                {this.state.stories.map((story) => {
+                    const { category, status, title, tweets } = story;
+                    return (
+                        <div key={story.id}>
+                            <div className="pl-3">
+                                {category ? (
+                                    <span className="story-sub">
+                                        {category} · {status}
+                                    </span>
+                                ) : (
+                                    <span className="story-sub">{status}</span>
+                                )}
+                                <br />
+                                <span className="story-title">{title}</span>
+                                {tweets ? (
+                                    <span className="story-sub">
+                                        <br />
+                                        {/* TODO: parse */}
+                                        {tweets} Tweets
+                                    </span>
+                                ) : null}
+                            </div>
+                            <hr className="story-hr" />
+                        </div>
+                    );
+                })}
+                <div className="text-primary p-3">Show more</div>
             </div>
         );
     }
