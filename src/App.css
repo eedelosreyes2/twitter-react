@@ -4,6 +4,10 @@ body {
     overflow: hidden;
 }
 
+a {
+    background-color: transparent;
+}
+
 .App {
     position: absolute;
     top: 0;
@@ -13,23 +17,29 @@ body {
     overflow: auto;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
 .user {
     border-radius: 50%;
     height: 45px;
     margin-left: 2px;
     margin-right: 2px;
     width: 45px;
+}
+
+.center-col {
+    border-right: 1px solid;
+    border-color: #dee2e3;
+    display: inline-block;
+    height: 100%;
+    width: 600px;
+}
+
+.right-col {
+    float: right;
+}
+
+.header1 {
+    font-size: 20px;
+    font-weight: 800;
 }
 
 .hr-sm {
@@ -41,24 +51,37 @@ body {
     font-size: 14px;
 }
 
+.nav-item:hover {
+    background-color: rgb(218, 241, 255);
+    background-position: 100px 0px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.tweet-cmp {
+    border-bottom: 10px solid;
+    border-color: #e6ecf0;
+    height: 120px;
+}
+
+.tweet-cmp-item:hover {
+    background-color: rgb(218, 241, 255);
+    border-radius: 50px;
+}
+
 .hoverable:hover {
     background-color: #edf0f1;
+    cursor: pointer;
+    z-index: 99;
 }
 
 .show-more:hover {
     background-color: #edf0f1;
     border-radius: 0px 0px 15px 15px;
+    cursor: pointer;
+    z-index: 99;
 }
 
 .story-title {
     font-weight: bold;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }

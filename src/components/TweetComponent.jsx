@@ -8,10 +8,10 @@ import { RiBarChart2Line, RiCalendarLine } from "react-icons/ri";
 export class WhatsHappening extends Component {
     render() {
         return (
-            <div className="border-bottom" style={{ height: "110px" }}>
+            <div className="tweet-cmp">
                 <div className="input-group mb-3 pl-3">
                     <img
-                        className="user"
+                        className="user mt-2"
                         src="https://pbs.twimg.com/profile_images/857089270414233601/H5OtJMkD_400x400.jpg"
                         alt="User"
                     />
@@ -24,9 +24,13 @@ export class WhatsHappening extends Component {
                 <div style={{ paddingLeft: "72.5px" }}>
                     <IconContext.Provider
                         value={{
+                            className: "tweet-cmp-item",
                             color: "DodgerBlue",
                             size: "1.5em",
-                            style: { float: "left", marginLeft: "13px" },
+                            style: {
+                                float: "left",
+                                marginLeft: "13px",
+                            },
                         }}
                     >
                         <BsImage />
@@ -37,7 +41,7 @@ export class WhatsHappening extends Component {
                     </IconContext.Provider>
                     <button
                         type="button"
-                        className="btn btn-block btn-primary rounded-pill mr-3 mt-n1"
+                        className="btn btn-block btn-primary rounded-pill mr-3 mt-n2"
                         style={{
                             float: "right",
                             height: "37.5px",

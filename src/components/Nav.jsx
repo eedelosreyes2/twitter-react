@@ -3,10 +3,14 @@ import NavItem from "./NavItem";
 import { IconContext } from "react-icons";
 import { AiOutlineTwitter, AiOutlineHome } from "react-icons/ai";
 import { FaHashtag } from "react-icons/fa";
-import { GrNotification } from "react-icons/gr";
 import { FiMail, FiMoreHorizontal } from "react-icons/fi";
 import { BsBookmark } from "react-icons/bs";
-import { RiFileList2Line, RiUserLine } from "react-icons/ri";
+import {
+    RiNotification4Line,
+    RiFileList2Line,
+    RiUserLine,
+} from "react-icons/ri";
+import { useHistory } from "react-router-dom";
 
 export class Nav extends Component {
     state = {
@@ -15,13 +19,15 @@ export class Nav extends Component {
                 id: "navItem-home",
                 title: "Home",
                 href: "/home",
-                isActive: "true",
+                isCurrent: "true",
+                isActive: "false",
                 icon: <AiOutlineHome />,
             },
             {
                 id: "navItem-explore",
                 title: "Explore",
                 href: "/explore",
+                isCurrent: "false",
                 isActive: "false",
                 icon: <FaHashtag />,
             },
@@ -29,13 +35,15 @@ export class Nav extends Component {
                 id: "navItem-notifications",
                 title: "Notifications",
                 href: "/notifications",
+                isCurrent: "false",
                 isActive: "false",
-                icon: <GrNotification />,
+                icon: <RiNotification4Line />,
             },
             {
                 id: "navItem-messages",
                 title: "Messages",
                 href: "/messages",
+                isCurrent: "false",
                 isActive: "false",
                 icon: <FiMail />,
             },
@@ -43,6 +51,7 @@ export class Nav extends Component {
                 id: "navItem-bookmarks",
                 title: "Bookmarks",
                 href: "/bookmarks",
+                isCurrent: "false",
                 isActive: "false",
                 icon: <BsBookmark />,
             },
@@ -50,6 +59,7 @@ export class Nav extends Component {
                 id: "navItem-lists",
                 title: "Lists",
                 href: "/lists",
+                isCurrent: "false",
                 isActive: "false",
                 icon: <RiFileList2Line />,
             },
@@ -57,6 +67,7 @@ export class Nav extends Component {
                 id: "navItem-profile",
                 title: "Profile",
                 href: "/profile",
+                isCurrent: "false",
                 isActive: "false",
                 icon: <RiUserLine />,
             },
@@ -70,12 +81,40 @@ export class Nav extends Component {
         ],
     };
 
+    handleCurrent = (id, href) => {
+        const navItems = [
+            ...this.state.navItems.map((navItem) => {
+                if (navItem.id === id) {
+                    navItem.isCurrent = "true";
+                } else {
+                    navItem.isCurrent = "false";
+                }
+                return navItem;
+            }),
+        ];
+
+        this.setState({ navItems });
+    };
+
     handleActive = (id) => {
         const navItems = [
             ...this.state.navItems.map((navItem) => {
                 if (navItem.id === id) {
                     navItem.isActive = "true";
                 } else {
+                    navItem.isActive = "false";
+                }
+                return navItem;
+            }),
+        ];
+
+        this.setState({ navItems });
+    };
+
+    handleInactive = (id) => {
+        const navItems = [
+            ...this.state.navItems.map((navItem) => {
+                if (navItem.id === id && navItem.isCurrent === "false") {
                     navItem.isActive = "false";
                 }
                 return navItem;
@@ -108,7 +147,9 @@ export class Nav extends Component {
                     </IconContext.Provider>
                     {this.state.navItems.map((navItem) => (
                         <NavItem
+                            onCurrent={this.handleCurrent}
                             onActive={this.handleActive}
+                            onInactive={this.handleInactive}
                             key={navItem.id}
                             navItem={navItem}
                         />

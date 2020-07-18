@@ -2,7 +2,11 @@ import React, { Component } from "react";
 
 export class Profile extends Component {
     render() {
-        return <div></div>;
+        return (
+            <div>
+                <div className="center-col"></div>
+            </div>
+        );
     }
 }
 

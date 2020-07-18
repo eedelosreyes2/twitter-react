@@ -6,8 +6,10 @@ export class NavItem extends Component {
         const { id, href, icon, title } = this.props.navItem;
 
         return (
-            <a
-                onClick={() => this.props.onActive(id)}
+            <span
+                onClick={() => this.props.onCurrent(id, href)}
+                onMouseEnter={() => this.props.onActive(id)}
+                onMouseLeave={() => this.props.onInactive(id)}
                 className={this.getClasses()}
                 id={id}
                 href={href}
@@ -17,19 +19,22 @@ export class NavItem extends Component {
                 <IconContext.Provider
                     value={{
                         size: "1.25em",
-                        style: { margin: "5px 15px" },
+                        style: { margin: "5px 15px 7.5px 15px" },
                     }}
                 >
                     {icon}
                 </IconContext.Provider>
                 {title}
-            </a>
+            </span>
         );
     }
 
     getClasses = () => {
-        let className = "h5 nav-link font-weight-bold text-";
-        if (this.props.navItem.isActive === "true") {
+        let className = "nav-item h5 nav-link font-weight-bold text-";
+        if (
+            this.props.navItem.isCurrent === "true" ||
+            this.props.navItem.isActive === "true"
+        ) {
             className += "primary";
         } else {
             className += "body";

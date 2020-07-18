@@ -50,15 +50,13 @@ export class WhatsHappening extends Component {
                     width: "350px",
                 }}
             >
-                <div className="h5 font-weight-bold pl-3 pt-2">
-                    What's Happening
-                </div>
+                <div className="header1 pb-1 pl-3 pt-2">What's Happening</div>
                 <hr className="hr-sm" />
                 {this.state.stories.map((story) => {
                     const { category, status, title, tweets } = story;
                     return (
-                        <div className="hoverable" key={story.id}>
-                            <div className="pl-3 pb-1 pt-1">
+                        <div key={story.id}>
+                            <div className="hoverable pl-3 pb-1 pt-1">
                                 {category ? (
                                     <span className="sub">
                                         {category} · {status}
