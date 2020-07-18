@@ -12,7 +12,7 @@ import Profile from "./components/Profile";
 
 function App() {
     return (
-        <div className="row" style={{ width: "100vw" }}>
+        <div className="App row" style={{ width: "100vw" }}>
             <Nav />
             <Router>
                 <Switch>

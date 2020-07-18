@@ -1,5 +1,16 @@
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
 .App {
-    text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
 }
 
 .App-logo {
@@ -13,29 +24,30 @@
     }
 }
 
-.App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.user {
+    border-radius: 50%;
+    height: 45px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 45px;
 }
 
-.App-link {
-    color: #61dafb;
+.hr-sm {
+    margin: auto;
 }
 
-.story-hr {
-    margin-bottom: 3px;
-    margin-top: 8px;
-}
-
-.story-sub {
+.sub {
     color: #6b7b8a;
     font-size: 14px;
+}
+
+.hoverable:hover {
+    background-color: #edf0f1;
+}
+
+.show-more:hover {
+    background-color: #edf0f1;
+    border-radius: 0px 0px 15px 15px;
 }
 
 .story-title {

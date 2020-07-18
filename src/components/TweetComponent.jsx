@@ -11,15 +11,9 @@ export class WhatsHappening extends Component {
             <div className="border-bottom" style={{ height: "110px" }}>
                 <div className="input-group mb-3 pl-3">
                     <img
+                        className="user"
                         src="https://pbs.twimg.com/profile_images/857089270414233601/H5OtJMkD_400x400.jpg"
                         alt="User"
-                        style={{
-                            borderRadius: "50%",
-                            height: "50px",
-                            marginLeft: "2px",
-                            marginRight: "2px",
-                            width: "50px",
-                        }}
                     />
                     <input
                         type="text"

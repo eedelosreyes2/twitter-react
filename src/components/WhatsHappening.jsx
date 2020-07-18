@@ -53,34 +53,34 @@ export class WhatsHappening extends Component {
                 <div className="h5 font-weight-bold pl-3 pt-2">
                     What's Happening
                 </div>
-                <hr className="story-hr" />
+                <hr className="hr-sm" />
                 {this.state.stories.map((story) => {
                     const { category, status, title, tweets } = story;
                     return (
-                        <div key={story.id}>
-                            <div className="pl-3">
+                        <div className="hoverable" key={story.id}>
+                            <div className="pl-3 pb-1 pt-1">
                                 {category ? (
-                                    <span className="story-sub">
+                                    <span className="sub">
                                         {category} · {status}
                                     </span>
                                 ) : (
-                                    <span className="story-sub">{status}</span>
+                                    <span className="sub">{status}</span>
                                 )}
                                 <br />
                                 <span className="story-title">{title}</span>
                                 {tweets ? (
-                                    <span className="story-sub">
+                                    <span className="sub">
                                         <br />
                                         {/* TODO: parse */}
                                         {tweets} Tweets
                                     </span>
                                 ) : null}
                             </div>
-                            <hr className="story-hr" />
+                            <hr className="hr-sm" />
                         </div>
                     );
                 })}
-                <div className="text-primary p-3">Show more</div>
+                <div className="show-more text-primary p-3">Show more</div>
             </div>
         );
     }

@@ -71,7 +71,6 @@ export class Nav extends Component {
     };
 
     handleActive = (id) => {
-        console.log(id);
         const navItems = [
             ...this.state.navItems.map((navItem) => {
                 if (navItem.id === id) {
@@ -89,10 +88,12 @@ export class Nav extends Component {
     render() {
         return (
             <div
-                className="col border-right position-sticky"
+                className="col border-right"
                 style={{
                     height: "100vh",
                     maxWidth: "23.25%",
+                    position: "sticky",
+                    top: 0,
                 }}
             >
                 <div className="nav flex-column nav-pills">
