@@ -10,7 +10,6 @@ import {
     RiFileList2Line,
     RiUserLine,
 } from "react-icons/ri";
-import { useHistory } from "react-router-dom";
 
 export class Nav extends Component {
     state = {
@@ -19,75 +18,76 @@ export class Nav extends Component {
                 id: "navItem-home",
                 title: "Home",
                 href: "/home",
-                isCurrent: "true",
-                isActive: "false",
+                isCurrent: false,
+                isActive: false,
                 icon: <AiOutlineHome />,
             },
             {
                 id: "navItem-explore",
                 title: "Explore",
                 href: "/explore",
-                isCurrent: "false",
-                isActive: "false",
+                isCurrent: false,
+                isActive: false,
                 icon: <FaHashtag />,
             },
             {
                 id: "navItem-notifications",
                 title: "Notifications",
                 href: "/notifications",
-                isCurrent: "false",
-                isActive: "false",
+                isCurrent: false,
+                isActive: false,
                 icon: <RiNotification4Line />,
             },
             {
                 id: "navItem-messages",
                 title: "Messages",
                 href: "/messages",
-                isCurrent: "false",
-                isActive: "false",
+                isCurrent: false,
+                isActive: false,
                 icon: <FiMail />,
             },
             {
                 id: "navItem-bookmarks",
                 title: "Bookmarks",
                 href: "/bookmarks",
-                isCurrent: "false",
-                isActive: "false",
+                isCurrent: false,
+                isActive: false,
                 icon: <BsBookmark />,
             },
             {
                 id: "navItem-lists",
                 title: "Lists",
                 href: "/lists",
-                isCurrent: "false",
-                isActive: "false",
+                isCurrent: false,
+                isActive: false,
                 icon: <RiFileList2Line />,
             },
             {
                 id: "navItem-profile",
                 title: "Profile",
                 href: "/profile",
-                isCurrent: "false",
-                isActive: "false",
+                isCurrent: false,
+                isActive: false,
                 icon: <RiUserLine />,
             },
             {
                 id: "navItem-more",
                 title: "More",
                 href: "#more",
-                isActive: "false",
+                isActive: false,
                 icon: <FiMoreHorizontal />,
             },
         ],
     };
 
-    handleCurrent = (id, href) => {
+    handleCurrent = (id) => {
         const navItems = [
             ...this.state.navItems.map((navItem) => {
                 if (navItem.id === id) {
-                    navItem.isCurrent = "true";
+                    navItem.isCurrent = true;
+                    console.log(id, "set to current");
                 } else {
-                    navItem.isCurrent = "false";
+                    navItem.isCurrent = false;
                 }
                 return navItem;
             }),
@@ -100,9 +100,9 @@ export class Nav extends Component {
         const navItems = [
             ...this.state.navItems.map((navItem) => {
                 if (navItem.id === id) {
-                    navItem.isActive = "true";
+                    navItem.isActive = true;
                 } else {
-                    navItem.isActive = "false";
+                    navItem.isActive = false;
                 }
                 return navItem;
             }),
@@ -114,8 +114,8 @@ export class Nav extends Component {
     handleInactive = (id) => {
         const navItems = [
             ...this.state.navItems.map((navItem) => {
-                if (navItem.id === id && navItem.isCurrent === "false") {
-                    navItem.isActive = "false";
+                if (navItem.id === id && navItem.isCurrent === false) {
+                    navItem.isActive = false;
                 }
                 return navItem;
             }),

@@ -8,7 +8,7 @@ export class Pane1 extends Component {
     render() {
         return (
             <div style={{ display: "inline-block", float: "right" }}>
-                <SearchBar />
+                <SearchBar type="1" />
                 <WhatsHappening />
                 <WhoToFollow />
                 <Breadcrumbs />

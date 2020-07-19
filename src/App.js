@@ -1,10 +1,5 @@
 import React from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    useHistory,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
@@ -18,8 +13,8 @@ import Profile from "./components/Profile";
 function App() {
     return (
         <div className="App row" style={{ width: "100vw" }}>
-            <Nav />
             <Router>
+                <Nav />
                 <Switch>
                     <Route path="/home" component={Home} />
                     <Route path="/explore" component={Explore} />

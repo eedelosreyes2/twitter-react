@@ -6,24 +6,27 @@ export class WhoToFollow extends Component {
     state = {
         users: [
             {
-                handle: "23_is_leland",
-                username: "Leland Manigo",
+                id: 0,
+                handle: "_elijah_d_r",
+                username: "Elijah Delos Reyes",
                 image:
-                    "https://pbs.twimg.com/profile_images/857089270414233601/H5OtJMkD_400x400.jpg",
+                    "https://pbs.twimg.com/profile_images/1248762899570421761/A_OW8iC6_400x400.jpg",
                 isVerified: false,
             },
             {
-                handle: "LeanandCuisine",
-                username: "Casey Lawrence",
+                id: 1,
+                handle: "Genius",
+                username: "Genius",
                 image:
-                    "https://pbs.twimg.com/profile_images/857089270414233601/H5OtJMkD_400x400.jpg",
-                isVerified: false,
+                    "https://pbs.twimg.com/profile_images/885222003174551552/cv3KtGVS_400x400.jpg",
+                isVerified: true,
             },
             {
-                handle: "thichnhathanh",
-                username: "Thich Nhat Hanh",
+                id: 2,
+                handle: "SupremeDreams_1",
+                username: "Mark Phillips",
                 image:
-                    "https://pbs.twimg.com/profile_images/857089270414233601/H5OtJMkD_400x400.jpg",
+                    "https://pbs.twimg.com/profile_images/858754432925933573/ZX1yNEty_400x400.jpg",
                 isVerified: true,
             },
         ],
@@ -44,9 +47,15 @@ export class WhoToFollow extends Component {
                     <div className="header1 pb-1 pl-3 pt-2">Who to follow</div>
                     <hr className="hr-sm" />
                     {this.state.users.map((user) => {
-                        const { handle, username, image, isVerified } = user;
+                        const {
+                            id,
+                            handle,
+                            username,
+                            image,
+                            isVerified,
+                        } = user;
                         return (
-                            <div>
+                            <div key={id}>
                                 <div className="hoverable pl-3 pb-2 pt-2">
                                     <img
                                         className="user mr-3"

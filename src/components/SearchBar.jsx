@@ -5,35 +5,39 @@ import { RiSearchLine } from "react-icons/ri";
 export class SearchBar extends Component {
     render() {
         return (
-            <div
-                className="ml-4 mt-2"
-                style={{
-                    backgroundColor: "#e6ecf0",
-                    borderRadius: "50px",
-                    height: "40px",
-                    width: "350px",
-                }}
-            >
+            <div className={this.getBarClasses()}>
                 <div className="ml-3">
                     <IconContext.Provider
-                        value={{ color: "#6b7b8a", size: "1.25em" }}
+                        value={{
+                            color: "#6b7b8a",
+                            size: "1.25em",
+                            style: { marginBottom: "2px" },
+                        }}
                     >
                         <RiSearchLine />
                     </IconContext.Provider>
                     <input
                         type="text"
-                        className="form-control-md border-0 mt-1"
+                        className={this.getInputClasses()}
                         placeholder="Search Twitter"
-                        style={{
-                            backgroundColor: "#e6ecf0",
-                            paddingLeft: "15px",
-                            paddingTop: "2px",
-                        }}
+                        style={{}}
                     />
                 </div>
             </div>
         );
     }
+
+    getBarClasses = () => {
+        let className = "search-bar";
+        className += this.props.type;
+        return className;
+    };
+
+    getInputClasses = () => {
+        let className = "form-control-md border-0 search-input";
+        className += this.props.type;
+        return className;
+    };
 }
 
 export default SearchBar;

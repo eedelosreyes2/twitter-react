@@ -6,8 +6,8 @@ export class NavItem extends Component {
         const { id, href, icon, title } = this.props.navItem;
 
         return (
-            <span
-                onClick={() => this.props.onCurrent(id, href)}
+            <a
+                onClick={() => this.props.onCurrent(id)}
                 onMouseEnter={() => this.props.onActive(id)}
                 onMouseLeave={() => this.props.onInactive(id)}
                 className={this.getClasses()}
@@ -25,15 +25,15 @@ export class NavItem extends Component {
                     {icon}
                 </IconContext.Provider>
                 {title}
-            </span>
+            </a>
         );
     }
 
     getClasses = () => {
         let className = "nav-item h5 nav-link font-weight-bold text-";
         if (
-            this.props.navItem.isCurrent === "true" ||
-            this.props.navItem.isActive === "true"
+            this.props.navItem.isCurrent === true ||
+            this.props.navItem.isActive === true
         ) {
             className += "primary";
         } else {

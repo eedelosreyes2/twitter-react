@@ -29,6 +29,7 @@ a {
     border-right: 1px solid;
     border-color: #dee2e3;
     display: inline-block;
+    /* max-width: 600px; */
     height: 100%;
     width: 600px;
 }
@@ -42,6 +43,16 @@ a {
     font-weight: 800;
 }
 
+.header2 {
+    color: #657787;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.header2-primary {
+    color: dodgerblue;
+}
+
 .hr-sm {
     margin: auto;
 }
@@ -51,9 +62,40 @@ a {
     font-size: 14px;
 }
 
+.search-bar1 {
+    background-color: #e6ecf0;
+    border-radius: 50px;
+    height: 40px;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.search-bar2 {
+    background-color: #e6ecf0;
+    border-radius: 50px;
+    float: left;
+    height: 32px;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 510px;
+}
+
+.search-input1 {
+    background-color: #e6ecf0;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+.search-input2 {
+    background-color: #e6ecf0;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
 .nav-item:hover {
     background-color: rgb(218, 241, 255);
-    background-position: 100px 0px;
     border-radius: 50px;
     cursor: pointer;
 }
@@ -67,6 +109,17 @@ a {
 .tweet-cmp-item:hover {
     background-color: rgb(218, 241, 255);
     border-radius: 50px;
+}
+
+.tab-current {
+    border-bottom: 2px inset;
+    border-color: dodgerblue;
+    height: 55px;
+}
+
+.tab:hover {
+    background-color: rgb(218, 241, 255);
+    color: dodgerblue;
 }
 
 .hoverable:hover {
