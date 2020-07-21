@@ -4,10 +4,6 @@ body {
     overflow: hidden;
 }
 
-a {
-    background-color: transparent;
-}
-
 .App {
     position: absolute;
     top: 0;
@@ -29,7 +25,6 @@ a {
     border-right: 1px solid;
     border-color: #dee2e3;
     display: inline-block;
-    /* max-width: 600px; */
     height: 100%;
     width: 600px;
 }
@@ -97,6 +92,7 @@ a {
 .nav-item:hover {
     background-color: rgb(218, 241, 255);
     border-radius: 50px;
+    text-decoration-style: red;
     cursor: pointer;
 }
 
@@ -111,15 +107,15 @@ a {
     border-radius: 50px;
 }
 
+/* .tab:hover {
+    background-color: rgb(218, 241, 255);
+    color: dodgerblue;
+} */
+
 .tab-current {
     border-bottom: 2px inset;
     border-color: dodgerblue;
     height: 55px;
-}
-
-.tab:hover {
-    background-color: rgb(218, 241, 255);
-    color: dodgerblue;
 }
 
 .hoverable:hover {

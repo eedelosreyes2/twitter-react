@@ -9,6 +9,7 @@ export class NavItem extends Component {
         return (
             <Link
                 to={href}
+                onClick={() => this.props.onRefresh()}
                 onMouseEnter={() => this.props.onActive(id)}
                 onMouseLeave={() => this.props.onInactive(id)}
                 className={this.getClasses(href)}
@@ -31,7 +32,7 @@ export class NavItem extends Component {
     getClasses = (href) => {
         let className = "nav-item h5 nav-link font-weight-bold text-";
         if (
-            window.location.pathname === href ||
+            window.location.pathname.includes(href) ||
             this.props.navItem.isActive === true
         ) {
             className += "primary";

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Pane1 } from "./Pane1";
 import { IconContext } from "react-icons";
 import { FiSettings } from "react-icons/fi";
@@ -10,26 +11,37 @@ export class Notifications extends Component {
                 id: 0,
                 title: "All",
                 href: "/notifications",
-                isCurrent: true,
                 isActive: false,
             },
             {
                 id: 1,
                 title: "Mentions",
                 href: "/notifications/mentions",
-                isCurrent: false,
                 isActive: false,
             },
         ],
     };
 
-    handleCurrent = (id) => {
+    handleActive = (id) => {
         const tabs = [
             ...this.state.tabs.map((tab) => {
                 if (tab.id === id) {
-                    tab.isCurrent = true;
+                    tab.isActive = true;
                 } else {
-                    tab.isCurrent = false;
+                    tab.isActive = false;
+                }
+                return tab;
+            }),
+        ];
+
+        this.setState({ tabs });
+    };
+
+    handleInactive = (id) => {
+        const tabs = [
+            ...this.state.tabs.map((tab, href) => {
+                if (tab.id === id && tab.href !== href) {
+                    tab.isActive = false;
                 }
                 return tab;
             }),
@@ -65,18 +77,25 @@ export class Notifications extends Component {
                         </div>
                         <div className="pt-1" style={{ width: "100%" }}>
                             {this.state.tabs.map((tab) => {
-                                const { id, title, href, isCurrent } = tab;
+                                const { id, title, href, isActive } = tab;
                                 let className = "tab header2 p-3 ";
-                                className +=
-                                    isCurrent === true
-                                        ? "header2-primary tab-current"
-                                        : null;
+                                if (window.location.pathname.includes(href)) {
+                                    className += "header2-primary tab-current";
+                                } else {
+                                    className += "body";
+                                }
+
                                 return (
-                                    <a
-                                        onClick={() => this.handleCurrent(id)}
+                                    <Link
+                                        to={href}
+                                        onMouseEnter={() =>
+                                            this.handleActive(id)
+                                        }
+                                        onMouseLeave={() =>
+                                            this.handleInactive(id)
+                                        }
                                         className={className}
                                         key={id}
-                                        href={href}
                                         style={{
                                             float: "left",
                                             textAlign: "center",
@@ -84,7 +103,7 @@ export class Notifications extends Component {
                                         }}
                                     >
                                         {title}
-                                    </a>
+                                    </Link>
                                 );
                             })}
                         </div>

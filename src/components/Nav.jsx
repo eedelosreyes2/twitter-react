@@ -73,6 +73,10 @@ export class Nav extends Component {
         ],
     };
 
+    handleRefresh = () => {
+        this.forceUpdate();
+    };
+
     handleActive = (id) => {
         const navItems = [
             ...this.state.navItems.map((navItem) => {
@@ -124,6 +128,7 @@ export class Nav extends Component {
                     </IconContext.Provider>
                     {this.state.navItems.map((navItem) => (
                         <NavItem
+                            onRefresh={this.handleRefresh}
                             onActive={this.handleActive}
                             onInactive={this.handleInactive}
                             key={navItem.id}
