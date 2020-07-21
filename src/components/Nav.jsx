@@ -18,7 +18,6 @@ export class Nav extends Component {
                 id: "navItem-home",
                 title: "Home",
                 href: "/home",
-                isCurrent: false,
                 isActive: false,
                 icon: <AiOutlineHome />,
             },
@@ -26,7 +25,6 @@ export class Nav extends Component {
                 id: "navItem-explore",
                 title: "Explore",
                 href: "/explore",
-                isCurrent: false,
                 isActive: false,
                 icon: <FaHashtag />,
             },
@@ -34,7 +32,6 @@ export class Nav extends Component {
                 id: "navItem-notifications",
                 title: "Notifications",
                 href: "/notifications",
-                isCurrent: false,
                 isActive: false,
                 icon: <RiNotification4Line />,
             },
@@ -42,7 +39,6 @@ export class Nav extends Component {
                 id: "navItem-messages",
                 title: "Messages",
                 href: "/messages",
-                isCurrent: false,
                 isActive: false,
                 icon: <FiMail />,
             },
@@ -50,7 +46,6 @@ export class Nav extends Component {
                 id: "navItem-bookmarks",
                 title: "Bookmarks",
                 href: "/bookmarks",
-                isCurrent: false,
                 isActive: false,
                 icon: <BsBookmark />,
             },
@@ -58,7 +53,6 @@ export class Nav extends Component {
                 id: "navItem-lists",
                 title: "Lists",
                 href: "/lists",
-                isCurrent: false,
                 isActive: false,
                 icon: <RiFileList2Line />,
             },
@@ -66,7 +60,6 @@ export class Nav extends Component {
                 id: "navItem-profile",
                 title: "Profile",
                 href: "/profile",
-                isCurrent: false,
                 isActive: false,
                 icon: <RiUserLine />,
             },
@@ -78,22 +71,6 @@ export class Nav extends Component {
                 icon: <FiMoreHorizontal />,
             },
         ],
-    };
-
-    handleCurrent = (id) => {
-        const navItems = [
-            ...this.state.navItems.map((navItem) => {
-                if (navItem.id === id) {
-                    navItem.isCurrent = true;
-                    console.log(id, "set to current");
-                } else {
-                    navItem.isCurrent = false;
-                }
-                return navItem;
-            }),
-        ];
-
-        this.setState({ navItems });
     };
 
     handleActive = (id) => {
@@ -113,8 +90,8 @@ export class Nav extends Component {
 
     handleInactive = (id) => {
         const navItems = [
-            ...this.state.navItems.map((navItem) => {
-                if (navItem.id === id && navItem.isCurrent === false) {
+            ...this.state.navItems.map((navItem, href) => {
+                if (navItem.id === id && navItem.href !== href) {
                     navItem.isActive = false;
                 }
                 return navItem;
@@ -147,7 +124,6 @@ export class Nav extends Component {
                     </IconContext.Provider>
                     {this.state.navItems.map((navItem) => (
                         <NavItem
-                            onCurrent={this.handleCurrent}
                             onActive={this.handleActive}
                             onInactive={this.handleInactive}
                             key={navItem.id}

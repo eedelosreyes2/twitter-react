@@ -23,6 +23,21 @@ export class Notifications extends Component {
         ],
     };
 
+    handleCurrent = (id) => {
+        const tabs = [
+            ...this.state.tabs.map((tab) => {
+                if (tab.id === id) {
+                    tab.isCurrent = true;
+                } else {
+                    tab.isCurrent = false;
+                }
+                return tab;
+            }),
+        ];
+
+        this.setState({ tabs });
+    };
+
     render() {
         return (
             <div>
@@ -50,16 +65,18 @@ export class Notifications extends Component {
                         </div>
                         <div className="pt-1" style={{ width: "100%" }}>
                             {this.state.tabs.map((tab) => {
-                                const { id, title, isCurrent } = tab;
+                                const { id, title, href, isCurrent } = tab;
                                 let className = "tab header2 p-3 ";
                                 className +=
                                     isCurrent === true
                                         ? "header2-primary tab-current"
                                         : null;
                                 return (
-                                    <div
+                                    <a
+                                        onClick={() => this.handleCurrent(id)}
                                         className={className}
                                         key={id}
+                                        href={href}
                                         style={{
                                             float: "left",
                                             textAlign: "center",
@@ -67,7 +84,7 @@ export class Notifications extends Component {
                                         }}
                                     >
                                         {title}
-                                    </div>
+                                    </a>
                                 );
                             })}
                         </div>

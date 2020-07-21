@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
 
 export class NavItem extends Component {
@@ -6,15 +7,13 @@ export class NavItem extends Component {
         const { id, href, icon, title } = this.props.navItem;
 
         return (
-            <a
-                onClick={() => this.props.onCurrent(id)}
+            <Link
+                to={href}
                 onMouseEnter={() => this.props.onActive(id)}
                 onMouseLeave={() => this.props.onInactive(id)}
-                className={this.getClasses()}
+                className={this.getClasses(href)}
                 id={id}
-                href={href}
                 data-toggle="pill"
-                role="tab"
             >
                 <IconContext.Provider
                     value={{
@@ -25,14 +24,14 @@ export class NavItem extends Component {
                     {icon}
                 </IconContext.Provider>
                 {title}
-            </a>
+            </Link>
         );
     }
 
-    getClasses = () => {
+    getClasses = (href) => {
         let className = "nav-item h5 nav-link font-weight-bold text-";
         if (
-            this.props.navItem.isCurrent === true ||
+            window.location.pathname === href ||
             this.props.navItem.isActive === true
         ) {
             className += "primary";
