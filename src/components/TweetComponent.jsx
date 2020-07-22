@@ -25,7 +25,7 @@ export class WhatsHappening extends Component {
                     <IconContext.Provider
                         value={{
                             className: "tweet-cmp-item",
-                            color: "DodgerBlue",
+                            // color: "DodgerBlue",
                             size: "1.5em",
                             style: {
                                 float: "left",

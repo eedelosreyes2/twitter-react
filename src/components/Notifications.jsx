@@ -62,7 +62,7 @@ export class Notifications extends Component {
                     >
                         <IconContext.Provider
                             value={{
-                                color: "Dodgerblue",
+                                className: "twitter-blue",
                                 size: "1.25em",
                                 style: {
                                     float: "right",

@@ -119,7 +119,7 @@ export class Nav extends Component {
                 <div className="nav flex-column nav-pills">
                     <IconContext.Provider
                         value={{
-                            color: "DodgerBlue",
+                            className: "twitter-blue",
                             size: "2.25em",
                             style: { margin: "10px 25px" },
                         }}

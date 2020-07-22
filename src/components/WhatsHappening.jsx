@@ -78,7 +78,7 @@ export class WhatsHappening extends Component {
                         </div>
                     );
                 })}
-                <div className="show-more text-primary p-3">Show more</div>
+                <div className="show-more twitter-blue p-3">Show more</div>
             </div>
         );
     }

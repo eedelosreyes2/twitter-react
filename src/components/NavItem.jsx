@@ -30,14 +30,14 @@ export class NavItem extends Component {
     }
 
     getClasses = (href) => {
-        let className = "nav-item h5 nav-link font-weight-bold text-";
+        let className = "nav-item h5 nav-link font-weight-bold ";
         if (
             window.location.pathname.includes(href) ||
             this.props.navItem.isActive === true
         ) {
-            className += "primary";
+            className += "twitter-blue";
         } else {
-            className += "body";
+            className += "text-body";
         }
 
         return className;

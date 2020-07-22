@@ -1,3 +1,21 @@
+:root {
+    --twitter-blue: #1da1f2;
+}
+
+.twitter-blue {
+    color: #1da1f2;
+}
+
+.text-primary {
+    color: #1da1f2;
+}
+
+.btn-primary {
+    background-color: #1da1f2;
+    border: none;
+    font-weight: bold;
+}
+
 html,
 body {
     height: 100%;
@@ -45,7 +63,7 @@ body {
 }
 
 .header2-primary {
-    color: dodgerblue;
+    color: var(--twitter-blue);
 }
 
 .hr-sm {
@@ -102,6 +120,10 @@ body {
     height: 120px;
 }
 
+.tweet-cmp-item {
+    color: #1da1f2;
+}
+
 .tweet-cmp-item:hover {
     background-color: rgb(218, 241, 255);
     border-radius: 50px;
@@ -109,12 +131,12 @@ body {
 
 /* .tab:hover {
     background-color: rgb(218, 241, 255);
-    color: dodgerblue;
+    color: var(--twitter-blue);
 } */
 
 .tab-current {
     border-bottom: 2px inset;
-    border-color: dodgerblue;
+    border-color: var(--twitter-blue);
     height: 55px;
 }
 

@@ -14,7 +14,7 @@ export class Home extends Component {
                         Home
                         <IconContext.Provider
                             value={{
-                                color: "DodgerBlue",
+                                className: "twitter-blue",
                                 size: "2em",
                                 style: { float: "right" },
                             }}
