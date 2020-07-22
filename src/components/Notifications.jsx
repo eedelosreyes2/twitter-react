@@ -77,7 +77,7 @@ export class Notifications extends Component {
                         </div>
                         <div className="pt-1" style={{ width: "100%" }}>
                             {this.state.tabs.map((tab) => {
-                                const { id, title, href, isActive } = tab;
+                                const { id, title, href } = tab;
                                 let className = "tab header2 p-3 ";
                                 if (window.location.pathname.includes(href)) {
                                     className += "header2-primary tab-current";

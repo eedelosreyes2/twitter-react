@@ -33,10 +33,10 @@ body {
 
 .user {
     border-radius: 50%;
-    height: 45px;
+    height: 49px;
     margin-left: 2px;
     margin-right: 2px;
-    width: 45px;
+    width: 49px;
 }
 
 .center-col {
@@ -107,6 +107,10 @@ body {
     margin-top: 2px;
 }
 
+.nav-link {
+    padding: 5px 12px;
+}
+
 .nav-item:hover {
     background-color: rgb(218, 241, 255);
     border-radius: 50px;
@@ -155,4 +159,22 @@ body {
 
 .story-title {
     font-weight: bold;
+}
+
+.post {
+    border-bottom: 1px solid;
+    border-color: #dee2e3;
+    display: flex;
+    min-height: 100px;
+    padding: 8px 0px;
+}
+
+.post-user {
+    float: left;
+    height: 100%;
+    max-width: 78px;
+}
+
+.post-icon {
+    color: #657787;
 }
