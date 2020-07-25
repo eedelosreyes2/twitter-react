@@ -1,25 +1,16 @@
+/* Overrides */
 :root {
     --twitter-blue: #1da1f2;
-}
-
-.twitter-blue {
-    color: #1da1f2;
-}
-
-.text-primary {
-    color: #1da1f2;
-}
-
-.btn-primary {
-    background-color: #1da1f2;
-    border: none;
-    font-weight: bold;
 }
 
 html,
 body {
     height: 100%;
     overflow: hidden;
+}
+
+a:hover {
+    color: #1da1f2;
 }
 
 .App {
@@ -31,35 +22,24 @@ body {
     overflow: auto;
 }
 
-.user {
-    border-radius: 50%;
-    height: 49px;
-    margin-left: 2px;
-    margin-right: 2px;
-    width: 49px;
+/* Bootstrap */
+.text-primary {
+    color: #1da1f2;
 }
 
-.nav-link {
-    padding: 5px 45px 5px 0px;
-    margin-left: 12px;
+.btn-primary {
+    background-color: #1da1f2;
+    border: none;
+    font-weight: bold;
 }
 
-.nav-item:hover {
-    background-color: rgb(218, 241, 255);
-    border-radius: 50px;
-    cursor: pointer;
+/* Variables */
+.twitter-blue {
+    color: #1da1f2;
 }
 
-.center-col {
-    border-right: 1px solid;
-    border-color: #dee2e3;
-    display: inline-block;
-    height: 100%;
-    width: 600px;
-}
-
-.right-col {
-    float: right;
+.hr-sm {
+    margin: auto;
 }
 
 .header1 {
@@ -77,15 +57,61 @@ body {
     color: var(--twitter-blue);
 }
 
-.hr-sm {
-    margin: auto;
-}
-
 .sub {
     color: #6b7b8a;
     font-size: 14px;
 }
 
+/* Main Components */
+.center-col {
+    border-right: 1px solid;
+    border-color: #dee2e3;
+    display: inline-block;
+    height: 100%;
+    width: 600px;
+}
+
+.right-col {
+    float: right;
+}
+
+/* Nav Components */
+.nav-link {
+    padding: 5px 45px 5px 0px;
+    margin-left: 12px;
+}
+
+.nav-item:hover {
+    background-color: rgb(218, 241, 255);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* Tweet Components */
+.user {
+    border-radius: 50%;
+    height: 49px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 49px;
+}
+
+.tweet-cmp {
+    border-bottom: 10px solid;
+    border-color: #e6ecf0;
+    height: 120px;
+}
+
+.tweet-cmp-item {
+    color: #1da1f2;
+}
+
+.tweet-cmp-item:hover {
+    background-color: rgb(218, 241, 255);
+    border-radius: 50px;
+}
+
+/* Search Bar Components */
 .search-bar1 {
     background-color: #e6ecf0;
     border-radius: 50px;
@@ -118,24 +144,11 @@ body {
     margin-top: 2px;
 }
 
-.tweet-cmp {
-    border-bottom: 10px solid;
-    border-color: #e6ecf0;
-    height: 120px;
-}
-
-.tweet-cmp-item {
-    color: #1da1f2;
-}
-
-.tweet-cmp-item:hover {
-    background-color: rgb(218, 241, 255);
-    border-radius: 50px;
-}
-
+/* Tab Components */
 .tab:hover {
     background-color: rgb(218, 241, 255);
     color: var(--twitter-blue);
+    text-decoration: none;
 }
 
 .tab-current {
@@ -144,6 +157,7 @@ body {
     height: 55px;
 }
 
+/* Reusable Components */
 .hoverable:hover {
     background-color: #edf0f1;
     cursor: pointer;
@@ -161,6 +175,7 @@ body {
     font-weight: bold;
 }
 
+/* Post Components */
 .post {
     border-bottom: 1px solid;
     border-color: #dee2e3;

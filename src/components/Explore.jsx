@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { SearchBar } from "./SearchBar";
+import { ExploreBar } from "./ExploreBar";
 import { WhoToFollow } from "./WhoToFollow";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { IconContext } from "react-icons";
@@ -8,13 +9,64 @@ import { FiSettings } from "react-icons/fi";
 export class Explore extends Component {
     state = {
         tabs: [
-            { id: 0, title: "For you", isCurrent: true },
-            { id: 1, title: "COVID 19", isCurrent: false },
-            { id: 2, title: "Trending", isCurrent: false },
-            { id: 3, title: "News", isCurrent: false },
-            { id: 4, title: "Sports", isCurrent: false },
-            { id: 5, title: "Fun", isCurrent: false },
+            {
+                id: 0,
+                title: "For you",
+                href: "/for-you",
+                isCurrent: true,
+            },
+            {
+                id: 1,
+                title: "COVID 19",
+                href: "/covid-19",
+                isCurrent: false,
+            },
+            {
+                id: 2,
+                title: "Trending",
+                href: "/trending",
+                isCurrent: false,
+            },
+            {
+                id: 3,
+                title: "News",
+                href: "/news",
+                isCurrent: false,
+            },
+            {
+                id: 4,
+                title: "Sports",
+                href: "/sports",
+                isCurrent: false,
+            },
+            {
+                id: 5,
+                title: "Fun",
+                href: "/fun",
+                isCurrent: false,
+            },
+            //    {
+            //        id: 6,
+            //        title: "Entertainment",
+            //        href: "/entertainment",
+            //        isCurrent: false,
+            //    },
         ],
+    };
+
+    handleCurrent = (id) => {
+        const tabs = [
+            ...this.state.tabs.map((tab) => {
+                if (tab.id === id) {
+                    tab.isCurrent = true;
+                } else {
+                    tab.isCurrent = false;
+                }
+                return tab;
+            }),
+        ];
+
+        this.setState({ tabs });
     };
 
     render() {
@@ -40,21 +92,10 @@ export class Explore extends Component {
                         >
                             <FiSettings />
                         </IconContext.Provider>
-                        <div className="row pt-2">
-                            {this.state.tabs.map((tab) => {
-                                const { id, title, isCurrent } = tab;
-                                let className = "tab header2 p-3 ";
-                                className +=
-                                    isCurrent === true
-                                        ? "header2-primary tab-current"
-                                        : null;
-                                return (
-                                    <div className={className} key={id}>
-                                        {title}
-                                    </div>
-                                );
-                            })}
-                        </div>
+                        <ExploreBar
+                            tabs={this.state.tabs}
+                            onCurrent={this.handleCurrent}
+                        />
                     </div>
                 </div>
                 <div className="right-col">

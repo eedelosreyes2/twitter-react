@@ -54,7 +54,8 @@ export class Notifications extends Component {
                                 const { id, title, href, isCurrent } = tab;
                                 let className = "col-6 tab header2 p-3 ";
                                 className +=
-                                    isCurrent === true
+                                    isCurrent === true ||
+                                    window.location.pathname === href
                                         ? "header2-primary tab-current"
                                         : null;
                                 return (
@@ -63,7 +64,6 @@ export class Notifications extends Component {
                                         className={className}
                                         style={{
                                             textAlign: "center",
-                                            width: "50%",
                                         }}
                                         key={id}
                                     >
