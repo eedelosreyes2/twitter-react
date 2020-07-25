@@ -11,43 +11,15 @@ export class Notifications extends Component {
                 id: 0,
                 title: "All",
                 href: "/notifications",
-                isActive: false,
+                isCurrent: false,
             },
             {
                 id: 1,
                 title: "Mentions",
                 href: "/notifications/mentions",
-                isActive: false,
+                isCurrent: false,
             },
         ],
-    };
-
-    handleActive = (id) => {
-        const tabs = [
-            ...this.state.tabs.map((tab) => {
-                if (tab.id === id) {
-                    tab.isActive = true;
-                } else {
-                    tab.isActive = false;
-                }
-                return tab;
-            }),
-        ];
-
-        this.setState({ tabs });
-    };
-
-    handleInactive = (id) => {
-        const tabs = [
-            ...this.state.tabs.map((tab, href) => {
-                if (tab.id === id && tab.href !== href) {
-                    tab.isActive = false;
-                }
-                return tab;
-            }),
-        ];
-
-        this.setState({ tabs });
     };
 
     render() {
@@ -72,35 +44,28 @@ export class Notifications extends Component {
                         >
                             <FiSettings />
                         </IconContext.Provider>
+
                         <div className="header1 pl-3 pr-2 pt-3">
                             Notifications
                         </div>
-                        <div className="pt-1" style={{ width: "100%" }}>
-                            {this.state.tabs.map((tab) => {
-                                const { id, title, href } = tab;
-                                let className = "tab header2 p-3 ";
-                                if (window.location.pathname.includes(href)) {
-                                    className += "header2-primary tab-current";
-                                } else {
-                                    className += "body";
-                                }
 
+                        <div className="row pt-2">
+                            {this.state.tabs.map((tab) => {
+                                const { id, title, href, isCurrent } = tab;
+                                let className = "col-6 tab header2 p-3 ";
+                                className +=
+                                    isCurrent === true
+                                        ? "header2-primary tab-current"
+                                        : null;
                                 return (
                                     <Link
                                         to={href}
-                                        onMouseEnter={() =>
-                                            this.handleActive(id)
-                                        }
-                                        onMouseLeave={() =>
-                                            this.handleInactive(id)
-                                        }
                                         className={className}
-                                        key={id}
                                         style={{
-                                            float: "left",
                                             textAlign: "center",
                                             width: "50%",
                                         }}
+                                        key={id}
                                     >
                                         {title}
                                     </Link>

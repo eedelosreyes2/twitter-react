@@ -116,12 +116,12 @@ export class Nav extends Component {
                     top: 0,
                 }}
             >
-                <div className="nav flex-column nav-pills">
+                <div className="col flex-column nav-pills pl-3">
                     <IconContext.Provider
                         value={{
                             className: "twitter-blue",
                             size: "2.25em",
-                            style: { margin: "10px 25px" },
+                            style: { margin: "10px 10px" },
                         }}
                     >
                         <AiOutlineTwitter />
@@ -135,14 +135,14 @@ export class Nav extends Component {
                             navItem={navItem}
                         />
                     ))}
+                    <button
+                        type="button"
+                        className="btn btn-block btn-primary rounded-pill mt-2"
+                        style={{ height: "50px", width: "225px" }}
+                    >
+                        Tweet
+                    </button>
                 </div>
-                <button
-                    type="button"
-                    className="btn btn-block btn-primary rounded-pill m-2 ml-4"
-                    style={{ height: "50px", width: "225px" }}
-                >
-                    Tweet
-                </button>
             </div>
         );
     }

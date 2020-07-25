@@ -19,7 +19,7 @@ export class Feed extends Component {
                 },
                 comments: 9,
                 retweets: 8,
-                likes: 77,
+                likes: 727,
             },
             {
                 created_at: "Fri Oct 12 20:19:24 +0000 2018",

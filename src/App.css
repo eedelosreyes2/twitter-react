@@ -39,6 +39,17 @@ body {
     width: 49px;
 }
 
+.nav-link {
+    padding: 5px 45px 5px 0px;
+    margin-left: 12px;
+}
+
+.nav-item:hover {
+    background-color: rgb(218, 241, 255);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
 .center-col {
     border-right: 1px solid;
     border-color: #dee2e3;
@@ -107,17 +118,6 @@ body {
     margin-top: 2px;
 }
 
-.nav-link {
-    padding: 5px 12px;
-}
-
-.nav-item:hover {
-    background-color: rgb(218, 241, 255);
-    border-radius: 50px;
-    text-decoration-style: red;
-    cursor: pointer;
-}
-
 .tweet-cmp {
     border-bottom: 10px solid;
     border-color: #e6ecf0;
@@ -133,10 +133,10 @@ body {
     border-radius: 50px;
 }
 
-/* .tab:hover {
+.tab:hover {
     background-color: rgb(218, 241, 255);
     color: var(--twitter-blue);
-} */
+}
 
 .tab-current {
     border-bottom: 2px inset;
@@ -173,6 +173,26 @@ body {
     float: left;
     height: 100%;
     max-width: 78px;
+}
+
+.post-icon-wrapper {
+    color: #657787;
+    float: left;
+    font-size: 15px;
+    margin-right: 80px;
+    width: 50px;
+}
+
+.post-icon-comment:hover {
+    color: #1da1f2;
+}
+
+.post-icon-retweet:hover {
+    color: green;
+}
+
+.post-icon-like:hover {
+    color: red;
 }
 
 .post-icon {

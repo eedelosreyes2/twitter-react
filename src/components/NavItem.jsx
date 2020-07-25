@@ -7,25 +7,27 @@ export class NavItem extends Component {
         const { id, href, icon, title } = this.props.navItem;
 
         return (
-            <Link
-                to={href}
-                onClick={() => this.props.onRefresh()}
-                onMouseEnter={() => this.props.onActive(id)}
-                onMouseLeave={() => this.props.onInactive(id)}
-                className={this.getClasses(href)}
-                id={id}
-                data-toggle="pill"
-            >
-                <IconContext.Provider
-                    value={{
-                        size: "1.25em",
-                        style: { margin: "5px 15px 7.5px 15px" },
-                    }}
+            <div className="row">
+                <Link
+                    to={href}
+                    onClick={() => this.props.onRefresh()}
+                    onMouseEnter={() => this.props.onActive(id)}
+                    onMouseLeave={() => this.props.onInactive(id)}
+                    className={this.getClasses(href)}
+                    id={id}
+                    data-toggle="pill"
                 >
-                    {icon}
-                </IconContext.Provider>
-                {title}
-            </Link>
+                    <IconContext.Provider
+                        value={{
+                            size: "1.25em",
+                            style: { margin: "5px 15px 7.5px 15px" },
+                        }}
+                    >
+                        {icon}
+                    </IconContext.Provider>
+                    {title}
+                </Link>
+            </div>
         );
     }
 

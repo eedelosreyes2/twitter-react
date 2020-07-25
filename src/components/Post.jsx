@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { IconContext } from "react-icons";
 import { FaRegComment, FaRetweet, FaRegHeart } from "react-icons/fa";
+import { FiShare } from "react-icons/fi";
 
 export class Post extends Component {
     render() {
@@ -19,11 +20,19 @@ export class Post extends Component {
                         <IconContext.Provider
                             value={{
                                 className: "post-icon",
+                                style: { marginBottom: "2px" },
                             }}
                         >
-                            <FaRegComment /> {comments}
-                            <FaRetweet /> {retweets}
-                            <FaRegHeart /> {likes}
+                            <div className="post-icon-wrapper post-icon-comment">
+                                <FaRegComment /> {comments}
+                            </div>
+                            <div className="post-icon-wrapper post-icon-retweet">
+                                <FaRetweet /> {retweets}
+                            </div>
+                            <div className="post-icon-wrapper post-icon-like">
+                                <FaRegHeart /> {likes}
+                            </div>
+                            <FiShare />
                         </IconContext.Provider>
                     </div>
                 </div>
