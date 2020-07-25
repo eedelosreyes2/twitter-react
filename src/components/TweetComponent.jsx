@@ -6,6 +6,16 @@ import { GrEmoji } from "react-icons/gr";
 import { RiBarChart2Line, RiCalendarLine } from "react-icons/ri";
 
 export class WhatsHappening extends Component {
+    state = {
+        items: [
+            <BsImage />,
+            <AiOutlineGif />,
+            <RiBarChart2Line />,
+            <GrEmoji />,
+            <RiCalendarLine />,
+        ],
+    };
+
     render() {
         return (
             <div className="tweet-cmp">
@@ -17,28 +27,26 @@ export class WhatsHappening extends Component {
                     />
                     <input
                         type="text"
-                        className="form-control-lg border-0"
+                        className="tweet form-control-lg border-0 pt-4 ml-n2"
+                        style={{ backgroundColor: "unset" }}
                         placeholder="What's happening?"
                     />
                 </div>
                 <div style={{ paddingLeft: "72.5px" }}>
-                    <IconContext.Provider
-                        value={{
-                            className: "tweet-cmp-item",
-                            // color: "DodgerBlue",
-                            size: "1.5em",
-                            style: {
-                                float: "left",
-                                marginLeft: "13px",
-                            },
-                        }}
-                    >
-                        <BsImage />
-                        <AiOutlineGif />
-                        <RiBarChart2Line />
-                        <GrEmoji />
-                        <RiCalendarLine />
-                    </IconContext.Provider>
+                    {this.state.items.map((item) => {
+                        return (
+                            <div className="tweet-item-wrapper">
+                                <IconContext.Provider
+                                    value={{
+                                        className: "twitter-blue",
+                                        size: "1.25em",
+                                    }}
+                                >
+                                    {item}
+                                </IconContext.Provider>
+                            </div>
+                        );
+                    })}
                     <button
                         type="button"
                         className="btn btn-block btn-primary rounded-pill mr-3 mt-n2"

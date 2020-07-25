@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import NavItem from "./NavItem";
 import { IconContext } from "react-icons";
 import { AiOutlineTwitter, AiOutlineHome } from "react-icons/ai";
@@ -117,15 +118,18 @@ export class Nav extends Component {
                 }}
             >
                 <div className="col flex-column nav-pills pl-3">
-                    <IconContext.Provider
-                        value={{
-                            className: "twitter-blue",
-                            size: "2.25em",
-                            style: { margin: "10px 10px" },
-                        }}
-                    >
-                        <AiOutlineTwitter />
-                    </IconContext.Provider>
+                    <div className="aiOutlineTwitter-wrapper">
+                        <IconContext.Provider
+                            value={{
+                                className: "twitter-blue",
+                                size: "2.2em",
+                            }}
+                        >
+                            <Link to="/home" style={{ cursor: "pointer" }}>
+                                <AiOutlineTwitter />
+                            </Link>
+                        </IconContext.Provider>
+                    </div>
                     {this.state.navItems.map((navItem) => (
                         <NavItem
                             onRefresh={this.handleRefresh}

@@ -10,7 +10,7 @@ export class Home extends Component {
         return (
             <div>
                 <div className="center-col">
-                    <div className="header1 border-bottom pb-3 pl-3 pr-2 pt-3">
+                    <div className="header1 border-bottom pb-2 pl-3 pr-2 pt-2 mt-1">
                         Home
                         <IconContext.Provider
                             value={{

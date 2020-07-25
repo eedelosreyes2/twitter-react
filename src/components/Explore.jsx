@@ -71,14 +71,9 @@ export class Explore extends Component {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <div className="center-col">
-                    <div
-                        className="border-bottom"
-                        style={{
-                            height: "105px",
-                        }}
-                    >
+                    <div className="explore-header">
                         <SearchBar type="2" />
                         <IconContext.Provider
                             value={{
@@ -102,7 +97,7 @@ export class Explore extends Component {
                     <WhoToFollow />
                     <Breadcrumbs />
                 </div>
-            </div>
+            </React.Fragment>
         );
     }
 }

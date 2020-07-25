@@ -13,6 +13,14 @@ a:hover {
     color: #1da1f2;
 }
 
+input {
+    background-color: unset;
+}
+
+input:focus {
+    outline: 0px;
+}
+
 .App {
     position: absolute;
     top: 0;
@@ -71,11 +79,31 @@ a:hover {
     width: 600px;
 }
 
+.center-col-sm {
+    border-right: 1px solid;
+    border-color: #dee2e3;
+    display: inline-block;
+    height: 100%;
+    width: 390px;
+}
+
 .right-col {
     float: right;
 }
 
 /* Nav Components */
+.aiOutlineTwitter-wrapper {
+    border-radius: 50%;
+    height: 42px;
+    padding: 4px 0px 0px 4px;
+    margin: 5px 5px;
+    width: 42px;
+}
+
+.aiOutlineTwitter-wrapper:hover {
+    background-color: rgb(218, 241, 255);
+}
+
 .nav-link {
     padding: 5px 45px 5px 0px;
     margin-left: 12px;
@@ -96,19 +124,27 @@ a:hover {
     width: 49px;
 }
 
+input.tweet:focus::-webkit-input-placeholder {
+    color: #bdc1c9;
+}
+
 .tweet-cmp {
     border-bottom: 10px solid;
     border-color: #e6ecf0;
     height: 120px;
 }
 
-.tweet-cmp-item {
-    color: #1da1f2;
+.tweet-item-wrapper {
+    border-radius: 50%;
+    float: left;
+    height: 30px;
+    padding: 1px 0px 0px 5px;
+    margin: -3px 10px 0px 0px;
+    width: 30px;
 }
 
-.tweet-cmp-item:hover {
+.tweet-item-wrapper:hover {
     background-color: rgb(218, 241, 255);
-    border-radius: 50px;
 }
 
 /* Search Bar Components */
@@ -212,4 +248,25 @@ a:hover {
 
 .post-icon {
     color: #657787;
+}
+
+/* Explore Components */
+.explore-header {
+    border-bottom: 11px solid;
+    border-color: #e6ecf0;
+    height: 115px;
+}
+
+/* Messages Components */
+.riMailAddLine-wrapper {
+    border-radius: 50%;
+    color: #1da1f2;
+    float: right;
+    height: 32px;
+    padding: 0px 6px;
+    width: 32px;
+}
+
+.riMailAddLine-wrapper:hover {
+    background-color: rgb(218, 241, 255);
 }

@@ -49,10 +49,10 @@ export class Notifications extends Component {
                             Notifications
                         </div>
 
-                        <div className="row pt-2">
+                        <div className="pt-1" style={{ width: "600px" }}>
                             {this.state.tabs.map((tab) => {
                                 const { id, title, href, isCurrent } = tab;
-                                let className = "col-6 tab header2 p-3 ";
+                                let className = "tab header2 p-3 ";
                                 className +=
                                     isCurrent === true ||
                                     window.location.pathname === href
@@ -63,7 +63,9 @@ export class Notifications extends Component {
                                         to={href}
                                         className={className}
                                         style={{
+                                            float: "left",
                                             textAlign: "center",
+                                            width: "50%",
                                         }}
                                         key={id}
                                     >
