@@ -6,7 +6,7 @@ export class Feed extends Component {
         posts: [
             {
                 created_at: "Wed Oct 10 20:19:24 +0000 2018",
-                id: 1050118621198921728,
+                id: 0,
                 text:
                     "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quia ut ullam, fugiat atque et sint dolore aliquam impedit aperiam, omnis fugit molestias modi explicabo, ea nam eaque distinctio minima.",
                 user: {
@@ -23,7 +23,7 @@ export class Feed extends Component {
             },
             {
                 created_at: "Fri Oct 12 20:19:24 +0000 2018",
-                id: 1050118621198921728,
+                id: 1,
                 text:
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolore enim recusandae aliquid mollitia odio molestias, obcaecati non quasi, quia reiciendis rerum illum modi deserunt fugit porro incidunt. Repellat, dignissimos?",
                 user: {
@@ -40,7 +40,7 @@ export class Feed extends Component {
             },
             {
                 created_at: "Fri Oct 12 20:19:24 +0000 2018",
-                id: 1050118621198921728,
+                id: 2,
                 text:
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolore enim recusandae aliquid mollitia odio molestias, obcaecati non quasi, quia reiciendis rerum illum modi deserunt fugit porro incidunt. Repellat, dignissimos?",
                 user: {
@@ -57,7 +57,7 @@ export class Feed extends Component {
             },
             {
                 created_at: "Fri Oct 12 20:19:24 +0000 2018",
-                id: 1050118621198921728,
+                id: 3,
                 text:
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolore enim recusandae aliquid mollitia odio molestias, obcaecati non quasi, quia reiciendis rerum illum modi deserunt fugit porro incidunt. Repellat, dignissimos?",
                 user: {
@@ -79,7 +79,7 @@ export class Feed extends Component {
         return (
             <div>
                 {this.state.posts.map((post) => {
-                    return <Post post={post} />;
+                    return <Post key={post.id} post={post} />;
                 })}
             </div>
         );

@@ -7,9 +7,9 @@ export class ExploreBar extends Component {
             <div style={{ paddingTop: "67px" }}>
                 {this.props.tabs.map((tab) => {
                     const { id, title, href, isCurrent } = tab;
-                    let className = "tab header2 p-3 ";
+                    let className = "tab header3 p-3 ";
                     if (isCurrent) {
-                        className += "header2-primary tab-current";
+                        className += "header3-primary tab-current";
                     }
                     return (
                         <Link

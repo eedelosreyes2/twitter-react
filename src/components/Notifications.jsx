@@ -49,24 +49,20 @@ export class Notifications extends Component {
                             Notifications
                         </div>
 
-                        <div className="pt-1" style={{ width: "600px" }}>
+                        <div style={{ overflow: "hidden", width: "600px" }}>
                             {this.state.tabs.map((tab) => {
                                 const { id, title, href, isCurrent } = tab;
-                                let className = "tab header2 p-3 ";
-                                className +=
-                                    isCurrent === true ||
+                                let className = "tab tab2 header3 p-3 ";
+                                if (
+                                    isCurrent ||
                                     window.location.pathname === href
-                                        ? "header2-primary tab-current"
-                                        : null;
+                                ) {
+                                    className += "header3-primary tab-current";
+                                }
                                 return (
                                     <Link
                                         to={href}
                                         className={className}
-                                        style={{
-                                            float: "left",
-                                            textAlign: "center",
-                                            width: "50%",
-                                        }}
                                         key={id}
                                     >
                                         {title}
@@ -74,6 +70,10 @@ export class Notifications extends Component {
                                 );
                             })}
                         </div>
+                    </div>
+                    <div>
+                        Nothing to see here — yet From likes to Retweets and a
+                        whole lot more, this is where all the action happens.
                     </div>
                 </div>
                 <div className="right-col">

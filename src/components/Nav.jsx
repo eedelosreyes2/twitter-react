@@ -11,6 +11,7 @@ import {
     RiFileList2Line,
     RiUserLine,
 } from "react-icons/ri";
+import { IoIosArrowDown } from "react-icons/io";
 
 export class Nav extends Component {
     state = {
@@ -107,6 +108,8 @@ export class Nav extends Component {
     };
 
     render() {
+        const { handle, username, imageSrc } = this.props.currentUser;
+
         return (
             <div
                 className="col border-right"
@@ -146,6 +149,42 @@ export class Nav extends Component {
                     >
                         Tweet
                     </button>
+                </div>
+                <div
+                    className="nav-item"
+                    style={{
+                        bottom: "0",
+                        height: "60px",
+                        margin: "0px 0px 10px 10px",
+                        paddingBottom: "-12px",
+                        paddingLeft: "10px",
+                        paddingRight: "10px",
+                        paddingTop: "2px",
+                        position: "absolute",
+                    }}
+                >
+                    <img
+                        className="user m-2"
+                        style={{ float: "left", height: "40px", width: "40px" }}
+                        src={imageSrc}
+                        alt="User"
+                    />
+                    <div className="mt-2" style={{ float: "left" }}>
+                        <p className="font-weight-bold mb-n1">{username}</p>
+                        <p className="sub">{handle}</p>
+                    </div>
+                    <IconContext.Provider
+                        value={{
+                            size: "1.5em",
+                            style: {
+                                float: "right",
+                                marginLeft: "55px",
+                                marginTop: "15px",
+                            },
+                        }}
+                    >
+                        <IoIosArrowDown />
+                    </IconContext.Provider>
                 </div>
             </div>
         );

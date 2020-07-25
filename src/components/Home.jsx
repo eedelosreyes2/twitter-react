@@ -12,17 +12,24 @@ export class Home extends Component {
                 <div className="center-col">
                     <div className="header1 border-bottom pb-2 pl-3 pr-2 pt-2 mt-1">
                         Home
-                        <IconContext.Provider
-                            value={{
-                                className: "twitter-blue",
-                                size: "2em",
-                                style: { float: "right" },
+                        <div
+                            className="aiOutlineTwitter-wrapper"
+                            style={{
+                                float: "right",
+                                marginTop: "-7px",
                             }}
                         >
-                            <WiStars />
-                        </IconContext.Provider>
+                            <IconContext.Provider
+                                value={{
+                                    className: "twitter-blue",
+                                    size: "2em",
+                                }}
+                            >
+                                <WiStars />
+                            </IconContext.Provider>
+                        </div>
                     </div>
-                    <TweetComponent />
+                    <TweetComponent currentUser={this.props.currentUser} />
                     <Feed />
                 </div>
                 <div className="right-col">

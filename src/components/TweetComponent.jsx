@@ -8,23 +8,21 @@ import { RiBarChart2Line, RiCalendarLine } from "react-icons/ri";
 export class WhatsHappening extends Component {
     state = {
         items: [
-            <BsImage />,
-            <AiOutlineGif />,
-            <RiBarChart2Line />,
-            <GrEmoji />,
-            <RiCalendarLine />,
+            { id: 0, component: <BsImage /> },
+            { id: 1, component: <AiOutlineGif /> },
+            { id: 2, component: <RiBarChart2Line /> },
+            { id: 3, component: <GrEmoji /> },
+            { id: 4, component: <RiCalendarLine /> },
         ],
     };
 
     render() {
+        const { imageSrc } = this.props.currentUser;
+
         return (
             <div className="tweet-cmp">
                 <div className="input-group mb-3 pl-3">
-                    <img
-                        className="user mt-2"
-                        src="https://pbs.twimg.com/profile_images/857089270414233601/H5OtJMkD_400x400.jpg"
-                        alt="User"
-                    />
+                    <img className="user mt-2" src={imageSrc} alt="User" />
                     <input
                         type="text"
                         className="tweet form-control-lg border-0 pt-4 ml-n2"
@@ -34,15 +32,16 @@ export class WhatsHappening extends Component {
                 </div>
                 <div style={{ paddingLeft: "72.5px" }}>
                     {this.state.items.map((item) => {
+                        const { id, component } = item;
                         return (
-                            <div className="tweet-item-wrapper">
+                            <div className="tweet-item-wrapper" key={id}>
                                 <IconContext.Provider
                                     value={{
                                         className: "twitter-blue",
                                         size: "1.25em",
                                     }}
                                 >
-                                    {item}
+                                    {component}
                                 </IconContext.Provider>
                             </div>
                         );

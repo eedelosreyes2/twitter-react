@@ -14,7 +14,7 @@ export class Post extends Component {
                 </div>
                 <div>
                     <span className="font-weight-bold">{user.username}</span>
-                    <span className="text-muted"> @{user.handle}</span>
+                    <span className="sub"> @{user.handle}</span>
                     <div className="post-text">{text}</div>
                     <div>
                         <IconContext.Provider

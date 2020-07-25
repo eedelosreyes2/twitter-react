@@ -16,13 +16,23 @@ import Lists from "./components/Lists";
 import Profile from "./components/Profile";
 
 function App() {
+    const currentUser = {
+        handle: "@currentUser",
+        username: "Current User",
+        imageSrc:
+            "https://pbs.twimg.com/profile_images/857089270414233601/H5OtJMkD_400x400.jpg",
+    };
+
     return (
         <div className="App row" style={{ width: "100vw" }}>
             <Router>
-                <Nav />
+                <Nav currentUser={currentUser} />
                 <Switch>
                     <Redirect exact from="/" to="/home" />
-                    <Route path="/home" component={Home} />
+                    <Route
+                        path="/home"
+                        render={() => <Home currentUser={currentUser} />}
+                    />
                     <Route path="/explore" component={Explore} />
                     <Route path="/notifications" component={Notifications} />
                     <Route path="/messages" component={Messages} />

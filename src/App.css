@@ -21,6 +21,10 @@ input:focus {
     outline: 0px;
 }
 
+::placeholder {
+    color: #6b7b8a;
+}
+
 .App {
     position: absolute;
     top: 0;
@@ -56,18 +60,24 @@ input:focus {
 }
 
 .header2 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.header3 {
     color: #657787;
     font-size: 15px;
     font-weight: bold;
 }
 
-.header2-primary {
+.header3-primary {
     color: var(--twitter-blue);
 }
 
 .sub {
     color: #6b7b8a;
     font-size: 14px;
+    font-weight: 500;
 }
 
 /* Main Components */
@@ -102,6 +112,7 @@ input:focus {
 
 .aiOutlineTwitter-wrapper:hover {
     background-color: rgb(218, 241, 255);
+    cursor: pointer;
 }
 
 .nav-link {
@@ -148,17 +159,25 @@ input.tweet:focus::-webkit-input-placeholder {
 }
 
 /* Search Bar Components */
-.search-bar1 {
+.search-bar {
     background-color: #e6ecf0;
     border-radius: 50px;
+}
+
+.search-input {
+    background-color: unset;
+    border: unset;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.search-bar1 {
     height: 40px;
     margin-left: 25px;
     margin-top: 20px;
 }
 
 .search-bar2 {
-    background-color: #e6ecf0;
-    border-radius: 50px;
     float: left;
     height: 32px;
     margin-left: 20px;
@@ -166,18 +185,22 @@ input.tweet:focus::-webkit-input-placeholder {
     width: 510px;
 }
 
+.search-bar3 {
+    margin: 10px 10px 0px 10px;
+    height: 40px;
+}
+
 .search-input1 {
-    background-color: #e6ecf0;
-    display: inline-block;
-    margin-left: 10px;
     margin-top: 7px;
 }
 
 .search-input2 {
-    background-color: #e6ecf0;
-    display: inline-block;
-    margin-left: 10px;
-    margin-top: 2px;
+    margin-top: 3px;
+}
+
+.search-input3 {
+    margin-top: 6px;
+    width: 300px;
 }
 
 /* Tab Components */
@@ -191,6 +214,13 @@ input.tweet:focus::-webkit-input-placeholder {
     border-bottom: 2px inset;
     border-color: var(--twitter-blue);
     height: 55px;
+}
+
+.tab2 {
+    float: left;
+    margin-top: -2px;
+    text-align: center;
+    width: 50%;
 }
 
 /* Reusable Components */

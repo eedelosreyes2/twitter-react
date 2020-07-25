@@ -19,8 +19,7 @@ export class SearchBar extends Component {
                     <input
                         type="text"
                         className={this.getInputClasses()}
-                        placeholder="Search Twitter"
-                        style={{}}
+                        placeholder={this.getPlaceholder()}
                     />
                 </div>
             </div>
@@ -28,15 +27,24 @@ export class SearchBar extends Component {
     }
 
     getBarClasses = () => {
-        let className = "search-bar";
+        let className = "search-bar search-bar";
         className += this.props.type;
         return className;
     };
 
     getInputClasses = () => {
-        let className = "form-control-md border-0 search-input";
+        let className = "form-control-md search-input search-input";
         className += this.props.type;
         return className;
+    };
+
+    getPlaceholder = () => {
+        const type = this.props.type;
+        if (type === "1" || type === "2") {
+            return "Search Twitter";
+        } else {
+            return "Search for people and groups";
+        }
     };
 }
 
