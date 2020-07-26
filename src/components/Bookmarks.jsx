@@ -6,7 +6,6 @@ export class Bookmarks extends Component {
         return (
             <div>
                 <div className="center-col">
-                    {/* <div className="h5 font-weight-bold border-bottom pb-3 pl-3"> */}
                     <div
                         className="border-bottom pl-3 pt-1"
                         style={{ height: "55px" }}

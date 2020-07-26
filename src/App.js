@@ -40,7 +40,10 @@ function App() {
                         path="/bookmarks"
                         render={() => <Bookmarks currentUser={currentUser} />}
                     />
-                    <Route path="/lists" component={Lists} />
+                    <Route
+                        path="/lists"
+                        render={() => <Lists currentUser={currentUser} />}
+                    />
                     <Route path="/profile" component={Profile} />
                 </Switch>
             </Router>

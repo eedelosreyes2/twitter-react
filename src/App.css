@@ -312,3 +312,16 @@ input.tweet:focus::-webkit-input-placeholder {
 .riMailAddLine-wrapper:hover {
     background-color: rgb(218, 241, 255);
 }
+
+/* Lists Components */
+.ioIosArrowRoundBack-wrapper {
+    border-radius: 50%;
+    float: left;
+    height: 32px;
+    margin-top: 7px;
+    width: 32px;
+}
+
+.ioIosArrowRoundBack-wrapper:hover {
+    background-color: rgb(218, 241, 255);
+}
