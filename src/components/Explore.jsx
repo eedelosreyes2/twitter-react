@@ -73,20 +73,27 @@ export class Explore extends Component {
         return (
             <React.Fragment>
                 <div className="center-col">
-                    <div className="explore-header">
+                    <div className="explore-header mt-1">
                         <SearchBar type="2" />
-                        <IconContext.Provider
-                            value={{
-                                className: "twitter-blue",
-                                size: "1.25em",
-                                style: {
-                                    float: "right",
-                                    margin: "16px 15px",
-                                },
+                        <div
+                            className="fiSettings-wrapper"
+                            style={{
+                                float: "right",
                             }}
                         >
-                            <FiSettings />
-                        </IconContext.Provider>
+                            <IconContext.Provider
+                                value={{
+                                    className: "twitter-blue",
+                                    size: "1.25em",
+                                    style: {
+                                        float: "right",
+                                        margin: "11px 11px",
+                                    },
+                                }}
+                            >
+                                <FiSettings />
+                            </IconContext.Provider>
+                        </div>
                         <ExploreBar
                             tabs={this.state.tabs}
                             onCurrent={this.handleCurrent}

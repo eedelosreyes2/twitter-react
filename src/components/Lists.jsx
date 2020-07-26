@@ -9,6 +9,11 @@ export class Lists extends Component {
                     <div className="h5 font-weight-bold border-bottom pb-3 pl-3 pt-3">
                         Lists
                     </div>
+                    {/* <input
+                        type="button"
+                        value="Go Back From Whence You Came!"
+                        onClick={this.context.router.history.goBack}
+                    /> */}
                 </div>
                 <div className="right-col">
                     <Pane1 />

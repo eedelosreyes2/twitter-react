@@ -22,6 +22,20 @@ export class Notifications extends Component {
         ],
     };
 
+    renderBody = () => {
+        const path = window.location.pathname;
+        var body;
+
+        if (path === "/notifications") {
+            body =
+                "From likes to Retweets and a whole lot more, this is where all the action happens.";
+        } else if (path === "/notifications/mentions") {
+            body = "When someone mentions you, you’ll find it here.";
+        }
+
+        return body;
+    };
+
     render() {
         return (
             <div>
@@ -29,23 +43,30 @@ export class Notifications extends Component {
                     <div
                         className="border-bottom"
                         style={{
-                            height: "105px",
+                            height: "104px",
                         }}
                     >
-                        <IconContext.Provider
-                            value={{
-                                className: "twitter-blue",
-                                size: "1.25em",
-                                style: {
-                                    float: "right",
-                                    margin: "16px 15px",
-                                },
+                        <div
+                            className="fiSettings-wrapper"
+                            style={{
+                                float: "right",
                             }}
                         >
-                            <FiSettings />
-                        </IconContext.Provider>
+                            <IconContext.Provider
+                                value={{
+                                    className: "twitter-blue",
+                                    size: "1.25em",
+                                    style: {
+                                        float: "right",
+                                        margin: "11px 11px",
+                                    },
+                                }}
+                            >
+                                <FiSettings />
+                            </IconContext.Provider>
+                        </div>
 
-                        <div className="header1 pl-3 pr-2 pt-3">
+                        <div className="header1 pb-1 pl-3 pr-2 pt-2 mt-1 mb-2">
                             Notifications
                         </div>
 
@@ -71,10 +92,10 @@ export class Notifications extends Component {
                             })}
                         </div>
                     </div>
-                    <div>
-                        Nothing to see here — yet From likes to Retweets and a
-                        whole lot more, this is where all the action happens.
-                    </div>
+                    <p className="header2 text-center mt-5">
+                        Nothing to see here — yet
+                    </p>
+                    <p className="sub text-center mt-n2">{this.renderBody()}</p>
                 </div>
                 <div className="right-col">
                     <Pane1 />

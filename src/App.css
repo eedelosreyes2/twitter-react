@@ -181,7 +181,7 @@ input.tweet:focus::-webkit-input-placeholder {
     float: left;
     height: 32px;
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: 6px;
     width: 510px;
 }
 
@@ -285,6 +285,18 @@ input.tweet:focus::-webkit-input-placeholder {
     border-bottom: 11px solid;
     border-color: #e6ecf0;
     height: 115px;
+}
+
+.fiSettings-wrapper {
+    border-radius: 50%;
+    height: 42px;
+    margin: 3px 5px;
+    width: 42px;
+}
+
+.fiSettings-wrapper:hover {
+    background-color: rgb(218, 241, 255);
+    cursor: pointer;
 }
 
 /* Messages Components */

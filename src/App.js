@@ -36,7 +36,10 @@ function App() {
                     <Route path="/explore" component={Explore} />
                     <Route path="/notifications" component={Notifications} />
                     <Route path="/messages" component={Messages} />
-                    <Route path="/bookmarks" component={Bookmarks} />
+                    <Route
+                        path="/bookmarks"
+                        render={() => <Bookmarks currentUser={currentUser} />}
+                    />
                     <Route path="/lists" component={Lists} />
                     <Route path="/profile" component={Profile} />
                 </Switch>
