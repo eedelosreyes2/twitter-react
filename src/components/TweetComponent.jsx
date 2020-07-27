@@ -17,12 +17,12 @@ export class WhatsHappening extends Component {
     };
 
     render() {
-        const { imageSrc } = this.props.currentUser;
+        const { userImg } = this.props.currentUser;
 
         return (
             <div className="tweet-cmp">
                 <div className="input-group mb-3 pl-3">
-                    <img className="user mt-2" src={imageSrc} alt="User" />
+                    <img className="user mt-2" src={userImg} alt="User" />
                     <input
                         type="text"
                         className="tweet form-control-lg border-0 pt-4 ml-n2"

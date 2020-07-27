@@ -44,7 +44,9 @@ export class WhoToFollow extends Component {
                         width: "350px",
                     }}
                 >
-                    <div className="header1 pb-1 pl-3 pt-2">Who to follow</div>
+                    <div className="header1 pb-1 pl-3 pt-2">
+                        {this.props.title}
+                    </div>
                     <hr className="hr-sm" />
                     {this.state.users.map((user) => {
                         const {

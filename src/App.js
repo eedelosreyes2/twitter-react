@@ -19,8 +19,12 @@ function App() {
     const currentUser = {
         handle: "@currentUser",
         username: "Current User",
-        imageSrc:
+        userImg:
             "https://pbs.twimg.com/profile_images/857089270414233601/H5OtJMkD_400x400.jpg",
+        headerImg:
+            "https://pbs.twimg.com/profile_banners/26270913/1583071044/1500x500",
+        numTweets: 0,
+        isVerified: false,
     };
 
     return (
@@ -44,7 +48,10 @@ function App() {
                         path="/lists"
                         render={() => <Lists currentUser={currentUser} />}
                     />
-                    <Route path="/profile" component={Profile} />
+                    <Route
+                        path="/profile"
+                        render={() => <Profile currentUser={currentUser} />}
+                    />
                 </Switch>
             </Router>
         </div>

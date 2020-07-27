@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SearchBar from "./SearchBar";
 import WhatsHappening from "./WhatsHappening";
-import WhoToFollow from "./WhoToFollow";
+import Follow from "./Follow";
 import Breadcrumbs from "./Breadcrumbs";
 
 export class Pane1 extends Component {
@@ -10,7 +10,7 @@ export class Pane1 extends Component {
             <div style={{ display: "inline-block", float: "right" }}>
                 <SearchBar type="1" />
                 <WhatsHappening />
-                <WhoToFollow />
+                <Follow title="Who to follow" />
                 <Breadcrumbs />
             </div>
         );

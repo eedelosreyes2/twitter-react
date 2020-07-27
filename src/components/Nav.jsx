@@ -108,7 +108,7 @@ export class Nav extends Component {
     };
 
     render() {
-        const { handle, username, imageSrc } = this.props.currentUser;
+        const { handle, username, userImg } = this.props.currentUser;
 
         return (
             <div
@@ -166,7 +166,7 @@ export class Nav extends Component {
                     <img
                         className="user m-2"
                         style={{ float: "left", height: "40px", width: "40px" }}
-                        src={imageSrc}
+                        src={userImg}
                         alt="User"
                     />
                     <div className="mt-2" style={{ float: "left" }}>

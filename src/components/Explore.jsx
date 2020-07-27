@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { SearchBar } from "./SearchBar";
-import { ExploreBar } from "./ExploreBar";
-import { WhoToFollow } from "./WhoToFollow";
-import { Breadcrumbs } from "./Breadcrumbs";
+import SearchBar from "./SearchBar";
+import ExploreBar from "./ExploreBar";
+import Follow from "./Follow";
+import Breadcrumbs from "./Breadcrumbs";
 import { IconContext } from "react-icons";
 import { FiSettings } from "react-icons/fi";
 
@@ -101,7 +101,7 @@ export class Explore extends Component {
                     </div>
                 </div>
                 <div className="right-col">
-                    <WhoToFollow />
+                    <Follow title="Who to follow" />
                     <Breadcrumbs />
                 </div>
             </React.Fragment>

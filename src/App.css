@@ -213,7 +213,6 @@ input.tweet:focus::-webkit-input-placeholder {
 .tab-current {
     border-bottom: 2px inset;
     border-color: var(--twitter-blue);
-    height: 55px;
 }
 
 .tab2 {
@@ -221,6 +220,11 @@ input.tweet:focus::-webkit-input-placeholder {
     margin-top: -2px;
     text-align: center;
     width: 50%;
+}
+
+.tab3 {
+    float: left;
+    padding: 12px 43px 13px 42.5px;
 }
 
 /* Reusable Components */

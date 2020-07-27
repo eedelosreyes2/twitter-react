@@ -41,8 +41,9 @@ export class Notifications extends Component {
             <div>
                 <div className="center-col">
                     <div
-                        className="border-bottom"
                         style={{
+                            borderBottom: "2px solid",
+                            borderColor: "#e6ecf0",
                             height: "104px",
                         }}
                     >
