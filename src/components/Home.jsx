@@ -32,9 +32,13 @@ export class Home extends Component {
                     <TweetComponent currentUser={this.props.currentUser} />
                     <Feed />
                 </div>
-                <div className="right-col">
-                    <Pane1 />
-                </div>
+                {this.props.sizes.showRightPane ? (
+                    <div className="right-col">
+                        <Pane1 />
+                    </div>
+                ) : (
+                    "e"
+                )}
             </div>
         );
     }

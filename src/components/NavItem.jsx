@@ -4,6 +4,7 @@ import { IconContext } from "react-icons";
 
 export class NavItem extends Component {
     render() {
+        const { sizes } = this.props;
         const { id, href, icon, title } = this.props.navItem;
 
         return (
@@ -16,16 +17,25 @@ export class NavItem extends Component {
                     className={this.getClasses(href)}
                     id={id}
                     data-toggle="pill"
+                    style={
+                        sizes.navCollapsed
+                            ? { marginLeft: "17.5px", width: "48px" }
+                            : null
+                    }
                 >
                     <IconContext.Provider
                         value={{
                             size: "1.25em",
-                            style: { margin: "5px 15px 7.5px 15px" },
+                            style: {
+                                margin: sizes.navCollapsed
+                                    ? "5px 15px 7.5px 10px"
+                                    : "5px 15px 7.5px 15px",
+                            },
                         }}
                     >
                         {icon}
                     </IconContext.Provider>
-                    {title}
+                    {sizes.navCollapsed ? null : title}
                 </Link>
             </div>
         );

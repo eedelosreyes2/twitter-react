@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import NavItem from "./NavItem";
 import { IconContext } from "react-icons";
 import { AiOutlineTwitter, AiOutlineHome } from "react-icons/ai";
-import { FaHashtag } from "react-icons/fa";
+import { FaHashtag, FaFeatherAlt } from "react-icons/fa";
 import { FiMail, FiMoreHorizontal } from "react-icons/fi";
 import { BsBookmark } from "react-icons/bs";
 import {
@@ -108,6 +108,7 @@ export class Nav extends Component {
     };
 
     render() {
+        const { sizes } = this.props;
         const { handle, username, userImg } = this.props.currentUser;
 
         return (
@@ -115,12 +116,22 @@ export class Nav extends Component {
                 className="col border-right"
                 style={{
                     height: "100vh",
-                    maxWidth: "23.25%",
+                    width: sizes.navWidth,
                     position: "sticky",
                     top: 0,
                 }}
             >
-                <div className="col flex-column nav-pills pl-3">
+                <div
+                    style={
+                        sizes.navCollapsed
+                            ? { float: "right", marginRight: "10px" }
+                            : {
+                                  float: "right",
+                                  paddingLeft: "30px",
+                                  paddingRight: "50px",
+                              }
+                    }
+                >
                     <div className="aiOutlineTwitter-wrapper">
                         <IconContext.Provider
                             value={{
@@ -135,6 +146,7 @@ export class Nav extends Component {
                     </div>
                     {this.state.navItems.map((navItem) => (
                         <NavItem
+                            sizes={sizes}
                             onRefresh={this.handleRefresh}
                             onActive={this.handleActive}
                             onInactive={this.handleInactive}
@@ -142,49 +154,71 @@ export class Nav extends Component {
                             navItem={navItem}
                         />
                     ))}
-                    <button
-                        type="button"
-                        className="btn btn-block btn-primary rounded-pill mt-2"
-                        style={{ height: "50px", width: "225px" }}
-                    >
-                        Tweet
-                    </button>
-                </div>
-                <div
-                    className="nav-item"
-                    style={{
-                        bottom: "0",
-                        height: "60px",
-                        margin: "0px 0px 10px 10px",
-                        paddingBottom: "-12px",
-                        paddingLeft: "10px",
-                        paddingRight: "10px",
-                        paddingTop: "2px",
-                        position: "absolute",
-                    }}
-                >
-                    <img
-                        className="user m-2"
-                        style={{ float: "left", height: "40px", width: "40px" }}
-                        src={userImg}
-                        alt="User"
-                    />
-                    <div className="mt-2" style={{ float: "left" }}>
-                        <p className="font-weight-bold mb-n1">{username}</p>
-                        <p className="sub">{handle}</p>
-                    </div>
-                    <IconContext.Provider
-                        value={{
-                            size: "1.5em",
-                            style: {
-                                float: "right",
-                                marginLeft: "55px",
-                                marginTop: "15px",
-                            },
+                    {sizes.navCollapsed ? (
+                        <button
+                            type="button"
+                            className="btn btn-block btn-primary rounded-pill mt-2"
+                            style={{ height: "50px", width: "50px" }}
+                        >
+                            <IconContext.Provider
+                                value={{
+                                    color: "white",
+                                    size: "1.25em",
+                                    style: { marginBottom: "3px" },
+                                }}
+                            >
+                                <FaFeatherAlt />
+                            </IconContext.Provider>
+                        </button>
+                    ) : (
+                        <button
+                            type="button"
+                            className="btn btn-block btn-primary rounded-pill mt-2"
+                            style={{ height: "50px", width: "225px" }}
+                        >
+                            Tweet
+                        </button>
+                    )}
+                    <div
+                        className="nav-item"
+                        style={{
+                            bottom: 0,
+                            height: "60px",
+                            margin: "0px 0px 10px 0px",
+                            paddingBottom: "-12px",
+                            paddingRight: "10px",
+                            paddingTop: "2px",
+                            position: "absolute",
+                            width: sizes.navCollapsed ? "58px" : "auto",
                         }}
                     >
-                        <IoIosArrowDown />
-                    </IconContext.Provider>
+                        <img
+                            className="user m-2"
+                            style={{
+                                float: "left",
+                                height: "40px",
+                                width: "40px",
+                            }}
+                            src={userImg}
+                            alt="User"
+                        />
+                        <div className="mt-2" style={{ float: "left" }}>
+                            <p className="font-weight-bold mb-n1">{username}</p>
+                            <p className="sub">{handle}</p>
+                        </div>
+                        <IconContext.Provider
+                            value={{
+                                size: "1.5em",
+                                style: {
+                                    float: "right",
+                                    marginLeft: "45px",
+                                    marginTop: "15px",
+                                },
+                            }}
+                        >
+                            <IoIosArrowDown />
+                        </IconContext.Provider>
+                    </div>
                 </div>
             </div>
         );

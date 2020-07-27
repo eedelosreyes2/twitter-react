@@ -45,6 +45,14 @@ input:focus {
     font-weight: bold;
 }
 
+.container {
+    padding: 0;
+}
+
+.col {
+    padding: 0;
+}
+
 /* Variables */
 .twitter-blue {
     color: #1da1f2;
