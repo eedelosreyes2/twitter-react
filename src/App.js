@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Nav";
-import BottomBar from "./components/BottomBar";
+import NavBottom from "./components/NavBottom";
 import Home from "./components/Home";
 import Explore from "./components/Explore";
 import Notifications from "./components/Notifications";
@@ -58,6 +58,7 @@ export class App extends Component {
             navCollapsed,
             navWidth: navCollapsed ? 100 : 300,
             showRightPane: windowWidth > 1060,
+            collapseCenter: windowWidth < 700,
         };
 
         return (
@@ -71,7 +72,7 @@ export class App extends Component {
                     {sizes.showNav ? (
                         <Nav sizes={sizes} currentUser={currentUser} />
                     ) : (
-                        <BottomBar />
+                        <NavBottom />
                     )}
                     <Switch>
                         <Redirect exact from="/" to="/home" />
@@ -81,25 +82,44 @@ export class App extends Component {
                                 <Home sizes={sizes} currentUser={currentUser} />
                             )}
                         />
-                        <Route path="/explore" component={Explore} />
+                        <Route
+                            path="/explore"
+                            render={() => <Explore sizes={sizes} />}
+                        />
                         <Route
                             path="/notifications"
-                            component={Notifications}
+                            render={() => <Notifications sizes={sizes} />}
                         />
-                        <Route path="/messages" component={Messages} />
+                        <Route
+                            path="/messages"
+                            render={() => <Messages sizes={sizes} />}
+                        />
                         <Route
                             path="/bookmarks"
                             render={() => (
-                                <Bookmarks currentUser={currentUser} />
+                                <Bookmarks
+                                    sizes={sizes}
+                                    currentUser={currentUser}
+                                />
                             )}
                         />
                         <Route
                             path="/lists"
-                            render={() => <Lists currentUser={currentUser} />}
+                            render={() => (
+                                <Lists
+                                    sizes={sizes}
+                                    currentUser={currentUser}
+                                />
+                            )}
                         />
                         <Route
                             path="/profile"
-                            render={() => <Profile currentUser={currentUser} />}
+                            render={() => (
+                                <Profile
+                                    sizes={sizes}
+                                    currentUser={currentUser}
+                                />
+                            )}
                         />
                     </Switch>
                 </Router>

@@ -4,7 +4,12 @@ import { Link } from "react-router-dom";
 export class ExploreBar extends Component {
     render() {
         return (
-            <div style={{ paddingTop: "67px" }}>
+            <div
+                style={{
+                    paddingTop: "67px",
+                    maxWidth: this.props.collapseCenter ? "80vw" : "600px",
+                }}
+            >
                 {this.props.tabs.map((tab) => {
                     const { id, title, href, isCurrent } = tab;
                     let className = "tab header3 p-3 ";

@@ -7,8 +7,8 @@ import Breadcrumbs from "./Breadcrumbs";
 export class Pane1 extends Component {
     render() {
         return (
-            <div style={{ display: "inline-block", float: "right" }}>
-                <SearchBar type="1" />
+            <div style={{ float: "right" }}>
+                <SearchBar sizes={null} type="1" />
                 <WhatsHappening />
                 <Follow title="Who to follow" />
                 <Breadcrumbs />

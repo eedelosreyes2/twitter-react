@@ -70,11 +70,16 @@ export class Explore extends Component {
     };
 
     render() {
+        const { sizes } = this.props;
+
         return (
             <React.Fragment>
-                <div className="center-col">
+                <div
+                    className="center-col"
+                    style={{ width: sizes.collapseCenter ? "80vw" : "600px" }}
+                >
                     <div className="explore-header mt-1">
-                        <SearchBar type="2" />
+                        <SearchBar sizes={sizes} type="2" />
                         <div
                             className="fiSettings-wrapper"
                             style={{
@@ -95,15 +100,18 @@ export class Explore extends Component {
                             </IconContext.Provider>
                         </div>
                         <ExploreBar
+                            sizes={sizes}
                             tabs={this.state.tabs}
                             onCurrent={this.handleCurrent}
                         />
                     </div>
                 </div>
-                <div className="right-col">
-                    <Follow title="Who to follow" />
-                    <Breadcrumbs />
-                </div>
+                {sizes.showRightPane ? (
+                    <div className="right-col">
+                        <Follow title="Who to follow" />
+                        <Breadcrumbs />
+                    </div>
+                ) : null}
             </React.Fragment>
         );
     }

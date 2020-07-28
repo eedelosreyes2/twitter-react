@@ -32,6 +32,7 @@ input:focus {
     left: 0;
     right: 0;
     overflow: auto;
+    /* background-color: rebeccapurple; */
 }
 
 /* Bootstrap */
@@ -94,7 +95,7 @@ input:focus {
     border-color: #dee2e3;
     display: inline-block;
     height: 100%;
-    width: 600px;
+    /* width: 600px; */
 }
 
 .center-col-sm {
@@ -190,7 +191,7 @@ input.tweet:focus::-webkit-input-placeholder {
     height: 32px;
     margin-left: 20px;
     margin-top: 6px;
-    width: 510px;
+    /* width: 510px; */
 }
 
 .search-bar3 {

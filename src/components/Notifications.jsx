@@ -37,9 +37,14 @@ export class Notifications extends Component {
     };
 
     render() {
+        const { sizes } = this.props;
+
         return (
             <div>
-                <div className="center-col">
+                <div
+                    className="center-col"
+                    style={{ width: sizes.collapseCenter ? "80vw" : "600px" }}
+                >
                     <div
                         style={{
                             borderBottom: "2px solid",
@@ -71,7 +76,12 @@ export class Notifications extends Component {
                             Notifications
                         </div>
 
-                        <div style={{ overflow: "hidden", width: "600px" }}>
+                        <div
+                            style={{
+                                overflow: "hidden",
+                                width: sizes.collapseCenter ? "80vw" : "600px",
+                            }}
+                        >
                             {this.state.tabs.map((tab) => {
                                 const { id, title, href, isCurrent } = tab;
                                 let className = "tab tab2 header3 p-3 ";
@@ -98,9 +108,11 @@ export class Notifications extends Component {
                     </p>
                     <p className="sub text-center mt-n2">{this.renderBody()}</p>
                 </div>
-                <div className="right-col">
-                    <Pane1 />
-                </div>
+                {sizes.showRightPane ? (
+                    <div className="right-col">
+                        <Pane1 />
+                    </div>
+                ) : null}
             </div>
         );
     }

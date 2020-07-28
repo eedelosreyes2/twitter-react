@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-export class BottomBar extends Component {
+export class NavBottom extends Component {
     render() {
         return <div></div>;
     }
 }
 
-export default BottomBar;
+export default NavBottom;

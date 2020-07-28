@@ -61,9 +61,14 @@ export class Profile extends Component {
             numTweets,
         } = this.props.currentUser;
 
+        const { sizes } = this.props;
+
         return (
             <div>
-                <div className="center-col">
+                <div
+                    className="center-col"
+                    style={{ width: sizes.collapseCenter ? "80vw" : "600px" }}
+                >
                     <div
                         className="border-bottom pl-3 pt-1"
                         style={{ height: "55px" }}
@@ -102,12 +107,14 @@ export class Profile extends Component {
                         onCurrent={this.handleCurrent}
                     />
                 </div>
-                <div style={{ float: "right" }}>
-                    <SearchBar type="1" />
-                    <Follow title="You might like" />
-                    <WhatsHappening />
-                    <Breadcrumbs />
-                </div>
+                {this.props.sizes.showRightPane ? (
+                    <div style={{ float: "right" }}>
+                        <SearchBar type="1" />
+                        <Follow title="You might like" />
+                        <WhatsHappening />
+                        <Breadcrumbs />
+                    </div>
+                ) : null}
             </div>
         );
     }

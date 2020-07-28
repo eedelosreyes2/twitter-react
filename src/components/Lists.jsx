@@ -7,9 +7,14 @@ import { FiMoreHorizontal } from "react-icons/fi";
 
 export class Lists extends Component {
     render() {
+        const { sizes } = this.props;
+
         return (
             <div>
-                <div className="center-col">
+                <div
+                    className="center-col"
+                    style={{ width: sizes.collapseCenter ? "80vw" : "600px" }}
+                >
                     <div
                         className="border-bottom pl-3 pt-1"
                         style={{ height: "55px" }}
@@ -103,9 +108,11 @@ export class Lists extends Component {
                         </button>
                     </div>
                 </div>
-                <div className="right-col">
-                    <Pane1 />
-                </div>
+                {this.props.sizes.showRightPane ? (
+                    <div className="right-col">
+                        <Pane1 />
+                    </div>
+                ) : null}
             </div>
         );
     }

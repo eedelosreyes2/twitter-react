@@ -3,9 +3,14 @@ import { Pane1 } from "./Pane1";
 
 export class Bookmarks extends Component {
     render() {
+        const { sizes } = this.props;
+
         return (
             <div>
-                <div className="center-col">
+                <div
+                    className="center-col"
+                    style={{ width: sizes.collapseCenter ? "80vw" : "600px" }}
+                >
                     <div
                         className="border-bottom pl-3 pt-1"
                         style={{ height: "55px" }}
@@ -22,9 +27,11 @@ export class Bookmarks extends Component {
                         When you do, they’ll show up here.
                     </p>
                 </div>
-                <div className="right-col">
-                    <Pane1 />
-                </div>
+                {this.props.sizes.showRightPane ? (
+                    <div className="right-col">
+                        <Pane1 />
+                    </div>
+                ) : null}
             </div>
         );
     }

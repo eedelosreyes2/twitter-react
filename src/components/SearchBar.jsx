@@ -4,8 +4,13 @@ import { RiSearchLine } from "react-icons/ri";
 
 export class SearchBar extends Component {
     render() {
+        const { sizes } = this.props;
+
         return (
-            <div className={this.getBarClasses()}>
+            <div
+                className={this.getBarClasses()}
+                style={{ width: this.getWidth(sizes) }}
+            >
                 <div className="ml-3">
                     <IconContext.Provider
                         value={{
@@ -36,6 +41,17 @@ export class SearchBar extends Component {
         let className = "form-control-md search-input search-input";
         className += this.props.type;
         return className;
+    };
+
+    getWidth = (sizes) => {
+        const type = this.props.type;
+        let width;
+        if (type === "2") {
+            width = sizes.collapseCenter ? "65vw" : "510px";
+        } else {
+            width = "unset";
+        }
+        return width;
     };
 
     getPlaceholder = () => {

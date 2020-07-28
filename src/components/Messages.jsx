@@ -39,34 +39,41 @@ export class Messages extends Component {
                     </div>
                 </div>
 
-                <div style={{ float: "right" }}>
+                {this.props.sizes.showRightPane ? (
                     <div
                         style={{
-                            marginLeft: "100px",
-                            marginTop: "285px",
-                            width: "400px",
+                            float: "right",
+                            width: "584px",
                         }}
                     >
-                        <p className="header2 text-center pt-3">
-                            You don't have a message selected
-                        </p>
-                        <p className="sub text-center mt-n2">
-                            Choose one from your existing messages, or start a
-                            new one
-                        </p>
-                        <button
-                            type="button"
-                            className="btn btn-block btn-primary rounded-pill mt-2"
+                        <div
                             style={{
-                                height: "40px",
-                                marginLeft: "125px",
-                                width: "140px",
+                                marginLeft: "100px",
+                                marginTop: "285px",
+                                width: "400px",
                             }}
                         >
-                            New message
-                        </button>
+                            <p className="header2 text-center pt-3">
+                                You don't have a message selected
+                            </p>
+                            <p className="sub text-center mt-n2">
+                                Choose one from your existing messages, or start
+                                a new one
+                            </p>
+                            <button
+                                type="button"
+                                className="btn btn-block btn-primary rounded-pill mt-2"
+                                style={{
+                                    height: "40px",
+                                    marginLeft: "125px",
+                                    width: "140px",
+                                }}
+                            >
+                                New message
+                            </button>
+                        </div>
                     </div>
-                </div>
+                ) : null}
             </div>
         );
     }

@@ -7,9 +7,16 @@ import { WiStars } from "react-icons/wi";
 
 export class Home extends Component {
     render() {
+        const { sizes } = this.props;
+
         return (
             <div>
-                <div className="center-col">
+                <div
+                    className="center-col"
+                    style={{
+                        width: sizes.collapseCenter ? "80vw" : "600px",
+                    }}
+                >
                     <div className="header1 border-bottom pb-2 pl-3 pr-2 pt-2 mt-1">
                         Home
                         <div
@@ -32,13 +39,7 @@ export class Home extends Component {
                     <TweetComponent currentUser={this.props.currentUser} />
                     <Feed />
                 </div>
-                {this.props.sizes.showRightPane ? (
-                    <div className="right-col">
-                        <Pane1 />
-                    </div>
-                ) : (
-                    "e"
-                )}
+                {sizes.showRightPane ? <Pane1 /> : null}
             </div>
         );
     }
