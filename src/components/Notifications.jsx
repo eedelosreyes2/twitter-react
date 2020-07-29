@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Pane1 } from "./Pane1";
+import { Pane1 } from "./Reusable/Pane1";
 import { IconContext } from "react-icons";
 import { FiSettings } from "react-icons/fi";
 
@@ -108,11 +108,7 @@ export class Notifications extends Component {
                     </p>
                     <p className="sub text-center mt-n2">{this.renderBody()}</p>
                 </div>
-                {sizes.showRightPane ? (
-                    <div className="right-col">
-                        <Pane1 />
-                    </div>
-                ) : null}
+                {sizes.showRightPane ? <Pane1 /> : null}
             </React.Fragment>
         );
     }

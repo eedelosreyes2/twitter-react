@@ -1,0 +1,69 @@
+.user {
+    border-radius: 50%;
+    height: 49px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 49px;
+}
+
+input.tweet:focus::-webkit-input-placeholder {
+    color: #bdc1c9;
+}
+
+.tweet-cmp {
+    border-bottom: 10px solid;
+    border-color: #e6ecf0;
+    height: 120px;
+}
+
+.tweet-item-wrapper {
+    border-radius: 50%;
+    float: left;
+    height: 30px;
+    padding: 1px 0px 0px 5px;
+    margin: -3px 10px 0px 0px;
+    width: 30px;
+}
+
+.tweet-item-wrapper:hover {
+    background-color: rgb(218, 241, 255);
+}
+
+.post {
+    border-bottom: 1px solid;
+    border-color: #dee2e3;
+    display: flex;
+    min-height: 100px;
+    padding: 8px 0px;
+}
+
+.post-user {
+    float: left;
+    height: 100%;
+    max-width: 78px;
+}
+
+.post-icon-wrapper {
+    color: #657787;
+    float: left;
+    font-size: 15px;
+    /* margin-right: 80px; */
+    margin-right: 7vw;
+    width: 50px;
+}
+
+.post-icon-comment:hover {
+    color: #1da1f2;
+}
+
+.post-icon-retweet:hover {
+    color: green;
+}
+
+.post-icon-like:hover {
+    color: red;
+}
+
+.post-icon {
+    color: #657787;
+}

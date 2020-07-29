@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { IconContext } from "react-icons";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import ProfileBar from "./ProfileBar";
-import SearchBar from "./SearchBar";
-import Follow from "./Follow";
-import WhatsHappening from "./WhatsHappening";
-import Breadcrumbs from "./Breadcrumbs";
+import SearchBar from "../SearchBar/SearchBar";
+import Follow from "../Reusable/Follow";
+import WhatsHappening from "../Reusable/WhatsHappening";
+import Breadcrumbs from "../Reusable/Breadcrumbs";
 
 export class Profile extends Component {
     state = {

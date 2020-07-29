@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Pane1 } from "./Pane1";
+import { Pane1 } from "./Reusable/Pane1";
 
 export class Bookmarks extends Component {
     render() {
@@ -27,11 +27,7 @@ export class Bookmarks extends Component {
                         When you do, they’ll show up here.
                     </p>
                 </div>
-                {this.props.sizes.showRightPane ? (
-                    <div className="right-col">
-                        <Pane1 />
-                    </div>
-                ) : null}
+                {this.props.sizes.showRightPane ? <Pane1 /> : null}
             </div>
         );
     }

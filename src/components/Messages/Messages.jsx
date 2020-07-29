@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { RiMailAddLine } from "react-icons/ri";
-import { SearchBar } from "./SearchBar";
+import { SearchBar } from "../SearchBar/SearchBar";
+import "./Messages.css";
 
 export class Messages extends Component {
     render() {

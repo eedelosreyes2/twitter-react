@@ -1,0 +1,12 @@
+.riMailAddLine-wrapper {
+    border-radius: 50%;
+    color: #1da1f2;
+    float: right;
+    height: 32px;
+    padding: 0px 6px;
+    width: 32px;
+}
+
+.riMailAddLine-wrapper:hover {
+    background-color: rgb(218, 241, 255);
+}

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import TweetComponent from "./TweetComponent";
 import Feed from "./Feed";
-import Pane1 from "./Pane1";
+import Pane1 from "../Reusable/Pane1";
 import { IconContext } from "react-icons";
 import { WiStars } from "react-icons/wi";
+import "./Home.css";
 
 export class Home extends Component {
     render() {

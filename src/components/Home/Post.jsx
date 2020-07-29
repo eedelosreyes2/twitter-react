@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { IconContext } from "react-icons";
 import { FaRegComment, FaRetweet, FaRegHeart } from "react-icons/fa";
 import { FiShare } from "react-icons/fi";
+import "./Home.css";
 
 export class Post extends Component {
     render() {

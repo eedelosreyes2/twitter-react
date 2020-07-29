@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { Pane1 } from "./Pane1";
+import { Pane1 } from "../Reusable/Pane1";
 import { IconContext } from "react-icons";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { MdPlaylistAdd } from "react-icons/md";
 import { FiMoreHorizontal } from "react-icons/fi";
+import "./Lists.css";
 
 export class Lists extends Component {
     render() {
@@ -109,11 +110,7 @@ export class Lists extends Component {
                         </button>
                     </div>
                 </div>
-                {this.props.sizes.showRightPane ? (
-                    <div className="right-col">
-                        <Pane1 />
-                    </div>
-                ) : null}
+                {this.props.sizes.showRightPane ? <Pane1 /> : null}
             </div>
         );
     }

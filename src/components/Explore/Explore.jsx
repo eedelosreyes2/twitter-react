@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import SearchBar from "./SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
 import ExploreBar from "./ExploreBar";
-import Follow from "./Follow";
-import Breadcrumbs from "./Breadcrumbs";
+import Follow from "../Reusable/Follow";
+import Breadcrumbs from "../Reusable/Breadcrumbs";
 import { IconContext } from "react-icons";
 import { FiSettings } from "react-icons/fi";
+import "./Explore.css";
 
 export class Explore extends Component {
     state = {
@@ -107,7 +108,7 @@ export class Explore extends Component {
                     </div>
                 </div>
                 {sizes.showRightPane ? (
-                    <div className="right-col">
+                    <div style={{ float: "right" }}>
                         <Follow title="Who to follow" />
                         <Breadcrumbs />
                     </div>

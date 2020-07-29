@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
+import "./Nav.css";
 
 export class NavItem extends Component {
     render() {

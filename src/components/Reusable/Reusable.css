@@ -1,0 +1,16 @@
+.hoverable:hover {
+    background-color: #edf0f1;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.show-more:hover {
+    background-color: #edf0f1;
+    border-radius: 0px 0px 15px 15px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.story-title {
+    font-weight: bold;
+}

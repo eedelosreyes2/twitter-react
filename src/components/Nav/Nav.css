@@ -1,0 +1,23 @@
+.aiOutlineTwitter-wrapper {
+    border-radius: 50%;
+    height: 42px;
+    padding: 4px 0px 0px 4px;
+    margin: 5px 5px;
+    width: 42px;
+}
+
+.aiOutlineTwitter-wrapper:hover {
+    background-color: rgb(218, 241, 255);
+    cursor: pointer;
+}
+
+.nav-link {
+    padding: 5px 45px 5px 0px;
+    margin-left: 12px;
+}
+
+.nav-item:hover {
+    background-color: rgb(218, 241, 255);
+    border-radius: 50px;
+    cursor: pointer;
+}

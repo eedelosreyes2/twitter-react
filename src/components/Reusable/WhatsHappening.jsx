@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export class WhatsHappening extends Component {
     state = {
@@ -78,7 +79,9 @@ export class WhatsHappening extends Component {
                         </div>
                     );
                 })}
-                <div className="show-more twitter-blue p-3">Show more</div>
+                <Link to="/explore">
+                    <div className="show-more twitter-blue p-3">Show more</div>
+                </Link>
             </div>
         );
     }

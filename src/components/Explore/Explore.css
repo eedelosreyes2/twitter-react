@@ -1,0 +1,17 @@
+.explore-header {
+    border-bottom: 11px solid;
+    border-color: #e6ecf0;
+    height: 115px;
+}
+
+.fiSettings-wrapper {
+    border-radius: 50%;
+    height: 42px;
+    margin: 3px 5px;
+    width: 42px;
+}
+
+.fiSettings-wrapper:hover {
+    background-color: rgb(218, 241, 255);
+    cursor: pointer;
+}

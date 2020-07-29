@@ -6,15 +6,15 @@ import {
     Redirect,
 } from "react-router-dom";
 import "./App.css";
-import Nav from "./components/Nav";
-import NavBottom from "./components/NavBottom";
-import Home from "./components/Home";
-import Explore from "./components/Explore";
+import Nav from "./components/Nav/Nav";
+import NavBottom from "./components/Nav/NavBottom";
+import Home from "./components/Home/Home";
+import Explore from "./components/Explore/Explore";
 import Notifications from "./components/Notifications";
-import Messages from "./components/Messages";
+import Messages from "./components/Messages/Messages";
 import Bookmarks from "./components/Bookmarks";
-import Lists from "./components/Lists";
-import Profile from "./components/Profile";
+import Lists from "./components/Lists/Lists";
+import Profile from "./components/Profile/Profile";
 
 export class App extends Component {
     state = {

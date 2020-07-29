@@ -1,4 +1,4 @@
-/* Overrides */
+/* Styles in this file are shared among multiple components */
 :root {
     --twitter-blue: #1da1f2;
 }
@@ -11,6 +11,7 @@ body {
 
 a:hover {
     color: #1da1f2;
+    text-decoration: none;
 }
 
 input {
@@ -36,7 +37,6 @@ input:focus {
     justify-content: space-between;
 }
 
-/* Bootstrap */
 .text-primary {
     color: #1da1f2;
 }
@@ -51,7 +51,6 @@ input:focus {
     padding: 0;
 }
 
-/* Variables */
 .twitter-blue {
     color: #1da1f2;
 }
@@ -86,13 +85,11 @@ input:focus {
     font-weight: 500;
 }
 
-/* Main Components */
 .center-col {
     border-right: 1px solid;
     border-color: #dee2e3;
     display: inline-block;
     height: 100%;
-    /* width: 600px; */
 }
 
 .center-col-sm {
@@ -103,113 +100,6 @@ input:focus {
     width: 390px;
 }
 
-.right-col {
-    float: right;
-}
-
-/* Nav Components */
-.aiOutlineTwitter-wrapper {
-    border-radius: 50%;
-    height: 42px;
-    padding: 4px 0px 0px 4px;
-    margin: 5px 5px;
-    width: 42px;
-}
-
-.aiOutlineTwitter-wrapper:hover {
-    background-color: rgb(218, 241, 255);
-    cursor: pointer;
-}
-
-.nav-link {
-    padding: 5px 45px 5px 0px;
-    margin-left: 12px;
-}
-
-.nav-item:hover {
-    background-color: rgb(218, 241, 255);
-    border-radius: 50px;
-    cursor: pointer;
-}
-
-/* Tweet Components */
-.user {
-    border-radius: 50%;
-    height: 49px;
-    margin-left: 2px;
-    margin-right: 2px;
-    width: 49px;
-}
-
-input.tweet:focus::-webkit-input-placeholder {
-    color: #bdc1c9;
-}
-
-.tweet-cmp {
-    border-bottom: 10px solid;
-    border-color: #e6ecf0;
-    height: 120px;
-}
-
-.tweet-item-wrapper {
-    border-radius: 50%;
-    float: left;
-    height: 30px;
-    padding: 1px 0px 0px 5px;
-    margin: -3px 10px 0px 0px;
-    width: 30px;
-}
-
-.tweet-item-wrapper:hover {
-    background-color: rgb(218, 241, 255);
-}
-
-/* Search Bar Components */
-.search-bar {
-    background-color: #e6ecf0;
-    border-radius: 50px;
-}
-
-.search-input {
-    background-color: unset;
-    border: unset;
-    margin-left: 10px;
-    display: inline-block;
-}
-
-.search-bar1 {
-    height: 40px;
-    margin-left: 25px;
-    margin-top: 20px;
-}
-
-.search-bar2 {
-    float: left;
-    height: 32px;
-    margin-left: 20px;
-    margin-top: 6px;
-    /* width: 510px; */
-}
-
-.search-bar3 {
-    margin: 10px 10px 0px 10px;
-    height: 40px;
-}
-
-.search-input1 {
-    margin-top: 7px;
-}
-
-.search-input2 {
-    margin-top: 3px;
-}
-
-.search-input3 {
-    margin-top: 6px;
-    width: 300px;
-}
-
-/* Tab Components */
 .tab:hover {
     background-color: rgb(218, 241, 255);
     color: var(--twitter-blue);
@@ -231,107 +121,4 @@ input.tweet:focus::-webkit-input-placeholder {
 .tab3 {
     float: left;
     padding: 12px 43px 13px 42.5px;
-}
-
-/* Reusable Components */
-.hoverable:hover {
-    background-color: #edf0f1;
-    cursor: pointer;
-    z-index: 99;
-}
-
-.show-more:hover {
-    background-color: #edf0f1;
-    border-radius: 0px 0px 15px 15px;
-    cursor: pointer;
-    z-index: 99;
-}
-
-.story-title {
-    font-weight: bold;
-}
-
-/* Post Components */
-.post {
-    border-bottom: 1px solid;
-    border-color: #dee2e3;
-    display: flex;
-    min-height: 100px;
-    padding: 8px 0px;
-}
-
-.post-user {
-    float: left;
-    height: 100%;
-    max-width: 78px;
-}
-
-.post-icon-wrapper {
-    color: #657787;
-    float: left;
-    font-size: 15px;
-    margin-right: 80px;
-    width: 50px;
-}
-
-.post-icon-comment:hover {
-    color: #1da1f2;
-}
-
-.post-icon-retweet:hover {
-    color: green;
-}
-
-.post-icon-like:hover {
-    color: red;
-}
-
-.post-icon {
-    color: #657787;
-}
-
-/* Explore Components */
-.explore-header {
-    border-bottom: 11px solid;
-    border-color: #e6ecf0;
-    height: 115px;
-}
-
-.fiSettings-wrapper {
-    border-radius: 50%;
-    height: 42px;
-    margin: 3px 5px;
-    width: 42px;
-}
-
-.fiSettings-wrapper:hover {
-    background-color: rgb(218, 241, 255);
-    cursor: pointer;
-}
-
-/* Messages Components */
-.riMailAddLine-wrapper {
-    border-radius: 50%;
-    color: #1da1f2;
-    float: right;
-    height: 32px;
-    padding: 0px 6px;
-    width: 32px;
-}
-
-.riMailAddLine-wrapper:hover {
-    background-color: rgb(218, 241, 255);
-}
-
-/* Lists Components */
-.ioIosArrowRoundBack-wrapper {
-    border-radius: 50%;
-    float: left;
-    height: 32px;
-    margin-top: 7px;
-    width: 32px;
-}
-
-.ioIosArrowRoundBack-wrapper:hover {
-    background-color: rgb(218, 241, 255);
 }

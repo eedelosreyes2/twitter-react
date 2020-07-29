@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { IconContext } from "react-icons";
 import { RiSearchLine } from "react-icons/ri";
+import "./SearchBar.css";
 
 export class SearchBar extends Component {
     render() {
