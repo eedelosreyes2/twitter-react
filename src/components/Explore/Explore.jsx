@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CenterCol from "../Reusable/CenterCol";
 import SearchBar from "../SearchBar/SearchBar";
 import ExploreBar from "./ExploreBar";
 import Follow from "../Reusable/Follow";
@@ -75,43 +76,51 @@ export class Explore extends Component {
 
         return (
             <React.Fragment>
-                <div
-                    className="center-col"
-                    style={{ width: sizes.collapseCenter ? "80vw" : "600px" }}
-                >
-                    <div className="explore-header mt-1">
-                        <SearchBar
-                            placeholder="Search Twitter"
-                            style={{ height: "38px", width: "auto" }}
-                        />
-                        <div
-                            className="fiSettings-wrapper"
-                            style={{
-                                float: "right",
-                            }}
-                        >
-                            <IconContext.Provider
-                                value={{
-                                    className: "twitter-blue",
-                                    size: "1.25em",
-                                    style: {
-                                        float: "right",
-                                        margin: "11px 11px",
-                                    },
+                <CenterCol
+                    sizes={sizes}
+                    component={
+                        <div className="explore-header mt-1">
+                            <SearchBar
+                                placeholder="Search Twitter"
+                                style={{ height: "38px", width: "auto" }}
+                            />
+                            <div
+                                className="fiSettings-wrapper"
+                                style={{
+                                    float: "right",
                                 }}
                             >
-                                <FiSettings />
-                            </IconContext.Provider>
+                                <IconContext.Provider
+                                    value={{
+                                        className: "twitter-blue",
+                                        size: "1.25em",
+                                        style: {
+                                            float: "right",
+                                            margin: "11px 11px",
+                                        },
+                                    }}
+                                >
+                                    <FiSettings />
+                                </IconContext.Provider>
+                            </div>
+                            <ExploreBar
+                                sizes={sizes}
+                                tabs={this.state.tabs}
+                                onCurrent={this.handleCurrent}
+                            />
                         </div>
-                        <ExploreBar
-                            sizes={sizes}
-                            tabs={this.state.tabs}
-                            onCurrent={this.handleCurrent}
-                        />
-                    </div>
-                </div>
+                    }
+                />
                 {sizes.showRightPane ? (
-                    <div style={{ float: "right" }}>
+                    <div
+                        style={{
+                            alignItems: "center",
+                            display: "flex",
+                            flexDirection: "column",
+                            float: "right",
+                            width: "380px",
+                        }}
+                    >
                         <Follow title="Who to follow" />
                         <Breadcrumbs />
                     </div>

@@ -10,11 +10,10 @@ export class Pane1 extends Component {
         return (
             <div
                 style={{
-                    // backgroundColor: "red",
-                    float: "right",
                     alignItems: "center",
                     display: "flex",
                     flexDirection: "column",
+                    float: "right",
                     width: "380px",
                 }}
             >

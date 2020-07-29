@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { IconContext } from "react-icons";
 import { RiSearchLine } from "react-icons/ri";
 import { AiFillCloseCircle } from "react-icons/ai";
+import "./SearchBar.css";
 
 export class SearchBar extends Component {
     state = {

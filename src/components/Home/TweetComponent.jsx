@@ -26,7 +26,7 @@ export class WhatsHappening extends Component {
                     <input
                         type="text"
                         className="tweet form-control-lg border-0 pt-4 ml-n2"
-                        style={{ backgroundColor: "unset" }}
+                        style={{ backgroundColor: "unset", color: "red" }}
                         placeholder="What's happening?"
                     />
                 </div>

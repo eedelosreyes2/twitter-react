@@ -6,6 +6,10 @@
     width: 49px;
 }
 
+input::placeholder {
+    color: #6b7b8a;
+}
+
 input.tweet:focus::-webkit-input-placeholder {
     color: #bdc1c9;
 }
