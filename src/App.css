@@ -92,14 +92,6 @@ input:focus {
     height: 100%;
 }
 
-.center-col-sm {
-    border-right: 1px solid;
-    border-color: #dee2e3;
-    display: inline-block;
-    height: 100%;
-    width: 390px;
-}
-
 .tab:hover {
     background-color: rgb(218, 241, 255);
     color: var(--twitter-blue);

@@ -8,8 +8,20 @@ import "./Reusable.css";
 export class Pane1 extends Component {
     render() {
         return (
-            <div style={{ float: "right" }}>
-                <SearchBar sizes={null} type="1" />
+            <div
+                style={{
+                    // backgroundColor: "red",
+                    float: "right",
+                    alignItems: "center",
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "380px",
+                }}
+            >
+                <SearchBar
+                    placeholder={"Search Twitter"}
+                    style={{ height: "38px", width: "350px" }}
+                />
                 <WhatsHappening />
                 <Follow title="Who to follow" />
                 <Breadcrumbs />

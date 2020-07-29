@@ -80,7 +80,10 @@ export class Explore extends Component {
                     style={{ width: sizes.collapseCenter ? "80vw" : "600px" }}
                 >
                     <div className="explore-header mt-1">
-                        <SearchBar sizes={sizes} type="2" />
+                        <SearchBar
+                            placeholder="Search Twitter"
+                            style={{ height: "38px", width: "auto" }}
+                        />
                         <div
                             className="fiSettings-wrapper"
                             style={{

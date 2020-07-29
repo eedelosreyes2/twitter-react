@@ -5,9 +5,16 @@ import "./Messages.css";
 
 export class Messages extends Component {
     render() {
+        const { sizes } = this.props;
+
         return (
             <div>
-                <div className="center-col-sm">
+                <div
+                    className="center-col-sm"
+                    style={{
+                        width: sizes.showRightPane ? "406px" : "80vw",
+                    }}
+                >
                     <div className="header1 border-bottom pb-2 pl-3 pr-2 pt-2 mt-1">
                         Messages
                         <div className="riMailAddLine-wrapper">
@@ -15,7 +22,7 @@ export class Messages extends Component {
                         </div>
                     </div>
                     <div className="border-bottom" style={{ height: "53px" }}>
-                        <SearchBar type="3" />
+                        <SearchBar sizes={sizes} type="3" />
                     </div>
                     <div className="p-4">
                         <p className="header2 text-center pt-3">
@@ -40,7 +47,7 @@ export class Messages extends Component {
                     </div>
                 </div>
 
-                {this.props.sizes.showRightPane ? (
+                {sizes.showRightPane ? (
                     <div
                         style={{
                             float: "right",

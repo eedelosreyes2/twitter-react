@@ -73,6 +73,13 @@ export class Notifications extends Component {
                         </div>
 
                         <div className="header1 pb-1 pl-3 pr-2 pt-2 mt-1 mb-2">
+                            {sizes.showNav ? null : (
+                                <img
+                                    className="user p-2 ml-n2 mr-3 mb-n4"
+                                    src={this.props.currentUser.userImg}
+                                    alt="User"
+                                />
+                            )}
                             Notifications
                         </div>
 

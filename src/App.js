@@ -54,7 +54,7 @@ export class App extends Component {
         const navCollapsed = windowWidth < 1260;
 
         const sizes = {
-            showNav: windowWidth > 436,
+            showNav: windowWidth > 500,
             navCollapsed,
             navWidth: navCollapsed ? 70 : 270,
             navMargin: navCollapsed ? 0 : 10,
@@ -96,7 +96,10 @@ export class App extends Component {
                                 <Route
                                     path="/notifications"
                                     render={() => (
-                                        <Notifications sizes={sizes} />
+                                        <Notifications
+                                            sizes={sizes}
+                                            currentUser={currentUser}
+                                        />
                                     )}
                                 />
                                 <Route

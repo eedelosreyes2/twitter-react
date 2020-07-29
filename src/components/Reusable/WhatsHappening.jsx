@@ -43,10 +43,10 @@ export class WhatsHappening extends Component {
     render() {
         return (
             <div
-                className="ml-4 mt-3"
                 style={{
                     backgroundColor: "#f5f8fa",
                     borderRadius: "15px",
+                    margin: "10px auto",
                     maxHeight: "450px",
                     width: "350px",
                 }}
