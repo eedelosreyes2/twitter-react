@@ -117,31 +117,23 @@ export class Nav extends Component {
                 style={{
                     display: "inline-block",
                     height: "100vh",
-                    marginLeft: sizes.navMargin,
+                    padding: sizes.navCollapsed
+                        ? "0 10px 0 10px"
+                        : "0 0 0 17px",
                     position: "sticky",
                     top: 0,
                     width: sizes.navWidth,
                 }}
             >
-                <div
-                    style={
-                        sizes.navCollapsed
-                            ? { float: "right", marginRight: "10px" }
-                            : {
-                                  float: "right",
-                                  paddingLeft: "30px",
-                                  paddingRight: "50px",
-                              }
-                    }
-                >
-                    <div className="aiOutlineTwitter-wrapper">
+                <div>
+                    <div className="nav-icon-wrapper">
                         <IconContext.Provider
                             value={{
                                 className: "twitter-blue",
                                 size: "2.2em",
                             }}
                         >
-                            <Link to="/home" style={{ cursor: "pointer" }}>
+                            <Link to="/home">
                                 <AiOutlineTwitter />
                             </Link>
                         </IconContext.Provider>
@@ -159,7 +151,7 @@ export class Nav extends Component {
                     {sizes.navCollapsed ? (
                         <button
                             type="button"
-                            className="btn btn-block btn-primary rounded-pill mt-2"
+                            className="btn btn-block btn-primary rounded-pill"
                             style={{ height: "50px", width: "50px" }}
                         >
                             <IconContext.Provider
@@ -175,7 +167,7 @@ export class Nav extends Component {
                     ) : (
                         <button
                             type="button"
-                            className="btn btn-block btn-primary rounded-pill mt-2"
+                            className="btn btn-block btn-primary rounded-pill"
                             style={{ height: "50px", width: "225px" }}
                         >
                             Tweet
@@ -187,10 +179,8 @@ export class Nav extends Component {
                             bottom: 0,
                             height: "60px",
                             margin: "0px 0px 10px 0px",
-                            paddingBottom: "-12px",
-                            paddingRight: "10px",
-                            paddingTop: "2px",
-                            position: "absolute",
+                            padding: "2px 10px -12px 0",
+                            position: "fixed",
                             width: sizes.navCollapsed ? "58px" : "auto",
                         }}
                     >

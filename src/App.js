@@ -76,7 +76,7 @@ export class App extends Component {
             showRightPane,
             smallTablet,
             width,
-            navWidth: navCollapsed ? 70 : 270,
+            navWidth: navCollapsed ? 70 : 285,
             navMargin: navCollapsed ? 0 : 10,
         };
 

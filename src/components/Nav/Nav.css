@@ -1,4 +1,4 @@
-.aiOutlineTwitter-wrapper {
+.nav-icon-wrapper {
     border-radius: 50%;
     height: 42px;
     padding: 4px 0px 0px 4px;
@@ -6,7 +6,7 @@
     width: 42px;
 }
 
-.aiOutlineTwitter-wrapper:hover {
+.nav-icon-wrapper:hover {
     background-color: rgb(218, 241, 255);
     cursor: pointer;
 }
