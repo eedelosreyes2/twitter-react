@@ -40,7 +40,7 @@ export class Notifications extends Component {
         const { sizes } = this.props;
 
         return (
-            <div>
+            <React.Fragment>
                 <div
                     className="center-col"
                     style={{ width: sizes.collapseCenter ? "80vw" : "600px" }}
@@ -113,7 +113,7 @@ export class Notifications extends Component {
                         <Pane1 />
                     </div>
                 ) : null}
-            </div>
+            </React.Fragment>
         );
     }
 }

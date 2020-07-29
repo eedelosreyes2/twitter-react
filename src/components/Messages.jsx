@@ -30,7 +30,7 @@ export class Messages extends Component {
                             className="btn btn-block btn-primary rounded-pill mt-2"
                             style={{
                                 height: "40px",
-                                marginLeft: "80px",
+                                margin: "0px auto",
                                 width: "185px",
                             }}
                         >

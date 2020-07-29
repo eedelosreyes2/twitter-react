@@ -46,7 +46,9 @@ export class SearchBar extends Component {
     getWidth = (sizes) => {
         const type = this.props.type;
         let width;
-        if (type === "2") {
+        if (type === "1") {
+            width = "350px";
+        } else if (type === "2") {
             width = sizes.collapseCenter ? "65vw" : "510px";
         } else {
             width = "unset";

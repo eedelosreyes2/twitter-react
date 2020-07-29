@@ -31,8 +31,9 @@ input:focus {
     bottom: 0;
     left: 0;
     right: 0;
-    overflow: auto;
-    /* background-color: rebeccapurple; */
+    display: flex;
+    width: auto;
+    justify-content: space-between;
 }
 
 /* Bootstrap */
@@ -44,10 +45,6 @@ input:focus {
     background-color: #1da1f2;
     border: none;
     font-weight: bold;
-}
-
-.container {
-    padding: 0;
 }
 
 .col {

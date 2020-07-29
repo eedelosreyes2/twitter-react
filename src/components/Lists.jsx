@@ -100,7 +100,8 @@ export class Lists extends Component {
                             className="btn btn-block btn-primary rounded-pill"
                             style={{
                                 height: "40px",
-                                marginLeft: "190px",
+                                // marginLeft: "190px",
+                                margin: "0px auto",
                                 width: "130px",
                             }}
                         >

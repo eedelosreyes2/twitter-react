@@ -56,73 +56,84 @@ export class App extends Component {
         const sizes = {
             showNav: windowWidth > 436,
             navCollapsed,
-            navWidth: navCollapsed ? 100 : 300,
+            navWidth: navCollapsed ? 70 : 270,
+            navMargin: navCollapsed ? 0 : 10,
             showRightPane: windowWidth > 1060,
             collapseCenter: windowWidth < 700,
         };
 
         return (
-            <div
-                className="App row"
-                style={{
-                    width: "100vw",
-                }}
-            >
-                <Router>
-                    {sizes.showNav ? (
-                        <Nav sizes={sizes} currentUser={currentUser} />
-                    ) : (
-                        <NavBottom />
-                    )}
-                    <Switch>
-                        <Redirect exact from="/" to="/home" />
-                        <Route
-                            path="/home"
-                            render={() => (
-                                <Home sizes={sizes} currentUser={currentUser} />
-                            )}
-                        />
-                        <Route
-                            path="/explore"
-                            render={() => <Explore sizes={sizes} />}
-                        />
-                        <Route
-                            path="/notifications"
-                            render={() => <Notifications sizes={sizes} />}
-                        />
-                        <Route
-                            path="/messages"
-                            render={() => <Messages sizes={sizes} />}
-                        />
-                        <Route
-                            path="/bookmarks"
-                            render={() => (
-                                <Bookmarks
-                                    sizes={sizes}
-                                    currentUser={currentUser}
+            <div className="App">
+                <div
+                    style={{
+                        margin: "0px auto",
+                        overflow: "auto",
+                        height: "100%",
+                    }}
+                >
+                    <Router>
+                        {sizes.showNav ? (
+                            <Nav sizes={sizes} currentUser={currentUser} />
+                        ) : (
+                            <NavBottom />
+                        )}
+                        <div style={{ float: "left" }}>
+                            <Switch>
+                                <Redirect exact from="/" to="/home" />
+                                <Route
+                                    path="/home"
+                                    render={() => (
+                                        <Home
+                                            sizes={sizes}
+                                            currentUser={currentUser}
+                                        />
+                                    )}
                                 />
-                            )}
-                        />
-                        <Route
-                            path="/lists"
-                            render={() => (
-                                <Lists
-                                    sizes={sizes}
-                                    currentUser={currentUser}
+                                <Route
+                                    path="/explore"
+                                    render={() => <Explore sizes={sizes} />}
                                 />
-                            )}
-                        />
-                        <Route
-                            path="/profile"
-                            render={() => (
-                                <Profile
-                                    sizes={sizes}
-                                    currentUser={currentUser}
+                                <Route
+                                    path="/notifications"
+                                    render={() => (
+                                        <Notifications sizes={sizes} />
+                                    )}
                                 />
-                            )}
-                        />
-                    </Switch>
-                </Router>
+                                <Route
+                                    path="/messages"
+                                    render={() => <Messages sizes={sizes} />}
+                                />
+                                <Route
+                                    path="/bookmarks"
+                                    render={() => (
+                                        <Bookmarks
+                                            sizes={sizes}
+                                            currentUser={currentUser}
+                                        />
+                                    )}
+                                />
+                                <Route
+                                    path="/lists"
+                                    render={() => (
+                                        <Lists
+                                            sizes={sizes}
+                                            currentUser={currentUser}
+                                        />
+                                    )}
+                                />
+                                <Route
+                                    path="/profile"
+                                    render={() => (
+                                        <Profile
+                                            sizes={sizes}
+                                            currentUser={currentUser}
+                                        />
+                                    )}
+                                />
+                            </Switch>
+                        </div>
+                    </Router>
+                </div>
             </div>
         );
     }

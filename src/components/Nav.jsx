@@ -115,10 +115,13 @@ export class Nav extends Component {
             <div
                 className="col border-right"
                 style={{
+                    display: "inline-block",
+                    float: "left",
                     height: "100vh",
-                    width: sizes.navWidth,
                     position: "sticky",
+                    marginLeft: sizes.navMargin,
                     top: 0,
+                    width: sizes.navWidth,
                 }}
             >
                 <div
