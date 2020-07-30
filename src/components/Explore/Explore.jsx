@@ -116,7 +116,8 @@ export class Explore extends Component {
                                             className: "twitter-blue",
                                             size: "1.25em",
                                             style: {
-                                                margin: "10px",
+                                                float: "right",
+                                                margin: "7px 6px",
                                             },
                                         }}
                                     >

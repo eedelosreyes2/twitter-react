@@ -114,7 +114,12 @@ export class App extends Component {
                             />
                             <Route
                                 path="/explore"
-                                render={() => <Explore sizes={sizes} />}
+                                render={() => (
+                                    <Explore
+                                        sizes={sizes}
+                                        currentUser={currentUser}
+                                    />
+                                )}
                             />
                             <Route
                                 path="/notifications"

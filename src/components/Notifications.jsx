@@ -48,41 +48,50 @@ export class Notifications extends Component {
                     component={
                         <React.Fragment>
                             <div
+                                className="header1 border-bottom"
                                 style={{
-                                    borderBottom: "2px solid",
-                                    borderColor: "#e6ecf0",
+                                    alignItems: "stretch",
+                                    display: "flex",
+                                    flexDirection: "column",
                                     height: "104px",
+                                    justifyContent: "space-between",
                                 }}
                             >
                                 <div
-                                    className="fiSettings-wrapper"
                                     style={{
-                                        float: "right",
+                                        alignItems: "center",
+                                        display: "flex",
+                                        justifyContent: "space-between",
                                     }}
                                 >
-                                    <IconContext.Provider
-                                        value={{
-                                            className: "twitter-blue",
-                                            size: "1.25em",
-                                            style: {
-                                                float: "right",
-                                                margin: "11px 11px",
-                                            },
-                                        }}
-                                    >
-                                        <FiSettings />
-                                    </IconContext.Provider>
-                                </div>
-
-                                <div className="header1 pb-2 pl-3 pr-2 pt-2 mt-1">
-                                    {sizes.showNav ? null : (
-                                        <img
-                                            className="user-image p-2 ml-n2 mr-3"
-                                            src={this.props.currentUser.userImg}
-                                            alt="User"
-                                        />
-                                    )}
-                                    Notifications
+                                    <div className="pl-1">
+                                        {sizes.showNav ? null : (
+                                            <img
+                                                className="user-image p-2"
+                                                src={
+                                                    this.props.currentUser
+                                                        .userImg
+                                                }
+                                                alt="User"
+                                            />
+                                        )}
+                                        <span className="pl-3">
+                                            Notifications
+                                        </span>
+                                    </div>
+                                    <div className="fiSettings-wrapper">
+                                        <IconContext.Provider
+                                            value={{
+                                                className: "twitter-blue",
+                                                style: {
+                                                    float: "right",
+                                                    margin: "11px 11px",
+                                                },
+                                            }}
+                                        >
+                                            <FiSettings />
+                                        </IconContext.Provider>
+                                    </div>
                                 </div>
 
                                 <div>
@@ -108,7 +117,7 @@ export class Notifications extends Component {
                                                 key={id}
                                                 style={{
                                                     float: "left",
-                                                    marginTop: "-2px",
+                                                    marginTop: "1px",
                                                     textAlign: "center",
                                                     width: "50%",
                                                 }}

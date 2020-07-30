@@ -10,7 +10,7 @@ export class CenterCol extends Component {
                     borderRight: "1px solid",
                     borderColor: "#dee2e3",
                     display: "inline-block",
-                    height: "100%", // fix
+                    height: "100vh", // fix
                     width: sizes.smallTablet
                         ? sizes.showNav
                             ? sizes.centerColWidth

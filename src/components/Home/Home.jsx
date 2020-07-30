@@ -18,19 +18,24 @@ export class Home extends Component {
                     component={
                         <React.Fragment>
                             <div
-                                className="header1 border-bottom"
+                                className="header1 border-bottom p-1"
                                 style={{
+                                    alignItems: "center",
+                                    display: "flex",
                                     height: "50px",
+                                    justifyContent: "space-between",
                                 }}
                             >
-                                {sizes.showNav ? null : (
-                                    <img
-                                        className="user-image p-2"
-                                        src={this.props.currentUser.userImg}
-                                        alt="User"
-                                    />
-                                )}
-                                Home
+                                <div>
+                                    {sizes.showNav ? null : (
+                                        <img
+                                            className="user-image p-2"
+                                            src={this.props.currentUser.userImg}
+                                            alt="User"
+                                        />
+                                    )}
+                                    <span className="pl-3">Home</span>
+                                </div>
                                 <div
                                     className="icon-wrapper"
                                     style={{
