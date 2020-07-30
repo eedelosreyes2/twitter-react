@@ -17,10 +17,15 @@ export class Home extends Component {
                     sizes={sizes}
                     component={
                         <React.Fragment>
-                            <div className="header1 border-bottom pb-2 pl-3 pr-2 pt-2 mt-1">
+                            <div
+                                className="header1 border-bottom"
+                                style={{
+                                    height: "50px",
+                                }}
+                            >
                                 {sizes.showNav ? null : (
                                     <img
-                                        className="user-image p-2 ml-n2 mr-3"
+                                        className="user-image p-2"
                                         src={this.props.currentUser.userImg}
                                         alt="User"
                                     />
@@ -30,7 +35,6 @@ export class Home extends Component {
                                     className="icon-wrapper"
                                     style={{
                                         float: "right",
-                                        marginTop: "-5px",
                                     }}
                                 >
                                     <IconContext.Provider

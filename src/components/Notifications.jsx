@@ -39,6 +39,7 @@ export class Notifications extends Component {
 
     render() {
         const { sizes } = this.props;
+        // let width = sizes.centerColWidth;
 
         return (
             <React.Fragment>
@@ -73,10 +74,10 @@ export class Notifications extends Component {
                                     </IconContext.Provider>
                                 </div>
 
-                                <div className="header1 pb-1 pl-3 pr-2 pt-2 mt-1 mb-2">
+                                <div className="header1 pb-2 pl-3 pr-2 pt-2 mt-1">
                                     {sizes.showNav ? null : (
                                         <img
-                                            className="user p-2 ml-n2 mr-3 mb-n4"
+                                            className="user-image p-2 ml-n2 mr-3"
                                             src={this.props.currentUser.userImg}
                                             alt="User"
                                         />
@@ -84,14 +85,7 @@ export class Notifications extends Component {
                                     Notifications
                                 </div>
 
-                                <div
-                                    style={{
-                                        overflow: "hidden",
-                                        width: sizes.collapseCenter
-                                            ? "80vw"
-                                            : "600px",
-                                    }}
-                                >
+                                <div>
                                     {this.state.tabs.map((tab) => {
                                         const {
                                             id,
@@ -99,7 +93,7 @@ export class Notifications extends Component {
                                             href,
                                             isCurrent,
                                         } = tab;
-                                        let className = "tab tab2 header3 p-3 ";
+                                        let className = "tab header3 p-3 ";
                                         if (
                                             isCurrent ||
                                             window.location.pathname === href
@@ -112,6 +106,12 @@ export class Notifications extends Component {
                                                 to={href}
                                                 className={className}
                                                 key={id}
+                                                style={{
+                                                    float: "left",
+                                                    marginTop: "-2px",
+                                                    textAlign: "center",
+                                                    width: "50%",
+                                                }}
                                             >
                                                 {title}
                                             </Link>

@@ -63,11 +63,11 @@ export class App extends Component {
         if (!showRightPane) {
             width = 670;
         }
+        if (smallTablet) {
+            width = window.innerWidth;
+        }
         if (!showNav) {
             width = 500;
-        }
-        if (smallTablet) {
-            width = "100vw";
         }
 
         const sizes = {
@@ -76,6 +76,7 @@ export class App extends Component {
             showRightPane,
             smallTablet,
             width,
+            centerColWidth: navCollapsed ? window.innerWidth - 70 : 600,
             navWidth: navCollapsed ? 70 : 285,
             navMargin: navCollapsed ? 0 : 10,
         };

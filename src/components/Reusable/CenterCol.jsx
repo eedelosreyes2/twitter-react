@@ -13,7 +13,7 @@ export class CenterCol extends Component {
                     height: "100%", // fix
                     width: sizes.smallTablet
                         ? sizes.showNav
-                            ? window.innerWidth - 70
+                            ? sizes.centerColWidth
                             : "100vw"
                         : "600px",
                 }}
