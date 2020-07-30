@@ -60,7 +60,7 @@ export class WhoToFollow extends Component {
                             <div key={id}>
                                 <div className="hoverable pl-3 pb-2 pt-2">
                                     <img
-                                        className="user mr-3"
+                                        className="user-image mr-3"
                                         src={image}
                                         alt="User"
                                         style={{

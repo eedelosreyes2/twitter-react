@@ -2,22 +2,42 @@ import React, { Component } from "react";
 import { IconContext } from "react-icons";
 import { FaRegComment, FaRetweet, FaRegHeart } from "react-icons/fa";
 import { FiShare } from "react-icons/fi";
-import "./Home.css";
 
 export class Post extends Component {
     render() {
         const { user, text, comments, retweets, likes } = this.props.post;
 
         return (
-            <div className="post">
-                <div className="post-user">
-                    <img className="user" src={user.image} alt="User" />
+            <div
+                style={{
+                    borderBottom: "1px solid",
+                    borderColor: "#e6ecf0",
+                    display: "flex",
+                    height: "100%",
+                    padding: "10px",
+                    width: "100%",
+                }}
+            >
+                <div
+                    style={{
+                        float: "left",
+                        minHeight: "100px",
+                        paddingRight: "10px",
+                    }}
+                >
+                    <img className="user-image" src={user.image} alt="User" />
                 </div>
                 <div>
-                    <span className="font-weight-bold">{user.username}</span>
-                    <span className="sub"> @{user.handle}</span>
-                    <div className="post-text">{text}</div>
                     <div>
+                        <span className="font-weight-bold">
+                            {user.username}
+                        </span>{" "}
+                        <span className="sub">{user.handle}</span>
+                        {" · "}
+                        <span className="sub">1h</span>
+                    </div>
+                    <div className="post-text">{text}</div>
+                    <div className="pt-2">
                         <IconContext.Provider
                             value={{
                                 className: "post-icon",

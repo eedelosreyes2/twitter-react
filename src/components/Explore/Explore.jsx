@@ -47,12 +47,12 @@ export class Explore extends Component {
                 href: "/fun",
                 isCurrent: false,
             },
-            //    {
-            //        id: 6,
-            //        title: "Entertainment",
-            //        href: "/entertainment",
-            //        isCurrent: false,
-            //    },
+            {
+                id: 6,
+                title: "Entertainment",
+                href: "/entertainment",
+                isCurrent: false,
+            },
         ],
     };
 
@@ -79,29 +79,50 @@ export class Explore extends Component {
                 <CenterCol
                     sizes={sizes}
                     component={
-                        <div className="explore-header mt-1">
-                            <SearchBar
-                                placeholder="Search Twitter"
-                                style={{ height: "38px", width: "auto" }}
-                            />
+                        <div
+                            style={{
+                                borderBottom: "11px solid",
+                                borderColor: "#e6ecf0",
+                                position: "relative",
+                                height: "115px",
+                            }}
+                        >
                             <div
-                                className="fiSettings-wrapper"
                                 style={{
-                                    float: "right",
+                                    display: "flex",
+                                    width: "100%",
                                 }}
                             >
-                                <IconContext.Provider
-                                    value={{
-                                        className: "twitter-blue",
-                                        size: "1.25em",
-                                        style: {
-                                            float: "right",
-                                            margin: "11px 11px",
-                                        },
+                                <SearchBar
+                                    placeholder="Search Twitter"
+                                    style={{
+                                        height: "35px",
+                                        width: sizes.smallTablet
+                                            ? window.innerWidth -
+                                              (sizes.showNav ? 170 : 100)
+                                            : "500px",
+                                    }}
+                                />
+                                <div
+                                    className="icon-wrapper"
+                                    style={{
+                                        float: "right",
+                                        marginTop: "8px",
+                                        marginRight: "10px",
                                     }}
                                 >
-                                    <FiSettings />
-                                </IconContext.Provider>
+                                    <IconContext.Provider
+                                        value={{
+                                            className: "twitter-blue",
+                                            size: "1.25em",
+                                            style: {
+                                                margin: "10px",
+                                            },
+                                        }}
+                                    >
+                                        <FiSettings />
+                                    </IconContext.Provider>
+                                </div>
                             </div>
                             <ExploreBar
                                 sizes={sizes}

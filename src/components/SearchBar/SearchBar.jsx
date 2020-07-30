@@ -47,7 +47,6 @@ export class SearchBar extends Component {
                     height: height,
                     margin: "10px auto",
                     width: width,
-                    verticalAlign: "middle",
                 }}
             >
                 <div

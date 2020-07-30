@@ -15,3 +15,11 @@
     background-color: rgb(218, 241, 255);
     cursor: pointer;
 }
+
+.scrolling-wrapper::-webkit-scrollbar {
+    display: none;
+    background: none;
+    /* z-index: ; */
+    position: absolute;
+    left: -9999px;
+}

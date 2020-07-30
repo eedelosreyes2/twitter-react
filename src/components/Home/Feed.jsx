@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Post } from "./Post";
+import { Post } from "../Reusable/Post";
 
 export class Feed extends Component {
     state = {
@@ -11,7 +11,7 @@ export class Feed extends Component {
                     "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas quia ut ullam, fugiat atque et sint dolore aliquam impedit aperiam, omnis fugit molestias modi explicabo, ea nam eaque distinctio minima.",
                 user: {
                     id: 0,
-                    handle: "user_handle",
+                    handle: "@user_handle",
                     username: "Username",
                     image:
                         "https://pbs.twimg.com/profile_images/857089270414233601/H5OtJMkD_400x400.jpg",
@@ -28,7 +28,7 @@ export class Feed extends Component {
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolore enim recusandae aliquid mollitia odio molestias, obcaecati non quasi, quia reiciendis rerum illum modi deserunt fugit porro incidunt. Repellat, dignissimos?",
                 user: {
                     id: 0,
-                    handle: "user_handle",
+                    handle: "@user_handle",
                     username: "Username",
                     image:
                         "https://pbs.twimg.com/profile_images/857089270414233601/H5OtJMkD_400x400.jpg",
@@ -45,7 +45,7 @@ export class Feed extends Component {
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolore enim recusandae aliquid mollitia odio molestias, obcaecati non quasi, quia reiciendis rerum illum modi deserunt fugit porro incidunt. Repellat, dignissimos?",
                 user: {
                     id: 0,
-                    handle: "user_handle",
+                    handle: "@user_handle",
                     username: "Username",
                     image:
                         "https://pbs.twimg.com/profile_images/857089270414233601/H5OtJMkD_400x400.jpg",
@@ -62,7 +62,7 @@ export class Feed extends Component {
                     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint dolore enim recusandae aliquid mollitia odio molestias, obcaecati non quasi, quia reiciendis rerum illum modi deserunt fugit porro incidunt. Repellat, dignissimos?",
                 user: {
                     id: 0,
-                    handle: "user_handle",
+                    handle: "@user_handle",
                     username: "Username",
                     image:
                         "https://pbs.twimg.com/profile_images/857089270414233601/H5OtJMkD_400x400.jpg",

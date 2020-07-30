@@ -188,7 +188,7 @@ export class Nav extends Component {
                         }}
                     >
                         <img
-                            className="user m-2"
+                            className="user-image m-2"
                             style={{
                                 float: "left",
                                 height: "40px",

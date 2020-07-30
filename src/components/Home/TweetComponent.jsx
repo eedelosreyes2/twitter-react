@@ -29,7 +29,7 @@ export class WhatsHappening extends Component {
                 }}
             >
                 <img
-                    className="user mt-2"
+                    className="user-image mt-2"
                     src={userImg}
                     alt="User"
                     style={{

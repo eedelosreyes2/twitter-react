@@ -20,7 +20,7 @@ export class Home extends Component {
                             <div className="header1 border-bottom pb-2 pl-3 pr-2 pt-2 mt-1">
                                 {sizes.showNav ? null : (
                                     <img
-                                        className="user p-2 ml-n2 mr-3"
+                                        className="user-image p-2 ml-n2 mr-3"
                                         src={this.props.currentUser.userImg}
                                         alt="User"
                                     />
@@ -28,7 +28,10 @@ export class Home extends Component {
                                 Home
                                 <div
                                     className="icon-wrapper"
-                                    style={{ float: "right" }}
+                                    style={{
+                                        float: "right",
+                                        marginTop: "-5px",
+                                    }}
                                 >
                                     <IconContext.Provider
                                         value={{
