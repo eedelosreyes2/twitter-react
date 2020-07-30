@@ -10,7 +10,7 @@ export class Post extends Component {
 
         return (
             <div className="post">
-                <div className="col-4 post-user">
+                <div className="post-user">
                     <img className="user" src={user.image} alt="User" />
                 </div>
                 <div>

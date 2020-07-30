@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import BlueButton from "../Reusable/BlueButton";
 import { IconContext } from "react-icons";
 import { AiOutlineGif } from "react-icons/ai";
 import { BsImage } from "react-icons/bs";
@@ -20,43 +21,69 @@ export class WhatsHappening extends Component {
         const { userImg } = this.props.currentUser;
 
         return (
-            <div className="tweet-cmp">
-                <div className="input-group mb-3 pl-3">
-                    <img className="user mt-2" src={userImg} alt="User" />
+            <div
+                style={{
+                    borderBottom: "10px solid",
+                    borderColor: "#e6ecf0",
+                    height: "120px",
+                }}
+            >
+                <img
+                    className="user mt-2"
+                    src={userImg}
+                    alt="User"
+                    style={{
+                        float: "left",
+                        marginLeft: "15px",
+                    }}
+                />
+                <div
+                    style={{
+                        float: "left",
+                        width: "82.5%",
+                    }}
+                >
                     <input
                         type="text"
-                        className="tweet form-control-lg border-0 pt-4 ml-n2"
-                        style={{ backgroundColor: "unset", color: "red" }}
+                        className="form-control-lg border-0 pt-3 ml-n2"
+                        style={{
+                            backgroundColor: "unset",
+                            width: "100%",
+                            marginBottom: "12px",
+                        }}
                         placeholder="What's happening?"
                     />
-                </div>
-                <div style={{ paddingLeft: "72.5px" }}>
-                    {this.state.items.map((item) => {
-                        const { id, component } = item;
-                        return (
-                            <div className="tweet-item-wrapper" key={id}>
-                                <IconContext.Provider
-                                    value={{
-                                        className: "twitter-blue",
-                                        size: "1.25em",
-                                    }}
-                                >
-                                    {component}
-                                </IconContext.Provider>
-                            </div>
-                        );
-                    })}
-                    <button
-                        type="button"
-                        className="btn btn-block btn-primary rounded-pill mr-3 mt-n2"
+                    <div
                         style={{
-                            float: "right",
-                            height: "37.5px",
-                            width: "75px",
+                            display: "inline-block",
+                            marginLeft: "5px",
+                            overflow: "hidden",
                         }}
                     >
-                        Tweet
-                    </button>
+                        {this.state.items.map((item) => {
+                            const { id, component } = item;
+                            return (
+                                <button className="icon-wrapper" key={id}>
+                                    <IconContext.Provider
+                                        value={{
+                                            className: "twitter-blue",
+                                            size: "1.35em",
+                                        }}
+                                    >
+                                        {component}
+                                    </IconContext.Provider>
+                                </button>
+                            );
+                        })}
+                    </div>
+                    <BlueButton
+                        title="Tweet"
+                        height="37.5px"
+                        width="75px"
+                        float="right"
+                        isActive={false}
+                        event={null}
+                    />
                 </div>
             </div>
         );

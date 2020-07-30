@@ -118,6 +118,7 @@ export class Explore extends Component {
                             display: "flex",
                             flexDirection: "column",
                             float: "right",
+                            paddingLeft: "30px",
                             width: "380px",
                         }}
                     >

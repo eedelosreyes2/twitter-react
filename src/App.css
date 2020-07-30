@@ -8,16 +8,6 @@ a:hover {
     text-decoration: none;
 }
 
-.text-primary {
-    color: #1da1f2;
-}
-
-.btn-primary {
-    background-color: #1da1f2;
-    border: none;
-    font-weight: bold;
-}
-
 .col {
     padding: 0;
 }

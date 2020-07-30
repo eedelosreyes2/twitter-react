@@ -10,26 +10,24 @@ input::placeholder {
     color: #6b7b8a;
 }
 
-input.tweet:focus::-webkit-input-placeholder {
+input:focus::-webkit-input-placeholder {
     color: #bdc1c9;
 }
 
-.tweet-cmp {
-    border-bottom: 10px solid;
-    border-color: #e6ecf0;
-    height: 120px;
-}
-
-.tweet-item-wrapper {
+.icon-wrapper {
+    background-color: unset;
+    border: none;
     border-radius: 50%;
     float: left;
-    height: 30px;
-    padding: 1px 0px 0px 5px;
-    margin: -3px 10px 0px 0px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
 }
 
-.tweet-item-wrapper:hover {
+.icon-wrapper:focus {
+    outline: none;
+}
+
+.icon-wrapper:hover {
     background-color: rgb(218, 241, 255);
 }
 
@@ -51,7 +49,6 @@ input.tweet:focus::-webkit-input-placeholder {
     color: #657787;
     float: left;
     font-size: 15px;
-    /* margin-right: 80px; */
     margin-right: 7vw;
     width: 50px;
 }

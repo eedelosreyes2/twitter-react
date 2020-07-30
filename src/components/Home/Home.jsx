@@ -27,11 +27,8 @@ export class Home extends Component {
                                 )}
                                 Home
                                 <div
-                                    className="aiOutlineTwitter-wrapper"
-                                    style={{
-                                        float: "right",
-                                        marginTop: "-7px",
-                                    }}
+                                    className="icon-wrapper"
+                                    style={{ float: "right" }}
                                 >
                                     <IconContext.Provider
                                         value={{

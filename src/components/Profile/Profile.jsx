@@ -119,6 +119,7 @@ export class Profile extends Component {
                             display: "flex",
                             flexDirection: "column",
                             float: "right",
+                            paddingLeft: "30px",
                             width: "380px",
                         }}
                     >

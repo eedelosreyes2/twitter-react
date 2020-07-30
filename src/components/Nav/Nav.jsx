@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import NavItem from "./NavItem";
+import BlueButton from "../Reusable/BlueButton";
 import { IconContext } from "react-icons";
 import { AiOutlineTwitter, AiOutlineHome } from "react-icons/ai";
 import { FaHashtag, FaFeatherAlt } from "react-icons/fa";
@@ -149,29 +150,31 @@ export class Nav extends Component {
                         />
                     ))}
                     {sizes.navCollapsed ? (
-                        <button
-                            type="button"
-                            className="btn btn-block btn-primary rounded-pill"
-                            style={{ height: "50px", width: "50px" }}
-                        >
-                            <IconContext.Provider
-                                value={{
-                                    color: "white",
-                                    size: "1.25em",
-                                    style: { marginBottom: "3px" },
-                                }}
-                            >
-                                <FaFeatherAlt />
-                            </IconContext.Provider>
-                        </button>
+                        <BlueButton
+                            title={
+                                <IconContext.Provider
+                                    value={{
+                                        color: "white",
+                                        size: "1.25em",
+                                        style: { marginBottom: "3px" },
+                                    }}
+                                >
+                                    <FaFeatherAlt />
+                                </IconContext.Provider>
+                            }
+                            height="50px"
+                            width="50px"
+                            isActive={true}
+                            event={null}
+                        />
                     ) : (
-                        <button
-                            type="button"
-                            className="btn btn-block btn-primary rounded-pill"
-                            style={{ height: "50px", width: "225px" }}
-                        >
-                            Tweet
-                        </button>
+                        <BlueButton
+                            title="Tweet"
+                            height="50px"
+                            width="225px"
+                            isActive={true}
+                            event={null}
+                        />
                     )}
                     <div
                         className="nav-item"

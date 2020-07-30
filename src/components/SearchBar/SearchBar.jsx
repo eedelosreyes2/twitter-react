@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { IconContext } from "react-icons";
 import { RiSearchLine } from "react-icons/ri";
-import { AiFillCloseCircle } from "react-icons/ai";
 import "./SearchBar.css";
 
 export class SearchBar extends Component {
@@ -10,7 +9,6 @@ export class SearchBar extends Component {
         border: "unset",
         borderColor: "#e6ecf0",
         iconColor: "#6b7b8a",
-        showClose: false,
     };
 
     handleFocus = () => {
@@ -32,24 +30,10 @@ export class SearchBar extends Component {
         });
     };
 
-    handleInput = () => {
-        this.setState({ showClose: true });
-    };
-
-    removeText = () => {
-        document.getElementById("input").value = "";
-    };
-
     render() {
         const { placeholder } = this.props;
         const { height, width } = this.props.style;
-        const {
-            backgroundColor,
-            border,
-            borderColor,
-            iconColor,
-            showClose,
-        } = this.state;
+        const { backgroundColor, border, borderColor, iconColor } = this.state;
 
         return (
             <div
@@ -88,7 +72,6 @@ export class SearchBar extends Component {
                         placeholder={placeholder}
                         onFocus={this.handleFocus}
                         onBlur={this.handleFocusOut}
-                        onInput={this.handleInput}
                         style={{
                             border: "unset",
                             display: "inline-block",
@@ -96,34 +79,6 @@ export class SearchBar extends Component {
                             width: "80%",
                         }}
                     />
-                    {showClose ? (
-                        <IconContext.Provider
-                            value={{
-                                color: "var(--twitter-blue)",
-                                size: "1.5em",
-                                style: {
-                                    float: "right",
-                                    marginBottom: "3px",
-                                    marginRight: "10px",
-                                },
-                            }}
-                        >
-                            <button
-                                onClick={this.removeText()}
-                                style={{
-                                    background: "none",
-                                    border: "none",
-                                    color: "inherit",
-                                    cursor: "pointer",
-                                    display: "inline-block",
-                                    float: "right",
-                                    width: "0",
-                                }}
-                            >
-                                <AiFillCloseCircle />
-                            </button>
-                        </IconContext.Provider>
-                    ) : null}
                 </div>
             </div>
         );
