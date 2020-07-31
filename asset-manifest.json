@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/twitter-react/static/css/main.f742470d.chunk.css",
+    "main.js": "/twitter-react/static/js/main.fa34252e.chunk.js",
+    "main.js.map": "/twitter-react/static/js/main.fa34252e.chunk.js.map",
+    "runtime-main.js": "/twitter-react/static/js/runtime-main.ab9f5a60.js",
+    "runtime-main.js.map": "/twitter-react/static/js/runtime-main.ab9f5a60.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/twitter-react/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.e05b5d67.chunk.js": "/twitter-react/static/js/2.e05b5d67.chunk.js",
+    "static/js/2.e05b5d67.chunk.js.map": "/twitter-react/static/js/2.e05b5d67.chunk.js.map",
+    "index.html": "/twitter-react/index.html",
+    "precache-manifest.d07147bf091033b05c350104f60e843c.js": "/twitter-react/precache-manifest.d07147bf091033b05c350104f60e843c.js",
+    "service-worker.js": "/twitter-react/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/twitter-react/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.f742470d.chunk.css.map": "/twitter-react/static/css/main.f742470d.chunk.css.map",
+    "static/js/2.e05b5d67.chunk.js.LICENSE.txt": "/twitter-react/static/js/2.e05b5d67.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ab9f5a60.js",
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.e05b5d67.chunk.js",
+    "static/css/main.f742470d.chunk.css",
+    "static/js/main.fa34252e.chunk.js"
+  ]
+}
