@@ -27,10 +27,10 @@ export class Notifications extends Component {
         const path = window.location.pathname;
         var body;
 
-        if (path === "/notifications") {
+        if (path === "/twitter-react/notifications") {
             body =
                 "From likes to Retweets and a whole lot more, this is where all the action happens.";
-        } else if (path === "/notifications/mentions") {
+        } else if (path === "/twitter-react/notifications/mentions") {
             body = "When someone mentions you, you’ll find it here.";
         }
 
@@ -39,7 +39,6 @@ export class Notifications extends Component {
 
     render() {
         const { sizes } = this.props;
-        // let width = sizes.centerColWidth;
 
         return (
             <React.Fragment>
@@ -105,7 +104,8 @@ export class Notifications extends Component {
                                         let className = "tab header3 p-3 ";
                                         if (
                                             isCurrent ||
-                                            window.location.pathname === href
+                                            window.location.pathname ===
+                                                "/twitter-react" + href
                                         ) {
                                             className +=
                                                 "header3-primary tab-current";

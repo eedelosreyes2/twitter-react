@@ -134,7 +134,7 @@ export class Nav extends Component {
                                 size: "2.2em",
                             }}
                         >
-                            <Link to="/home">
+                            <Link to="/twitter-react/home">
                                 <AiOutlineTwitter />
                             </Link>
                         </IconContext.Provider>
