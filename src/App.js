@@ -89,7 +89,7 @@ export class App extends Component {
                     width: width,
                 }}
             >
-                <Router>
+                <Router basename="/twitter-react">
                     {sizes.showNav ? (
                         <Nav sizes={sizes} currentUser={currentUser} />
                     ) : (
