@@ -21,13 +21,15 @@ export class Bookmarks extends Component {
                                     {this.props.currentUser.handle}
                                 </p>
                             </div>
-                            <p className="header2 text-center mt-5">
-                                You haven’t added any Tweets to your Bookmarks
-                                yet
-                            </p>
-                            <p className="sub text-center mt-n2">
-                                When you do, they’ll show up here.
-                            </p>
+                            <div className="p-2">
+                                <p className="header2 text-center mt-5">
+                                    You haven’t added any Tweets to your
+                                    Bookmarks yet
+                                </p>
+                                <p className="sub text-center mt-n2">
+                                    When you do, they’ll show up here.
+                                </p>
+                            </div>
                         </React.Fragment>
                     }
                 />

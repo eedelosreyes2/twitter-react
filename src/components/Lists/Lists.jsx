@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { CenterCol } from "../Reusable/CenterCol";
 import { Pane1 } from "../Reusable/Pane1";
+import { BlueButton } from "../Reusable/BlueButton";
 import { IconContext } from "react-icons";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { MdPlaylistAdd } from "react-icons/md";
@@ -99,18 +100,13 @@ export class Lists extends Component {
                                 <p className="sub mb-3">
                                     When you do, it’ll show up here.
                                 </p>
-                                <button
-                                    type="button"
-                                    className="btn btn-block btn-primary rounded-pill"
-                                    style={{
-                                        height: "40px",
-                                        // marginLeft: "190px",
-                                        margin: "0px auto",
-                                        width: "130px",
-                                    }}
-                                >
-                                    Create a List
-                                </button>
+                                <BlueButton
+                                    title="Create a List"
+                                    height="40px"
+                                    width="130px"
+                                    isActive={true}
+                                    event={null}
+                                />
                             </div>
                         </React.Fragment>
                     }

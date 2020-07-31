@@ -48,7 +48,7 @@ export class NavBottom extends Component {
                     justifyContent: "space-between",
                     height: "65px",
                     position: "fixed",
-                    width: "100%",
+                    // width: "100%",
                 }}
             >
                 {this.state.navItems.map((navItem) => {

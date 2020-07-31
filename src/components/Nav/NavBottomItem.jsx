@@ -12,7 +12,7 @@ export class NavBottomItem extends Component {
                 onClick={() => this.props.onRefresh()}
                 style={{
                     color: this.getColor(href),
-                    padding: "40px",
+                    padding: "auto",
                 }}
             >
                 <IconContext.Provider value={{ size: "1.5em" }}>

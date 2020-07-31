@@ -66,8 +66,8 @@ export class App extends Component {
         if (smallTablet) {
             width = window.innerWidth;
         }
-        if (!showNav) {
-            width = 500;
+        if (window.innerWidth < 500) {
+            width = "100vw";
         }
 
         const sizes = {
@@ -132,7 +132,12 @@ export class App extends Component {
                             />
                             <Route
                                 path="/messages"
-                                render={() => <Messages sizes={sizes} />}
+                                render={() => (
+                                    <Messages
+                                        sizes={sizes}
+                                        currentUser={currentUser}
+                                    />
+                                )}
                             />
                             <Route
                                 path="/bookmarks"
