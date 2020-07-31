@@ -64,7 +64,7 @@ export class App extends Component {
             width = 670;
         }
         if (smallTablet) {
-            width = window.innerWidth;
+            width = windowWidth;
         }
         if (window.innerWidth < 500) {
             width = "100vw";
@@ -89,7 +89,7 @@ export class App extends Component {
                     width: width,
                 }}
             >
-                <Router basename="/">
+                <Router>
                     {sizes.showNav ? (
                         <Nav sizes={sizes} currentUser={currentUser} />
                     ) : (
@@ -102,7 +102,7 @@ export class App extends Component {
                         }}
                     >
                         <Switch>
-                            <Redirect exact from="/" to="/home" />
+                            <Redirect exact from="/twitter-react" to="/home" />
                             <Route
                                 path="/home"
                                 render={() => (
