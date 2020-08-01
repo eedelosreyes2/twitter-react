@@ -6,14 +6,18 @@ export class ProfileBar extends Component {
         return (
             <div
                 style={{
+                    alignItems: "center",
                     borderBottom: "2px solid",
                     borderColor: "#e6ecf0",
+                    display: "flex",
+                    justifyContent: "space-around",
                     height: "49px",
+                    width: "100%",
                 }}
             >
                 {this.props.tabs.map((tab) => {
                     const { id, title, href, isCurrent } = tab;
-                    let className = "tab tab3 header3 ";
+                    let className = "tab header3 ";
                     if (isCurrent) {
                         className += "header3-primary tab-current";
                     }
@@ -23,6 +27,12 @@ export class ProfileBar extends Component {
                             onClick={() => this.props.onCurrent(id)}
                             className={className}
                             key={id}
+                            style={{
+                                height: "100%",
+                                paddingTop: "12px",
+                                textAlign: "center",
+                                width: "100%",
+                            }}
                         >
                             {title}
                         </Link>

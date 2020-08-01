@@ -9,7 +9,6 @@ import "./Messages.css";
 export class Messages extends Component {
     render() {
         const { sizes } = this.props;
-        const showRightPane = window.innerWidth > 1070;
 
         return (
             <div>

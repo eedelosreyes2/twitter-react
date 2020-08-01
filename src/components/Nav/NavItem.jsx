@@ -43,7 +43,7 @@ export class NavItem extends Component {
     }
 
     getClasses = (path) => {
-        const { isActive, isCurrent } = this.props.navItem;
+        const { isActive } = this.props.navItem;
         const href = window.location.href;
 
         let className = "nav-item h5 nav-link font-weight-bold ";

@@ -4,7 +4,7 @@ import { IconContext } from "react-icons";
 
 export class NavBottomItem extends Component {
     render() {
-        const { id, path, icon } = this.props.navItem;
+        const { path, icon } = this.props.navItem;
 
         return (
             <Link

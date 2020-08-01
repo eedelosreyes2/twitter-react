@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import NavBottomItem from "./NavBottomItem";
-import { IconContext } from "react-icons";
 import { AiOutlineHome } from "react-icons/ai";
 import { RiSearchLine, RiNotification4Line } from "react-icons/ri";
 import { FiMail } from "react-icons/fi";

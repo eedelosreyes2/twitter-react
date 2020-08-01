@@ -29,6 +29,8 @@ export class App extends Component {
                 "https://pbs.twimg.com/profile_banners/26270913/1583071044/1500x500",
             numTweets: 0,
             isVerified: false,
+            following: 1,
+            followers: 0,
         },
     };
 

@@ -7,6 +7,7 @@ import WhatsHappening from "../Reusable/WhatsHappening";
 import Breadcrumbs from "../Reusable/Breadcrumbs";
 import { IconContext } from "react-icons";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { BsCalendar } from "react-icons/bs";
 
 export class Profile extends Component {
     state = {
@@ -60,6 +61,8 @@ export class Profile extends Component {
             userImg,
             headerImg,
             numTweets,
+            following,
+            followers,
         } = this.props.currentUser;
 
         const { sizes } = this.props;
@@ -99,13 +102,90 @@ export class Profile extends Component {
                             </div>
                             <img
                                 src={headerImg}
-                                style={{
-                                    height: "200px",
-                                    width: "100%",
-                                }}
+                                style={
+                                    sizes.smallTablet
+                                        ? sizes.showNav
+                                            ? { height: "30vw", width: "90vw" }
+                                            : {
+                                                  height: "33.3vw",
+                                                  width: "100vw",
+                                              }
+                                        : {
+                                              height: "200px",
+                                              width: "100%",
+                                          }
+                                }
                             />
-                            <div style={{ height: "180px" }}></div>
+                            <div
+                                style={{
+                                    height: "180px",
+                                }}
+                            >
+                                <img
+                                    src={userImg}
+                                    style={{
+                                        border: "3px solid",
+                                        borderColor: "white",
+                                        borderRadius: "50%",
+                                        height: sizes.smallTablet
+                                            ? "22vw"
+                                            : "140px",
+                                        marginLeft: "15px",
+                                        marginTop: sizes.smallTablet
+                                            ? "-14vw"
+                                            : "-80px",
+                                        position: "fixed",
+                                        width: sizes.smallTablet
+                                            ? "22vw"
+                                            : "140px",
+                                    }}
+                                />
+                                <div
+                                    style={{
+                                        paddingTop: sizes.smallTablet
+                                            ? "47.5px"
+                                            : "60px",
+                                    }}
+                                >
+                                    <div
+                                        style={{
+                                            display: "flex",
+                                            flexDirection: "column",
+                                            paddingLeft: "20px",
+                                        }}
+                                    >
+                                        <span className="header1">
+                                            {username}
+                                        </span>
+                                        <span className="sub mt-n1">
+                                            {handle}
+                                        </span>
+                                        <span className="sub pt-2 pb-2">
+                                            <IconContext.Provider
+                                                value={{ color: "#6b7b8a" }}
+                                            >
+                                                <BsCalendar /> Joined July 2020
+                                            </IconContext.Provider>
+                                        </span>
+                                        <span>
+                                            <span className="font-weight-bold">
+                                                {following}{" "}
+                                            </span>
+                                            <span className="sub pr-3">
+                                                Following
+                                            </span>
+                                            <span className="font-weight-bold">
+                                                {followers}{" "}
+                                            </span>
+                                            <span className="sub">
+                                                Followers
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                             <ProfileBar
+                                sizes={sizes}
                                 tabs={this.state.tabs}
                                 onCurrent={this.handleCurrent}
                             />
