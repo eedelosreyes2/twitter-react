@@ -11,22 +11,22 @@ export class NavBottom extends Component {
         navItems: [
             {
                 id: "navItem-home",
-                href: "/home",
+                path: "/home",
                 icon: <AiOutlineHome />,
             },
             {
                 id: "navItem-explore",
-                href: "/explore",
+                path: "/explore",
                 icon: <RiSearchLine />,
             },
             {
                 id: "navItem-notifications",
-                href: "/notifications",
+                path: "/notifications",
                 icon: <RiNotification4Line />,
             },
             {
                 id: "navItem-messages",
-                href: "/messages",
+                path: "/messages",
                 icon: <FiMail />,
             },
         ],
@@ -45,10 +45,10 @@ export class NavBottom extends Component {
                     backgroundColor: "white",
                     bottom: 0,
                     display: "flex",
-                    justifyContent: "space-between",
+                    justifyContent: "space-around",
                     height: "65px",
                     position: "fixed",
-                    // width: "100%",
+                    width: "100%",
                 }}
             >
                 {this.state.navItems.map((navItem) => {

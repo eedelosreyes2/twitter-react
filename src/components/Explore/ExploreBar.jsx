@@ -5,6 +5,7 @@ export class ExploreBar extends Component {
     render() {
         return (
             <div
+                onClick={() => this.props.onRefresh()}
                 className="scrolling-wrapper"
                 style={{
                     bottom: 0,
@@ -17,15 +18,16 @@ export class ExploreBar extends Component {
                 }}
             >
                 {this.props.tabs.map((tab) => {
-                    const { id, title, href, isCurrent } = tab;
+                    const { id, title, path } = tab;
+                    const href = window.location.href;
                     let className = "tab header3 pt-3 pr-3 pb-2 pl-3 ";
-                    if (isCurrent) {
+
+                    if (href.includes(path)) {
                         className += "header3-primary tab-current";
                     }
                     return (
                         <Link
-                            to={"/explore/tabs" + href}
-                            onClick={() => this.props.onCurrent(id)}
+                            to={"/explore/tabs" + path}
                             className={className}
                             key={id}
                         >

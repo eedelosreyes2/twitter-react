@@ -14,61 +14,43 @@ export class Explore extends Component {
             {
                 id: 0,
                 title: "For you",
-                href: "/for-you",
-                isCurrent: true,
+                path: "/for-you",
             },
             {
                 id: 1,
                 title: "COVID 19",
-                href: "/covid-19",
-                isCurrent: false,
+                path: "/covid-19",
             },
             {
                 id: 2,
                 title: "Trending",
-                href: "/trending",
-                isCurrent: false,
+                path: "/trending",
             },
             {
                 id: 3,
                 title: "News",
-                href: "/news",
-                isCurrent: false,
+                path: "/news",
             },
             {
                 id: 4,
                 title: "Sports",
-                href: "/sports",
-                isCurrent: false,
+                path: "/sports",
             },
             {
                 id: 5,
                 title: "Fun",
-                href: "/fun",
-                isCurrent: false,
+                path: "/fun",
             },
             {
                 id: 6,
                 title: "Entertainment",
-                href: "/entertainment",
-                isCurrent: false,
+                path: "/entertainment",
             },
         ],
     };
 
-    handleCurrent = (id) => {
-        const tabs = [
-            ...this.state.tabs.map((tab) => {
-                if (tab.id === id) {
-                    tab.isCurrent = true;
-                } else {
-                    tab.isCurrent = false;
-                }
-                return tab;
-            }),
-        ];
-
-        this.setState({ tabs });
+    handleRefresh = () => {
+        this.forceUpdate();
     };
 
     render() {
@@ -88,11 +70,19 @@ export class Explore extends Component {
                             }}
                         >
                             <div
+                                className="pl-1"
                                 style={{
                                     display: "flex",
                                     width: "100%",
                                 }}
                             >
+                                {sizes.showNav ? null : (
+                                    <img
+                                        className="user-image p-2"
+                                        src={this.props.currentUser.userImg}
+                                        alt="User"
+                                    />
+                                )}
                                 <SearchBar
                                     placeholder="Search Twitter"
                                     style={{
@@ -103,21 +93,14 @@ export class Explore extends Component {
                                             : "500px",
                                     }}
                                 />
-                                <div
-                                    className="icon-wrapper"
-                                    style={{
-                                        float: "right",
-                                        marginTop: "8px",
-                                        marginRight: "10px",
-                                    }}
-                                >
+                                <div className="icon-wrapper m-1">
                                     <IconContext.Provider
                                         value={{
                                             className: "twitter-blue",
                                             size: "1.25em",
                                             style: {
                                                 float: "right",
-                                                margin: "7px 6px",
+                                                margin: "11px",
                                             },
                                         }}
                                     >
@@ -128,7 +111,7 @@ export class Explore extends Component {
                             <ExploreBar
                                 sizes={sizes}
                                 tabs={this.state.tabs}
-                                onCurrent={this.handleCurrent}
+                                onRefresh={this.handleRefresh}
                             />
                         </div>
                     }

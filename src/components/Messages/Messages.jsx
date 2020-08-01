@@ -85,7 +85,7 @@ export class Messages extends Component {
                                 <BlueButton
                                     title="Start a conversation"
                                     height="40px"
-                                    width="185px"
+                                    width="195px"
                                     isActive={true}
                                     event={null}
                                 />

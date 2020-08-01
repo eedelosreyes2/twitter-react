@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { CenterCol } from "./Reusable/CenterCol";
-import { Pane1 } from "./Reusable/Pane1";
+import { CenterCol } from "../Reusable/CenterCol";
+import NotificationsBar from "./NotificationsBar";
+import { Pane1 } from "../Reusable/Pane1";
 import { IconContext } from "react-icons";
 import { FiSettings } from "react-icons/fi";
 
@@ -11,27 +12,40 @@ export class Notifications extends Component {
             {
                 id: 0,
                 title: "All",
-                href: "/notifications",
-                isCurrent: false,
+                path: "/notifications",
+                isCurrent: true,
             },
             {
                 id: 1,
                 title: "Mentions",
-                href: "/notifications/mentions",
-                isCurrent: false,
+                path: "/notifications/mentions",
+                isCurent: false,
             },
         ],
     };
 
-    renderBody = () => {
-        const path = window.location.pathname;
-        var body;
+    renderTabs = () => {
+        let className = "tab header3 p-3 ";
+        const href = window.location.href;
 
-        if (path === "/twitter-react/notifications") {
+        if (href.includes("mentions")) {
+            className += "";
+        } else {
+            className += "";
+        }
+
+        return className;
+    };
+
+    renderBody = () => {
+        let body;
+        const href = window.location.href;
+
+        if (href.includes("mentions")) {
+            body = "When someone mentions you, you’ll find it here.";
+        } else {
             body =
                 "From likes to Retweets and a whole lot more, this is where all the action happens.";
-        } else if (path === "/twitter-react/notifications/mentions") {
-            body = "When someone mentions you, you’ll find it here.";
         }
 
         return body;
@@ -78,13 +92,13 @@ export class Notifications extends Component {
                                             Notifications
                                         </span>
                                     </div>
-                                    <div className="fiSettings-wrapper">
+                                    <div className="icon-wrapper m-1">
                                         <IconContext.Provider
                                             value={{
                                                 className: "twitter-blue",
                                                 style: {
                                                     float: "right",
-                                                    margin: "11px 11px",
+                                                    margin: "11px",
                                                 },
                                             }}
                                         >
@@ -92,40 +106,36 @@ export class Notifications extends Component {
                                         </IconContext.Provider>
                                     </div>
                                 </div>
-
-                                <div>
-                                    {this.state.tabs.map((tab) => {
-                                        const {
-                                            id,
-                                            title,
-                                            href,
-                                            isCurrent,
-                                        } = tab;
-                                        let className = "tab header3 p-3 ";
-                                        if (
-                                            isCurrent ||
-                                            window.location.pathname ===
-                                                "/twitter-react" + href
-                                        ) {
-                                            className +=
-                                                "header3-primary tab-current";
-                                        }
-                                        return (
-                                            <Link
-                                                to={href}
-                                                className={className}
-                                                key={id}
-                                                style={{
-                                                    float: "left",
-                                                    marginTop: "1px",
-                                                    textAlign: "center",
-                                                    width: "50%",
-                                                }}
-                                            >
-                                                {title}
-                                            </Link>
-                                        );
-                                    })}
+                                {/* <NotificationsBar
+                                    tabs={this.state.tabs}
+                                    onCurrent={this.handleCurrent}
+                                /> */}
+                                <div
+                                    style={{
+                                        marginTop: "1px",
+                                        textAlign: "center",
+                                    }}
+                                >
+                                    <Link
+                                        to="/notifications"
+                                        className={this.renderTabs()}
+                                        style={{
+                                            float: "left",
+                                            width: "50%",
+                                        }}
+                                    >
+                                        All
+                                    </Link>
+                                    <Link
+                                        to="/notifications/mentions"
+                                        className={this.renderTabs()}
+                                        style={{
+                                            float: "left",
+                                            width: "50%",
+                                        }}
+                                    >
+                                        Mentions
+                                    </Link>
                                 </div>
                             </div>
                             <p className="header2 text-center mt-5">

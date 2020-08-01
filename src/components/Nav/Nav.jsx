@@ -20,64 +20,60 @@ export class Nav extends Component {
             {
                 id: "navItem-home",
                 title: "Home",
-                href: "/home",
+                path: "/home",
                 isActive: false,
                 icon: <AiOutlineHome />,
             },
             {
                 id: "navItem-explore",
                 title: "Explore",
-                href: "/explore",
+                path: "/explore",
                 isActive: false,
                 icon: <FaHashtag />,
             },
             {
                 id: "navItem-notifications",
                 title: "Notifications",
-                href: "/notifications",
+                path: "/notifications",
                 isActive: false,
                 icon: <RiNotification4Line />,
             },
             {
                 id: "navItem-messages",
                 title: "Messages",
-                href: "/messages",
+                path: "/messages",
                 isActive: false,
                 icon: <FiMail />,
             },
             {
                 id: "navItem-bookmarks",
                 title: "Bookmarks",
-                href: "/bookmarks",
+                path: "/bookmarks",
                 isActive: false,
                 icon: <BsBookmark />,
             },
             {
                 id: "navItem-lists",
                 title: "Lists",
-                href: "/lists",
+                path: "/lists",
                 isActive: false,
                 icon: <RiFileList2Line />,
             },
             {
                 id: "navItem-profile",
                 title: "Profile",
-                href: "/profile",
+                path: "/profile",
                 isActive: false,
                 icon: <RiUserLine />,
             },
             {
                 id: "navItem-more",
                 title: "More",
-                href: "#more",
+                path: "#more",
                 isActive: false,
                 icon: <FiMoreHorizontal />,
             },
         ],
-    };
-
-    handleRefresh = () => {
-        this.forceUpdate();
     };
 
     handleActive = (id) => {
@@ -97,8 +93,8 @@ export class Nav extends Component {
 
     handleInactive = (id) => {
         const navItems = [
-            ...this.state.navItems.map((navItem, href) => {
-                if (navItem.id === id && navItem.href !== href) {
+            ...this.state.navItems.map((navItem, path) => {
+                if (navItem.id === id && navItem.path !== path) {
                     navItem.isActive = false;
                 }
                 return navItem;
@@ -106,6 +102,10 @@ export class Nav extends Component {
         ];
 
         this.setState({ navItems });
+    };
+
+    handleRefresh = () => {
+        this.forceUpdate();
     };
 
     render() {
@@ -134,7 +134,7 @@ export class Nav extends Component {
                                 size: "2.2em",
                             }}
                         >
-                            <Link to="/twitter-react/home">
+                            <Link to="/home">
                                 <AiOutlineTwitter />
                             </Link>
                         </IconContext.Provider>
@@ -142,9 +142,9 @@ export class Nav extends Component {
                     {this.state.navItems.map((navItem) => (
                         <NavItem
                             sizes={sizes}
-                            onRefresh={this.handleRefresh}
                             onActive={this.handleActive}
                             onInactive={this.handleInactive}
+                            onRefresh={this.handleRefresh}
                             key={navItem.id}
                             navItem={navItem}
                         />

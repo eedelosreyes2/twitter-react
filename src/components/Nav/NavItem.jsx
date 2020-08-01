@@ -6,16 +6,16 @@ import "./Nav.css";
 export class NavItem extends Component {
     render() {
         const { sizes } = this.props;
-        const { id, href, icon, title } = this.props.navItem;
+        const { id, path, icon, title } = this.props.navItem;
 
         return (
             <div className="row">
                 <Link
-                    to={href}
-                    onClick={() => this.props.onRefresh()}
+                    to={path}
                     onMouseEnter={() => this.props.onActive(id)}
                     onMouseLeave={() => this.props.onInactive(id)}
-                    className={this.getClasses(href)}
+                    onClick={() => this.props.onRefresh()}
+                    className={this.getClasses(path)}
                     id={id}
                     data-toggle="pill"
                     style={
@@ -42,12 +42,12 @@ export class NavItem extends Component {
         );
     }
 
-    getClasses = (href) => {
+    getClasses = (path) => {
+        const { isActive, isCurrent } = this.props.navItem;
+        const href = window.location.href;
+
         let className = "nav-item h5 nav-link font-weight-bold ";
-        if (
-            window.location.pathname.includes(href) ||
-            this.props.navItem.isActive === true
-        ) {
+        if (href.includes(path) || isActive === true) {
             className += "twitter-blue";
         } else {
             className += "text-body";

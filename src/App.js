@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
     Redirect,
@@ -10,7 +10,7 @@ import Nav from "./components/Nav/Nav";
 import NavBottom from "./components/Nav/NavBottom";
 import Home from "./components/Home/Home";
 import Explore from "./components/Explore/Explore";
-import Notifications from "./components/Notifications";
+import Notifications from "./components/Notifications/Notifications";
 import Messages from "./components/Messages/Messages";
 import Bookmarks from "./components/Bookmarks";
 import Lists from "./components/Lists/Lists";
@@ -50,11 +50,12 @@ export class App extends Component {
     };
 
     render() {
-        const { windowWidth, currentUser } = this.state;
+        const { windowWidth, windowHeight, currentUser } = this.state;
         const showNav = windowWidth > 500;
         const navCollapsed = windowWidth < 1260;
         const showRightPane = windowWidth > 1060;
         const smallTablet = windowWidth < 670;
+        let height = "100vh";
         let width = 1280;
 
         if (navCollapsed) {
@@ -64,9 +65,10 @@ export class App extends Component {
             width = 670;
         }
         if (smallTablet) {
+            height = windowHeight;
             width = windowWidth;
         }
-        if (window.innerWidth < 500) {
+        if (windowWidth < 500) {
             width = "100vw";
         }
 
@@ -76,7 +78,7 @@ export class App extends Component {
             showRightPane,
             smallTablet,
             width,
-            centerColWidth: navCollapsed ? window.innerWidth - 70 : 600,
+            centerColWidth: navCollapsed ? windowWidth - 70 : 600,
             navWidth: navCollapsed ? 70 : 285,
             navMargin: navCollapsed ? 0 : 10,
         };
@@ -86,6 +88,7 @@ export class App extends Component {
                 style={{
                     marginLeft: "auto",
                     marginRight: "auto",
+                    height: height,
                     width: width,
                 }}
             >
@@ -102,7 +105,7 @@ export class App extends Component {
                         }}
                     >
                         <Switch>
-                            <Redirect exact from="/twitter-react" to="/home" />
+                            <Redirect exact from="/" to="/home" />
                             <Route
                                 path="/home"
                                 render={() => (
@@ -111,6 +114,11 @@ export class App extends Component {
                                         currentUser={currentUser}
                                     />
                                 )}
+                            />
+                            <Redirect
+                                exact
+                                from="/explore"
+                                to="/explore/tabs/for-you"
                             />
                             <Route
                                 path="/explore"
