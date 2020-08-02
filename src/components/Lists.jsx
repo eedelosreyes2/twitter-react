@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { CenterCol } from "../Reusable/CenterCol";
-import { Pane1 } from "../Reusable/Pane1";
-import { BlueButton } from "../Reusable/BlueButton";
+import { CenterCol } from "./Reusable/CenterCol";
+import { Pane1 } from "./Reusable/Pane1";
+import { BlueButton } from "./Reusable/BlueButton";
 import { IconContext } from "react-icons";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { MdPlaylistAdd } from "react-icons/md";
 import { FiMoreHorizontal } from "react-icons/fi";
-import "./Lists.css";
 
 export class Lists extends Component {
     render() {
@@ -22,21 +21,30 @@ export class Lists extends Component {
                                 className="border-bottom pl-3 pt-1"
                                 style={{ height: "55px" }}
                             >
-                                <div className="ioIosArrowRoundBack-wrapper">
+                                <div
+                                    className="icon-wrapper"
+                                    style={{
+                                        padding: "5px",
+                                        marginRight: "15px",
+                                    }}
+                                >
                                     <IconContext.Provider
                                         value={{
                                             className: "twitter-blue",
                                             size: "2em",
                                         }}
                                     >
-                                        <IoIosArrowRoundBack />
+                                        <IoIosArrowRoundBack
+                                            onClick={() =>
+                                                window.history.back()
+                                            }
+                                        />
                                     </IconContext.Provider>
                                 </div>
                                 <div
                                     style={{
                                         float: "left",
                                         height: "100%",
-                                        paddingLeft: "28px",
                                     }}
                                 >
                                     <p className="header1 pb-1">Lists</p>
@@ -51,11 +59,11 @@ export class Lists extends Component {
                                             size: "1.7em",
                                         }}
                                     >
-                                        <div className="ioIosArrowRoundBack-wrapper mr-2 pl-1 pt-1">
+                                        <div className="icon-wrapper p-2 mr-1">
                                             <MdPlaylistAdd />
                                         </div>
                                         <div
-                                            className="ioIosArrowRoundBack-wrapper mr-3 pt-1"
+                                            className="icon-wrapper pt-2 pl-1 mr-1"
                                             style={{ paddingLeft: "2px" }}
                                         >
                                             <FiMoreHorizontal />

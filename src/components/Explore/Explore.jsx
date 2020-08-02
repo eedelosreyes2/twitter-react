@@ -63,58 +63,81 @@ export class Explore extends Component {
                 <CenterCol
                     sizes={sizes}
                     component={
-                        <div
-                            style={{
-                                borderBottom: "11px solid",
-                                borderColor: "#e6ecf0",
-                                position: "relative",
-                                height: "115px",
-                            }}
-                        >
+                        <div>
                             <div
-                                className="pl-1"
                                 style={{
+                                    borderBottom: "11px solid",
+                                    borderColor: "#e6ecf0",
+                                    position: "relative",
+                                    height: "115px",
+                                }}
+                            >
+                                <div
+                                    className="pl-1"
+                                    style={{
+                                        display: "flex",
+                                        width: "100%",
+                                    }}
+                                >
+                                    {sizes.showNav ? null : (
+                                        <img
+                                            className="user-image p-2"
+                                            src={this.props.currentUser.userImg}
+                                            alt="User"
+                                            onClick={() =>
+                                                this.props.onProfileClick()
+                                            }
+                                        />
+                                    )}
+                                    <SearchBar
+                                        placeholder="Search Twitter"
+                                        style={{
+                                            height: "35px",
+                                            width: sizes.smallTablet
+                                                ? window.innerWidth -
+                                                  (sizes.showNav ? 170 : 100)
+                                                : "500px",
+                                        }}
+                                    />
+                                    <div className="icon-wrapper m-1">
+                                        <IconContext.Provider
+                                            value={{
+                                                className: "twitter-blue",
+                                                size: "1.25em",
+                                                style: {
+                                                    float: "right",
+                                                    margin: "11px",
+                                                },
+                                            }}
+                                        >
+                                            <FiSettings />
+                                        </IconContext.Provider>
+                                    </div>
+                                </div>
+                                <ExploreBar
+                                    sizes={sizes}
+                                    tabs={this.state.tabs}
+                                    onRefresh={this.handleRefresh}
+                                />
+                            </div>
+                            <div
+                                style={{
+                                    alignItems: "center",
                                     display: "flex",
+                                    flexDirection: "column",
+                                    height: "70vh",
+                                    justifyContent: "center",
                                     width: "100%",
                                 }}
                             >
-                                {sizes.showNav ? null : (
-                                    <img
-                                        className="user-image p-2"
-                                        src={this.props.currentUser.userImg}
-                                        alt="User"
-                                    />
-                                )}
-                                <SearchBar
-                                    placeholder="Search Twitter"
-                                    style={{
-                                        height: "35px",
-                                        width: sizes.smallTablet
-                                            ? window.innerWidth -
-                                              (sizes.showNav ? 170 : 100)
-                                            : "500px",
-                                    }}
-                                />
-                                <div className="icon-wrapper m-1">
-                                    <IconContext.Provider
-                                        value={{
-                                            className: "twitter-blue",
-                                            size: "1.25em",
-                                            style: {
-                                                float: "right",
-                                                margin: "11px",
-                                            },
-                                        }}
-                                    >
-                                        <FiSettings />
-                                    </IconContext.Provider>
-                                </div>
+                                <span className="header1">
+                                    Nothing to see here — yet
+                                </span>
+                                <span className="sub">
+                                    The developer is working hard on further
+                                    implementations!
+                                </span>
                             </div>
-                            <ExploreBar
-                                sizes={sizes}
-                                tabs={this.state.tabs}
-                                onRefresh={this.handleRefresh}
-                            />
                         </div>
                     }
                 />

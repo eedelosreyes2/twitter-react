@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
 import { FaRegComment, FaRetweet, FaRegHeart } from "react-icons/fa";
 import { FiShare } from "react-icons/fi";
@@ -25,7 +26,13 @@ export class Post extends Component {
                         paddingRight: "10px",
                     }}
                 >
-                    <img className="user-image" src={user.image} alt="User" />
+                    <Link to="/profile">
+                        <img
+                            className="user-image"
+                            src={user.image}
+                            alt="User"
+                        />
+                    </Link>
                 </div>
                 <div>
                     <div>

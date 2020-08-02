@@ -7,26 +7,26 @@ export class WhoToFollow extends Component {
         users: [
             {
                 id: 0,
-                handle: "_elijah_d_r",
-                username: "Elijah Delos Reyes",
+                handle: "@sfchronicle",
+                username: "San Francisco Chronicle",
                 image:
-                    "https://pbs.twimg.com/profile_images/1248762899570421761/A_OW8iC6_400x400.jpg",
-                isVerified: false,
+                    "https://pbs.twimg.com/profile_images/1145742752824483842/gAPc8mwO_400x400.png",
+                isVerified: true,
             },
             {
                 id: 1,
-                handle: "Genius",
-                username: "Genius",
+                handle: "@BarackObama",
+                username: "Barack Obama",
                 image:
-                    "https://pbs.twimg.com/profile_images/885222003174551552/cv3KtGVS_400x400.jpg",
+                    "https://pbs.twimg.com/profile_images/822547732376207360/5g0FC8XX_400x400.jpg",
                 isVerified: true,
             },
             {
                 id: 2,
-                handle: "SupremeDreams_1",
-                username: "Mark Phillips",
+                handle: "@BernieSanders",
+                username: "Bernie Sanders",
                 image:
-                    "https://pbs.twimg.com/profile_images/858754432925933573/ZX1yNEty_400x400.jpg",
+                    "https://pbs.twimg.com/profile_images/1097820307388334080/9ddg5F6v_400x400.png",
                 isVerified: true,
             },
         ],
@@ -91,7 +91,7 @@ export class WhoToFollow extends Component {
                                             ) : null}
                                         </span>
                                         <br />
-                                        <span className="sub">@{handle}</span>
+                                        <span className="sub">{handle}</span>
                                     </div>
                                 </div>
                                 <hr className="hr-sm" />

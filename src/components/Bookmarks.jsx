@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { CenterCol } from "./Reusable/CenterCol";
 import { Pane1 } from "./Reusable/Pane1";
+import { IconContext } from "react-icons";
+import { IoIosArrowRoundBack } from "react-icons/io";
 
 export class Bookmarks extends Component {
     render() {
@@ -16,6 +18,28 @@ export class Bookmarks extends Component {
                                 className="border-bottom pl-3 pt-1"
                                 style={{ height: "55px" }}
                             >
+                                {sizes.showNav ? null : (
+                                    <div
+                                        className="icon-wrapper"
+                                        style={{
+                                            padding: "5px",
+                                            marginRight: "15px",
+                                        }}
+                                    >
+                                        <IconContext.Provider
+                                            value={{
+                                                className: "twitter-blue",
+                                                size: "2em",
+                                            }}
+                                        >
+                                            <IoIosArrowRoundBack
+                                                onClick={() =>
+                                                    window.history.back()
+                                                }
+                                            />
+                                        </IconContext.Provider>
+                                    </div>
+                                )}
                                 <p className="header1 pb-1">Bookmarks</p>
                                 <p className="sub mt-n4">
                                     {this.props.currentUser.handle}

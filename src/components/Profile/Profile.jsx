@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import CenterCol from "../Reusable/CenterCol";
 import ProfileBar from "./ProfileBar";
 import SearchBar from "../SearchBar/SearchBar";
@@ -84,14 +83,18 @@ export class Profile extends Component {
                                 className="border-bottom pl-3 pt-1"
                                 style={{ height: "55px" }}
                             >
-                                <div className="ioIosArrowRoundBack-wrapper">
+                                <div className="icon-wrapper p-1">
                                     <IconContext.Provider
                                         value={{
                                             className: "twitter-blue",
                                             size: "2em",
                                         }}
                                     >
-                                        <IoIosArrowRoundBack />
+                                        <IoIosArrowRoundBack
+                                            onClick={() =>
+                                                window.history.back()
+                                            }
+                                        />
                                     </IconContext.Provider>
                                 </div>
                                 <div

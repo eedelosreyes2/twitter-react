@@ -60,6 +60,7 @@ button:focus {
 }
 
 .icon-wrapper:hover {
+    cursor: pointer;
     background-color: rgb(218, 241, 255);
 }
 
@@ -69,6 +70,10 @@ button:focus {
     margin-left: 2px;
     margin-right: 2px;
     width: 49px;
+}
+
+.user-image:hover {
+    cursor: pointer;
 }
 
 .post-icon-wrapper {

@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { CenterCol } from "../Reusable/CenterCol";
-import NotificationsBar from "./NotificationsBar";
-import BlueButton from "../Reusable/BlueButton";
-import { Pane1 } from "../Reusable/Pane1";
+import { CenterCol } from "./Reusable/CenterCol";
+import BlueButton from "./Reusable/BlueButton";
+import { Pane1 } from "./Reusable/Pane1";
 import { IconContext } from "react-icons";
 import { FiSettings } from "react-icons/fi";
 import { FaFeatherAlt } from "react-icons/fa";
@@ -26,14 +25,14 @@ export class Notifications extends Component {
         ],
     };
 
-    renderTabs = () => {
+    renderTabs = (tab) => {
         let className = "tab header3 p-3 ";
         const href = window.location.href;
 
-        if (href.includes("mentions")) {
-            className += "";
-        } else {
-            className += "";
+        if (tab === "All" && !href.includes("mentions")) {
+            className += "header3-primary tab-current";
+        } else if (tab === "Mentions" && href.includes("mentions")) {
+            className += "header3-primary tab-current";
         }
 
         return className;
@@ -88,6 +87,9 @@ export class Notifications extends Component {
                                                         .userImg
                                                 }
                                                 alt="User"
+                                                onClick={() =>
+                                                    this.props.onProfileClick()
+                                                }
                                             />
                                         )}
                                         <span className="pl-3">
@@ -120,7 +122,7 @@ export class Notifications extends Component {
                                 >
                                     <Link
                                         to="/notifications"
-                                        className={this.renderTabs()}
+                                        className={this.renderTabs("All")}
                                         style={{
                                             float: "left",
                                             width: "50%",
@@ -130,7 +132,7 @@ export class Notifications extends Component {
                                     </Link>
                                     <Link
                                         to="/notifications/mentions"
-                                        className={this.renderTabs()}
+                                        className={this.renderTabs("Mentions")}
                                         style={{
                                             float: "left",
                                             width: "50%",

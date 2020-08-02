@@ -11,10 +11,10 @@ import NavSide from "./components/Nav/NavSide";
 import NavBottom from "./components/Nav/NavBottom";
 import Home from "./components/Home/Home";
 import Explore from "./components/Explore/Explore";
-import Notifications from "./components/Notifications/Notifications";
+import Notifications from "./components/Notifications";
 import Messages from "./components/Messages/Messages";
 import Bookmarks from "./components/Bookmarks";
-import Lists from "./components/Lists/Lists";
+import Lists from "./components/Lists";
 import Profile from "./components/Profile/Profile";
 
 export class App extends Component {
@@ -35,7 +35,7 @@ export class App extends Component {
             location: "Bay Area, CA",
             link: "eedelosreyes2.github.io",
             dateJoined: "July 2020",
-            following: 1,
+            following: 0,
             followers: 0,
         },
     };
@@ -117,7 +117,10 @@ export class App extends Component {
                     ) : (
                         <div>
                             <NavBottom />
-                            <NavSide onProfileClick={this.handleProfileClick} />
+                            <NavSide
+                                currentUser={currentUser}
+                                onProfileClick={this.handleProfileClick}
+                            />
                         </div>
                     )}
                     <div
@@ -149,6 +152,7 @@ export class App extends Component {
                                     <Explore
                                         sizes={sizes}
                                         currentUser={currentUser}
+                                        onProfileClick={this.handleProfileClick}
                                     />
                                 )}
                             />
@@ -158,6 +162,7 @@ export class App extends Component {
                                     <Notifications
                                         sizes={sizes}
                                         currentUser={currentUser}
+                                        onProfileClick={this.handleProfileClick}
                                     />
                                 )}
                             />
@@ -167,6 +172,7 @@ export class App extends Component {
                                     <Messages
                                         sizes={sizes}
                                         currentUser={currentUser}
+                                        onProfileClick={this.handleProfileClick}
                                     />
                                 )}
                             />

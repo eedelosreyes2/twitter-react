@@ -32,6 +32,9 @@ export class Messages extends Component {
                                             className="user-image p-2"
                                             src={this.props.currentUser.userImg}
                                             alt="User"
+                                            onClick={() =>
+                                                this.props.onProfileClick()
+                                            }
                                         />
                                     )}
                                     <span className="pl-3">Messages</span>
