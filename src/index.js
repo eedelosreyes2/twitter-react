@@ -16,7 +16,7 @@ const client = new Twitter({
     access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
     access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 });
-console.log("hey " + process.env.TWITTER_CONSUMER_KEY);
+// console.log("hey " + process.env.TWITTER_CONSUMER_KEY);
 const tweets = scrape("sfchronicle");
 
 function scrape(screen_name) {

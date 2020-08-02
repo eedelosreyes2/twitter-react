@@ -20,7 +20,15 @@ export class BlueButton extends Component {
     };
 
     render() {
-        const { title, height, width, float, isActive, event } = this.props;
+        const {
+            title,
+            height,
+            shadow,
+            width,
+            float,
+            isActive,
+            event,
+        } = this.props;
 
         return (
             <button
@@ -31,6 +39,7 @@ export class BlueButton extends Component {
                     backgroundColor: this.state.backgroundColor,
                     border: "none",
                     borderRadius: "50px",
+                    boxShadow: shadow ? "2px 2px 4px gray" : "",
                     color: "white",
                     float: float,
                     fontWeight: "bold",

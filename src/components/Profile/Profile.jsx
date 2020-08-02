@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import CenterCol from "../Reusable/CenterCol";
 import ProfileBar from "./ProfileBar";
 import SearchBar from "../SearchBar/SearchBar";
@@ -72,7 +73,6 @@ export class Profile extends Component {
         } = this.props.currentUser;
 
         const { sizes } = this.props;
-        console.log(link);
 
         return (
             <div>
@@ -124,13 +124,7 @@ export class Profile extends Component {
                                           }
                                 }
                             />
-                            <div
-                                style={
-                                    {
-                                        // height: "180px",
-                                    }
-                                }
-                            >
+                            <div>
                                 <img
                                     src={userImg}
                                     alt="user"
@@ -171,7 +165,9 @@ export class Profile extends Component {
                                         <span className="sub mt-n1">
                                             {handle}
                                         </span>
-                                        <span>{bio}</span>
+                                        <span style={{ paddingRight: "40px" }}>
+                                            {bio}
+                                        </span>
                                         <span className="sub pt-2 pb-2">
                                             <IconContext.Provider
                                                 value={{
@@ -183,13 +179,24 @@ export class Profile extends Component {
                                                     {" " + location}
                                                 </span>
                                                 <FiLink />
-                                                <a
-                                                    href={link}
-                                                    target="_blank"
-                                                    className="twitter-blue pr-3"
+                                                <button
+                                                    onClick={() => {
+                                                        window.open(
+                                                            "https://" + link,
+                                                            "_blank"
+                                                        );
+                                                        return false;
+                                                    }}
+                                                    className="link pr-3"
+                                                    style={{
+                                                        background: "none",
+                                                        border: "none",
+                                                        color:
+                                                            "var(--twitter-blue)",
+                                                    }}
                                                 >
                                                     {" " + link}
-                                                </a>
+                                                </button>
                                                 <BsCalendar />
                                                 {" Joined " + dateJoined}
                                             </IconContext.Provider>
@@ -211,11 +218,13 @@ export class Profile extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <ProfileBar
-                                sizes={sizes}
-                                tabs={this.state.tabs}
-                                onCurrent={this.handleCurrent}
-                            />
+                            <div style={{ paddingTop: "10px" }}>
+                                <ProfileBar
+                                    sizes={sizes}
+                                    tabs={this.state.tabs}
+                                    onCurrent={this.handleCurrent}
+                                />
+                            </div>
                         </React.Fragment>
                     }
                 />

@@ -26,10 +26,6 @@ export class Messages extends Component {
                                     justifyContent: "space-between",
                                 }}
                             >
-                                {/* Messages
-                                <div className="riMailAddLine-wrapper">
-                                    <RiMailAddLine />
-                                </div> */}
                                 <div>
                                     {sizes.showNav ? null : (
                                         <img
@@ -40,21 +36,52 @@ export class Messages extends Component {
                                     )}
                                     <span className="pl-3">Messages</span>
                                 </div>
-                                <div
-                                    className="icon-wrapper"
-                                    style={{
-                                        padding: "3px 10px",
-                                        float: "right",
-                                    }}
-                                >
-                                    <IconContext.Provider
-                                        value={{
-                                            className: "twitter-blue",
+                                {sizes.showNav ? (
+                                    <div
+                                        className="icon-wrapper"
+                                        style={{
+                                            padding: "3px 10px",
+                                            float: "right",
                                         }}
                                     >
-                                        <RiMailAddLine />
-                                    </IconContext.Provider>
-                                </div>
+                                        <IconContext.Provider
+                                            value={{
+                                                className: "twitter-blue",
+                                            }}
+                                        >
+                                            <RiMailAddLine />
+                                        </IconContext.Provider>
+                                    </div>
+                                ) : (
+                                    <div
+                                        style={{
+                                            bottom: 80,
+                                            right: 20,
+                                            position: "fixed",
+                                        }}
+                                    >
+                                        <BlueButton
+                                            title={
+                                                <IconContext.Provider
+                                                    value={{
+                                                        color: "white",
+                                                        size: "1.25em",
+                                                        style: {
+                                                            marginBottom: "3px",
+                                                        },
+                                                    }}
+                                                >
+                                                    <RiMailAddLine />
+                                                </IconContext.Provider>
+                                            }
+                                            height="50px"
+                                            shadow={true}
+                                            width="50px"
+                                            isActive={true}
+                                            event={null}
+                                        />
+                                    </div>
+                                )}
                             </div>
 
                             <div

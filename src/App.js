@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Nav/Nav";
+import NavSide from "./components/Nav/NavSide";
 import NavBottom from "./components/Nav/NavBottom";
 import Home from "./components/Home/Home";
 import Explore from "./components/Explore/Explore";
@@ -29,7 +30,8 @@ export class App extends Component {
                 "https://pbs.twimg.com/media/EZHM3yNXYAUzlkm?format=jpg&name=small",
             numTweets: 0,
             isVerified: false,
-            bio: "Temporary bio",
+            bio:
+                "This is not a real Twitter account, but you can make posts on this app and they will also show up here!",
             location: "Bay Area, CA",
             link: "eedelosreyes2.github.io",
             dateJoined: "July 2020",
@@ -55,7 +57,18 @@ export class App extends Component {
         this.setState({ windowWidth, windowHeight });
     };
 
+    handleProfileClick = () => {
+        const navSide = document.getElementById("navSide");
+        if (navSide.style.display === "none") {
+            navSide.style.display = "block";
+        } else {
+            navSide.style.display = "none";
+        }
+    };
+
     render() {
+        console.log(this.props.tweets);
+
         const { windowWidth, windowHeight, currentUser } = this.state;
         const showNav = windowWidth > 500;
         const navCollapsed = windowWidth < 1260;
@@ -102,7 +115,10 @@ export class App extends Component {
                     {sizes.showNav ? (
                         <Nav sizes={sizes} currentUser={currentUser} />
                     ) : (
-                        <NavBottom />
+                        <div>
+                            <NavBottom />
+                            <NavSide onProfileClick={this.handleProfileClick} />
+                        </div>
                     )}
                     <div
                         style={{
@@ -118,6 +134,7 @@ export class App extends Component {
                                     <Home
                                         sizes={sizes}
                                         currentUser={currentUser}
+                                        onProfileClick={this.handleProfileClick}
                                     />
                                 )}
                             />

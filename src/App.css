@@ -8,6 +8,10 @@ a:hover {
     text-decoration: none;
 }
 
+button:focus {
+    outline: none;
+}
+
 .twitter-blue {
     color: #1da1f2;
 }

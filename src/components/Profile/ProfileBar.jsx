@@ -28,13 +28,20 @@ export class ProfileBar extends Component {
                             className={className}
                             key={id}
                             style={{
+                                display: "table",
                                 height: "100%",
-                                paddingTop: "12px",
                                 textAlign: "center",
                                 width: "100%",
                             }}
                         >
-                            {title}
+                            <span
+                                style={{
+                                    display: "table-cell",
+                                    verticalAlign: "middle",
+                                }}
+                            >
+                                {title}
+                            </span>
                         </Link>
                     );
                 })}
