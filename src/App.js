@@ -26,9 +26,13 @@ export class App extends Component {
             userImg:
                 "https://pbs.twimg.com/profile_images/857089270414233601/H5OtJMkD_400x400.jpg",
             headerImg:
-                "https://pbs.twimg.com/profile_banners/26270913/1583071044/1500x500",
+                "https://pbs.twimg.com/media/EZHM3yNXYAUzlkm?format=jpg&name=small",
             numTweets: 0,
             isVerified: false,
+            bio: "Temporary bio",
+            location: "Bay Area, CA",
+            link: "eedelosreyes2.github.io",
+            dateJoined: "July 2020",
             following: 1,
             followers: 0,
         },

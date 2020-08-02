@@ -118,10 +118,11 @@ export class Nav extends Component {
                 style={{
                     display: "inline-block",
                     height: "100vh",
+                    overflow: "scroll",
                     padding: sizes.navCollapsed
                         ? "0 10px 0 10px"
                         : "0 0 0 17px",
-                    position: "sticky",
+                    position: "fixed",
                     top: 0,
                     width: sizes.navWidth,
                 }}
@@ -149,40 +150,44 @@ export class Nav extends Component {
                             navItem={navItem}
                         />
                     ))}
-                    {sizes.navCollapsed ? (
-                        <BlueButton
-                            title={
-                                <IconContext.Provider
-                                    value={{
-                                        color: "white",
-                                        size: "1.25em",
-                                        style: { marginBottom: "3px" },
-                                    }}
-                                >
-                                    <FaFeatherAlt />
-                                </IconContext.Provider>
-                            }
-                            height="50px"
-                            width="50px"
-                            isActive={true}
-                            event={null}
-                        />
-                    ) : (
-                        <BlueButton
-                            title="Tweet"
-                            height="50px"
-                            width="225px"
-                            isActive={true}
-                            event={null}
-                        />
-                    )}
+                    <div style={{ paddingBottom: "100px" }}>
+                        {sizes.navCollapsed ? (
+                            <BlueButton
+                                title={
+                                    <IconContext.Provider
+                                        value={{
+                                            color: "white",
+                                            size: "1.25em",
+                                            style: { marginBottom: "3px" },
+                                        }}
+                                    >
+                                        <FaFeatherAlt />
+                                    </IconContext.Provider>
+                                }
+                                height="50px"
+                                width="50px"
+                                isActive={true}
+                                event={null}
+                            />
+                        ) : (
+                            <BlueButton
+                                title="Tweet"
+                                height="50px"
+                                width="225px"
+                                isActive={true}
+                                event={null}
+                            />
+                        )}
+                    </div>
+
                     <div
-                        className="nav-item"
+                        className="current-user"
                         style={{
+                            backgroundColor: "white",
                             bottom: 0,
                             height: "60px",
-                            margin: "0px 0px 10px 0px",
-                            padding: "2px 10px -12px 0",
+                            margin: "0px 0px 0px 0px",
+                            padding: "2px 10px 0 0",
                             position: "fixed",
                             width: sizes.navCollapsed ? "58px" : "auto",
                         }}

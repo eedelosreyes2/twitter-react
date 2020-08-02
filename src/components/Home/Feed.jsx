@@ -77,7 +77,7 @@ export class Feed extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{ paddingBottom: "65px" }}>
                 {this.state.posts.map((post) => {
                     return <Post key={post.id} post={post} />;
                 })}

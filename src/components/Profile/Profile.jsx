@@ -7,6 +7,8 @@ import WhatsHappening from "../Reusable/WhatsHappening";
 import Breadcrumbs from "../Reusable/Breadcrumbs";
 import { IconContext } from "react-icons";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { GoLocation } from "react-icons/go";
+import { FiLink } from "react-icons/fi";
 import { BsCalendar } from "react-icons/bs";
 
 export class Profile extends Component {
@@ -63,9 +65,14 @@ export class Profile extends Component {
             numTweets,
             following,
             followers,
+            bio,
+            location,
+            link,
+            dateJoined,
         } = this.props.currentUser;
 
         const { sizes } = this.props;
+        console.log(link);
 
         return (
             <div>
@@ -102,6 +109,7 @@ export class Profile extends Component {
                             </div>
                             <img
                                 src={headerImg}
+                                alt="header"
                                 style={
                                     sizes.smallTablet
                                         ? sizes.showNav
@@ -117,12 +125,15 @@ export class Profile extends Component {
                                 }
                             />
                             <div
-                                style={{
-                                    height: "180px",
-                                }}
+                                style={
+                                    {
+                                        // height: "180px",
+                                    }
+                                }
                             >
                                 <img
                                     src={userImg}
+                                    alt="user"
                                     style={{
                                         border: "3px solid",
                                         borderColor: "white",
@@ -134,7 +145,7 @@ export class Profile extends Component {
                                         marginTop: sizes.smallTablet
                                             ? "-14vw"
                                             : "-80px",
-                                        position: "fixed",
+                                        position: "absolute",
                                         width: sizes.smallTablet
                                             ? "22vw"
                                             : "140px",
@@ -160,11 +171,27 @@ export class Profile extends Component {
                                         <span className="sub mt-n1">
                                             {handle}
                                         </span>
+                                        <span>{bio}</span>
                                         <span className="sub pt-2 pb-2">
                                             <IconContext.Provider
-                                                value={{ color: "#6b7b8a" }}
+                                                value={{
+                                                    color: "#6b7b8a",
+                                                }}
                                             >
-                                                <BsCalendar /> Joined July 2020
+                                                <GoLocation />
+                                                <span className="pr-3">
+                                                    {" " + location}
+                                                </span>
+                                                <FiLink />
+                                                <a
+                                                    href={link}
+                                                    target="_blank"
+                                                    className="twitter-blue pr-3"
+                                                >
+                                                    {" " + link}
+                                                </a>
+                                                <BsCalendar />
+                                                {" Joined " + dateJoined}
                                             </IconContext.Provider>
                                         </span>
                                         <span>

@@ -15,6 +15,7 @@ export class Pane1 extends Component {
                     flexDirection: "column",
                     float: "right",
                     paddingLeft: "30px",
+                    position: "sticky",
                     width: "380px",
                 }}
             >
