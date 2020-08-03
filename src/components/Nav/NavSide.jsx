@@ -54,7 +54,6 @@ export class NavSide extends Component {
                     left: 0,
                     position: "fixed",
                     top: 0,
-                    transition: "2s",
                     width: "100%",
                     zIndex: 100,
                 }}

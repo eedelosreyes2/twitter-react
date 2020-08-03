@@ -70,7 +70,8 @@ export class Messages extends Component {
                                                         color: "white",
                                                         size: "1.25em",
                                                         style: {
-                                                            marginBottom: "3px",
+                                                            // marginBottom: "3px",
+                                                            margin: "auto",
                                                         },
                                                     }}
                                                 >

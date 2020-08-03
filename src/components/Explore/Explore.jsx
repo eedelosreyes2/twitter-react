@@ -127,6 +127,7 @@ export class Explore extends Component {
                                     flexDirection: "column",
                                     height: "70vh",
                                     justifyContent: "center",
+                                    textAlign: "center",
                                     width: "100%",
                                 }}
                             >

@@ -200,8 +200,14 @@ export class Profile extends Component {
                                                 >
                                                     {" " + link}
                                                 </button>
-                                                <BsCalendar />
-                                                {" Joined " + dateJoined}
+                                                <span
+                                                    style={{
+                                                        display: "inline-block",
+                                                    }}
+                                                >
+                                                    <BsCalendar />
+                                                    {" Joined " + dateJoined}
+                                                </span>
                                             </IconContext.Provider>
                                         </span>
                                         <span>
