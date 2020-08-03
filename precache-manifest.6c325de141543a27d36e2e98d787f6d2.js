@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fdb5be2c994ba739b8a0f27e32ec9760",
+    "revision": "9908a22370b97f23a31a04ab9d5ca5d0",
     "url": "/twitter-react/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/twitter-react/static/css/2.829c9cb5.chunk.css"
   },
   {
-    "revision": "a825788d6504a2d150b2",
+    "revision": "e7d55b10e0f88283c4a6",
     "url": "/twitter-react/static/css/main.bb3ad4c7.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/twitter-react/static/js/2.7e93a7c9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a825788d6504a2d150b2",
-    "url": "/twitter-react/static/js/main.acce1b1a.chunk.js"
+    "revision": "e7d55b10e0f88283c4a6",
+    "url": "/twitter-react/static/js/main.d81738e0.chunk.js"
   },
   {
     "revision": "8804427ee7ae0b7412c6",
