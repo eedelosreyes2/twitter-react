@@ -4,9 +4,25 @@ import { IconContext } from "react-icons";
 import { FaRegComment, FaRetweet, FaRegHeart } from "react-icons/fa";
 import { FiShare } from "react-icons/fi";
 
+var moment = require("moment");
+moment().format();
+
 export class Post extends Component {
+    getDateString = (dateInMs) => {
+        // moment(tweetDate, "dd MMM DD HH:mm:ss ZZ YYYY", "en");
+        console.log(moment(dateInMs));
+        return moment.unix(dateInMs);
+    };
+
     render() {
-        const { user, text, comments, retweets, likes } = this.props.post;
+        const {
+            createdAt,
+            user,
+            text,
+            comments,
+            retweets,
+            likes,
+        } = this.props.post;
 
         return (
             <div
@@ -16,13 +32,14 @@ export class Post extends Component {
                     display: "flex",
                     height: "100%",
                     padding: "10px",
+                    paddingRight: "20px",
                     width: "100%",
                 }}
             >
                 <div
                     style={{
                         float: "left",
-                        minHeight: "100px",
+                        minHeight: "80px",
                         paddingRight: "10px",
                     }}
                 >
@@ -41,7 +58,7 @@ export class Post extends Component {
                         </span>{" "}
                         <span className="sub">{user.handle}</span>
                         {" · "}
-                        <span className="sub">1h</span>
+                        <span className="sub">{createdAt}</span>
                     </div>
                     <div className="post-text">{text}</div>
                     <div className="pt-2">

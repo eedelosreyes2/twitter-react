@@ -70,7 +70,8 @@ export class WhoToFollow extends Component {
                                     ></img>
                                     <div
                                         style={{
-                                            display: "inline-block",
+                                            display: "flex",
+                                            flexDirection: "column",
                                         }}
                                     >
                                         <span className="story-title">
@@ -90,7 +91,7 @@ export class WhoToFollow extends Component {
                                                 </IconContext.Provider>
                                             ) : null}
                                         </span>
-                                        <br />
+                                        {/* <br /> */}
                                         <span className="sub">{handle}</span>
                                     </div>
                                 </div>
