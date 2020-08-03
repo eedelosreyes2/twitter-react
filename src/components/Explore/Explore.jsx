@@ -120,25 +120,13 @@ export class Explore extends Component {
                                     onRefresh={this.handleRefresh}
                                 />
                             </div>
-                            <div
-                                style={{
-                                    alignItems: "center",
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    height: "70vh",
-                                    justifyContent: "center",
-                                    textAlign: "center",
-                                    width: "100%",
-                                }}
-                            >
-                                <span className="header1">
-                                    Nothing to see here — yet
-                                </span>
-                                <span className="sub">
-                                    The developer is working hard on further
-                                    implementations!
-                                </span>
-                            </div>
+                            <p className="header2 text-center mt-5">
+                                Nothing to see here — yet
+                            </p>
+                            <p className="sub text-center mt-n2">
+                                The developer is working hard on further
+                                implementations!
+                            </p>
                         </div>
                     }
                 />

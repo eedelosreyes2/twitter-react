@@ -119,6 +119,7 @@ export class Nav extends Component {
                     display: "inline-block",
                     height: "100vh",
                     overflow: "scroll",
+                    overflowX: "hidden",
                     padding: sizes.navCollapsed
                         ? "0 10px 0 10px"
                         : "0 0 0 17px",

@@ -110,10 +110,6 @@ export class Notifications extends Component {
                                         </IconContext.Provider>
                                     </div>
                                 </div>
-                                {/* <NotificationsBar
-                                    tabs={this.state.tabs}
-                                    onCurrent={this.handleCurrent}
-                                /> */}
                                 <div
                                     style={{
                                         marginTop: "1px",
