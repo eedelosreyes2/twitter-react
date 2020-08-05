@@ -4,7 +4,7 @@ I (kind of) recreated [Twitter](https://twitter.com/)! The purpose of making thi
 
 ## Live Demo
 
-[Twitter React](https://eedelosreyes2.github.io/twitter-react/){:target="\_blank"}
+[Twitter React](https://eedelosreyes2.github.io/twitter-react/)
 
 ## Version
 
