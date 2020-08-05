@@ -17,8 +17,8 @@ export class Post extends Component {
     render() {
         const {
             createdAt,
-            user,
             text,
+            user,
             comments,
             retweets,
             likes,
@@ -46,7 +46,7 @@ export class Post extends Component {
                     <Link to="/profile">
                         <img
                             className="user-image"
-                            src={user.image}
+                            src={user.userImg}
                             alt="User"
                         />
                     </Link>

@@ -63,7 +63,7 @@ export class Home extends Component {
                                     currentUser={this.props.currentUser}
                                 />
                             ) : null}
-                            <Feed />
+                            <Feed currentUser={this.props.currentUser} />
                         </React.Fragment>
                     }
                 />

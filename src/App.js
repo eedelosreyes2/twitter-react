@@ -22,12 +22,12 @@ export class App extends Component {
         windowWidth: 0,
         windowHeight: 0,
         currentUser: {
-            handle: "@currentUser",
-            username: "Current User",
+            handle: "@handle",
+            username: "Username",
             userImg:
-                "https://pbs.twimg.com/profile_images/857089270414233601/H5OtJMkD_400x400.jpg",
+                "https://icon-library.com/images/twitter-icon-images/twitter-icon-images-12.jpg",
             headerImg:
-                "https://pbs.twimg.com/media/EZHM3yNXYAUzlkm?format=jpg&name=small",
+                "https://64.media.tumblr.com/95ff024ccc5563db3afa1ac6d2cdbf35/510ee8c665eda2db-e2/s640x960/5ab783f55f32dd813e512edbe4e9cbf8ed2272fd.jpg",
             numTweets: 0,
             isVerified: false,
             bio:

@@ -21,7 +21,7 @@ export class NavBottomItem extends Component {
                         width: "50px",
                     }}
                 >
-                    <IconContext.Provider value={{ size: "2em" }}>
+                    <IconContext.Provider value={{ size: "1.5em" }}>
                         {icon}
                     </IconContext.Provider>
                 </div>

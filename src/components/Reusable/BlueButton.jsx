@@ -39,7 +39,7 @@ export class BlueButton extends Component {
                     backgroundColor: this.state.backgroundColor,
                     border: "none",
                     borderRadius: "50px",
-                    boxShadow: shadow ? "2px 2px 4px gray" : "",
+                    boxShadow: shadow ? "1px 1px 3px gray" : "",
                     color: "white",
                     float: float,
                     fontWeight: "bold",

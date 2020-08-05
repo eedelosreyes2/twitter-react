@@ -44,7 +44,7 @@ export class NavBottom extends Component {
                     bottom: 0,
                     display: "flex",
                     justifyContent: "space-around",
-                    height: "65px",
+                    height: "50px",
                     position: "fixed",
                     width: "100%",
                 }}

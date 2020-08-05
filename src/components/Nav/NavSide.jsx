@@ -63,7 +63,7 @@ export class NavSide extends Component {
                         backgroundColor: "white",
                         float: "left",
                         height: "100%",
-                        width: "60vw",
+                        width: "75vw",
                     }}
                 >
                     <div
@@ -168,7 +168,7 @@ export class NavSide extends Component {
                         filter: "blur(50%)",
                         float: "right",
                         height: "100%",
-                        width: "40vw",
+                        width: "25vw",
                     }}
                 ></div>
             </div>
