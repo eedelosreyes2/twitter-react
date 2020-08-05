@@ -1,10 +1,10 @@
 # Twitter React App
 
-I (kind of) recreated Twitter! The purpose of making this app is to learn the fundamentals of [React](https://reactjs.org/) by creating reusable and reactive components, integrating [React-Router-Dom](https://www.npmjs.com/package/react-router-dom), [Bootstrap](https://www.npmjs.com/package/react-router-dom), and responsive optimizations for all devices.
+I (kind of) recreated [Twitter](https://twitter.com/)! The purpose of making this app is to learn the fundamentals of [React](https://reactjs.org/) by creating reusable and reactive components, integrating [React-Router-Dom](https://www.npmjs.com/package/react-router-dom), [Bootstrap](https://www.npmjs.com/package/react-router-dom), and responsive optimizations for all devices.
 
 ## Live Demo
 
-[Twitter React](https://eedelosreyes2.github.io/twitter-react/)
+[Twitter React](https://eedelosreyes2.github.io/twitter-react/){:target="\_blank"}
 
 ## Version
 
@@ -14,7 +14,7 @@ I (kind of) recreated Twitter! The purpose of making this app is to learn the fu
 
 -   App is intended to look as close to [Twitter](https://twitter.com/) as possible
 -   Optimized for desktop, tablet, and phone (try them all out!)
--   Not all icons are the same as real twitter. All icons used in this app are imported from [react-icons](https://react-icons.github.io/react-icons/)
+-   Not all icons are the same as real Twitter. All icons used in this app are imported from [react-icons](https://react-icons.github.io/react-icons/)
 -   Not every single functionality from Twitter is implemented
     -   Components that don't have functionality yet:
         -   Homepage: Sparkle button, Searchbar
@@ -34,7 +34,7 @@ I (kind of) recreated Twitter! The purpose of making this app is to learn the fu
 
 ## Feedback
 
-I'd love any feedback on my code, comments, or questions - [Contact](https://eedelosreyes2.github.io/#contact)
+I'd love any feedback on my code, comments, questions, job offers - [My Website](https://eedelosreyes2.github.io)
 
 ### TODO
 
