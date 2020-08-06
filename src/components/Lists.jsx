@@ -114,6 +114,7 @@ export class Lists extends Component {
                                     width="130px"
                                     isActive={true}
                                     event={null}
+                                    path="/lists"
                                 />
                             </div>
                         </React.Fragment>

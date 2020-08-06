@@ -29,6 +29,7 @@ export class WhatsHappening extends Component {
                 }}
             >
                 <img
+                    id="tweetComponent"
                     className="user-image mt-2"
                     src={userImg}
                     alt="User"
@@ -45,6 +46,7 @@ export class WhatsHappening extends Component {
                 >
                     <input
                         type="text"
+                        id="tweetComponentInput"
                         className="form-control-lg border-0 pt-3 ml-n2"
                         style={{
                             backgroundColor: "unset",
@@ -83,6 +85,7 @@ export class WhatsHappening extends Component {
                         float="right"
                         isActive={false}
                         event={null}
+                        path="/"
                     />
                 </div>
             </div>

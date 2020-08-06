@@ -128,11 +128,12 @@ export class NavSide extends Component {
                             </span>
                         </div>
                         {this.state.navItems.map((navItem) => {
-                            const { icon, title, path } = navItem;
+                            const { id, icon, title, path } = navItem;
 
                             return (
                                 <Link
                                     to={path}
+                                    key={id}
                                     onClick={
                                         title === "Help"
                                             ? () => {

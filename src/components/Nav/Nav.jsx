@@ -69,6 +69,7 @@ export class Nav extends Component {
             {
                 id: "navItem-help",
                 title: "Help",
+                // path: "/",
                 isActive: false,
                 icon: <FiHelpCircle />,
             },
@@ -170,6 +171,7 @@ export class Nav extends Component {
                                 width="50px"
                                 isActive={true}
                                 event={null}
+                                path="/compose/tweet"
                             />
                         ) : (
                             <BlueButton
@@ -178,6 +180,7 @@ export class Nav extends Component {
                                 width="225px"
                                 isActive={true}
                                 event={null}
+                                path="/compose/tweet"
                             />
                         )}
                     </div>

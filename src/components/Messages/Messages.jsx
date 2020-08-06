@@ -83,6 +83,7 @@ export class Messages extends Component {
                                             width="50px"
                                             isActive={true}
                                             event={null}
+                                            path="/messages"
                                         />
                                     </div>
                                 )}
@@ -118,6 +119,7 @@ export class Messages extends Component {
                                     width="195px"
                                     isActive={true}
                                     event={null}
+                                    path="/messages"
                                 />
                             </div>
                         </React.Fragment>
@@ -150,6 +152,7 @@ export class Messages extends Component {
                                 width="140px"
                                 isActive={true}
                                 event={null}
+                                path="/messages"
                             />
                         </div>
                     </div>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export class BlueButton extends Component {
     state = {
@@ -28,28 +29,31 @@ export class BlueButton extends Component {
             float,
             isActive,
             event,
+            path,
         } = this.props;
 
         return (
-            <button
-                onClick={event}
-                onMouseEnter={() => this.handleMouseEnter(isActive)}
-                onMouseLeave={() => this.handleMouseLeave(isActive)}
-                style={{
-                    backgroundColor: this.state.backgroundColor,
-                    border: "none",
-                    borderRadius: "50px",
-                    boxShadow: shadow ? "1px 1px 3px gray" : "",
-                    color: "white",
-                    float: float,
-                    fontWeight: "bold",
-                    height: height,
-                    outline: "none",
-                    width: width,
-                }}
-            >
-                {title}
-            </button>
+            <Link to={path}>
+                <button
+                    onClick={event}
+                    onMouseEnter={() => this.handleMouseEnter(isActive)}
+                    onMouseLeave={() => this.handleMouseLeave(isActive)}
+                    style={{
+                        backgroundColor: this.state.backgroundColor,
+                        border: "none",
+                        borderRadius: "50px",
+                        boxShadow: shadow ? "1px 1px 3px gray" : "",
+                        color: "white",
+                        float: float,
+                        fontWeight: "bold",
+                        height: height,
+                        outline: "none",
+                        width: width,
+                    }}
+                >
+                    {title}
+                </button>
+            </Link>
         );
     }
 }

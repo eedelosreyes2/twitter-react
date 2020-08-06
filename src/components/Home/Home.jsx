@@ -92,6 +92,7 @@ export class Home extends Component {
                             width="50px"
                             isActive={true}
                             event={null}
+                            path="/compose/tweet"
                         />
                     </div>
                 )}

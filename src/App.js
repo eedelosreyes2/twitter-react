@@ -9,6 +9,7 @@ import "./App.css";
 import Nav from "./components/Nav/Nav";
 import NavSide from "./components/Nav/NavSide";
 import NavBottom from "./components/Nav/NavBottom";
+import TweetComponent from "./components/Home/TweetComponent";
 import Home from "./components/Home/Home";
 import Explore from "./components/Explore/Explore";
 import Notifications from "./components/Notifications";
@@ -129,6 +130,12 @@ export class App extends Component {
                     >
                         <Switch>
                             <Redirect exact from="/" to="/home" />
+                            <Route
+                                path="/compose/tweet"
+                                render={() => (
+                                    <TweetComponent currentUser={currentUser} />
+                                )}
+                            />
                             <Route
                                 path="/home"
                                 render={() => (
