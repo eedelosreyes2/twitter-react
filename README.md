@@ -1,6 +1,6 @@
 # Twitter React App
 
-I (kind of) recreated [Twitter](https://twitter.com/)! The purpose of making this app is to learn the fundamentals of [React](https://reactjs.org/) by creating reusable and reactive components, integrating [React-Router-Dom](https://www.npmjs.com/package/react-router-dom), [Bootstrap](https://www.npmjs.com/package/react-router-dom), and responsive optimizations for all devices.
+I (kind of) recreated [Twitter](https://twitter.com/)! The purpose of making this app is to learn the fundamentals of [React](https://reactjs.org/) by creating reusable and reactive components, implementing basic post, like, and retweet functionality, integrating [React-Router-Dom](https://www.npmjs.com/package/react-router-dom), [Bootstrap](https://www.npmjs.com/package/react-router-dom), and responsive optimizations for all devices.
 
 ## Live Demo
 
