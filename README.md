@@ -4,7 +4,7 @@ I (kind of) recreated [Twitter](https://twitter.com/)! The purpose of making thi
 
 ## Live Demo
 
-[Twitter React](https://eedelosreyes2.github.io/twitter-react/)
+https://eedelosreyes2.github.io/twitter-react/
 
 ## Version
 
@@ -13,6 +13,7 @@ I (kind of) recreated [Twitter](https://twitter.com/)! The purpose of making thi
 ## Specs
 
 -   App is intended to look as close to [Twitter](https://twitter.com/) as possible
+-   Basic post, like, and retweet functionality for a single user
 -   Optimized for desktop, tablet, and phone (try them all out!)
 -   Not all icons are the same as real Twitter. All icons used in this app are imported from [react-icons](https://react-icons.github.io/react-icons/)
 -   Not every single functionality from Twitter is implemented
@@ -34,12 +35,10 @@ I (kind of) recreated [Twitter](https://twitter.com/)! The purpose of making thi
 
 ## Feedback
 
-I'd love any feedback on my code, comments, questions, job offers - [My Website](https://eedelosreyes2.github.io)
+I'd love any feedback on my code, comments, questions, job offers ;) - [Contact ->](https://eedelosreyes2.github.io/#contact)
 
 ### TODO
 
--   Nav change more to help
--   CenterCol height
 -   Fix weird stuff on phones
 -   Post functionality:
     -   Show in home feed and profile, and likes

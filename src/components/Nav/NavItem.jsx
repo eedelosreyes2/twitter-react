@@ -14,7 +14,17 @@ export class NavItem extends Component {
                     to={path}
                     onMouseEnter={() => this.props.onActive(id)}
                     onMouseLeave={() => this.props.onInactive(id)}
-                    onClick={() => this.props.onRefresh()}
+                    onClick={
+                        title === "Help"
+                            ? () => {
+                                  window.open(
+                                      "https://github.com/eedelosreyes2/twitter-react",
+                                      "_blank"
+                                  );
+                                  return false;
+                              }
+                            : () => this.props.onRefresh()
+                    }
                     className={this.getClasses(path)}
                     id={id}
                     data-toggle="pill"

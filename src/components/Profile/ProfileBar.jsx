@@ -31,7 +31,7 @@ export class ProfileBar extends Component {
                                 display: "table",
                                 height: "100%",
                                 textAlign: "center",
-                                width: "100%",
+                                width: "25%",
                             }}
                         >
                             <span

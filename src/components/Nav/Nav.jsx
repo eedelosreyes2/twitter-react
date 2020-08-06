@@ -5,7 +5,7 @@ import BlueButton from "../Reusable/BlueButton";
 import { IconContext } from "react-icons";
 import { AiOutlineTwitter, AiOutlineHome } from "react-icons/ai";
 import { FaHashtag, FaFeatherAlt } from "react-icons/fa";
-import { FiMail, FiMoreHorizontal } from "react-icons/fi";
+import { FiMail, FiHelpCircle } from "react-icons/fi";
 import { BsBookmark } from "react-icons/bs";
 import {
     RiNotification4Line,
@@ -67,11 +67,10 @@ export class Nav extends Component {
                 icon: <RiUserLine />,
             },
             {
-                id: "navItem-more",
-                title: "More",
-                path: "#more",
+                id: "navItem-help",
+                title: "Help",
                 isActive: false,
-                icon: <FiMoreHorizontal />,
+                icon: <FiHelpCircle />,
             },
         ],
     };
@@ -159,7 +158,9 @@ export class Nav extends Component {
                                         value={{
                                             color: "white",
                                             size: "1.25em",
-                                            style: { marginBottom: "3px" },
+                                            style: {
+                                                marginBottom: "3px",
+                                            },
                                         }}
                                     >
                                         <FaFeatherAlt />
@@ -190,7 +191,7 @@ export class Nav extends Component {
                             margin: "0px 0px 0px 0px",
                             padding: "2px 10px 0 0",
                             position: "fixed",
-                            width: sizes.navCollapsed ? "58px" : "auto",
+                            width: sizes.navCollapsed ? "58px" : "260px",
                         }}
                     >
                         <img

@@ -11,7 +11,7 @@ export class CenterCol extends Component {
                     borderColor: "#dee2e3",
                     display: "inline-block",
                     // height: "100vh", // fix
-                    height: sizes.showRightPane ? "140vh" : "100vh",
+                    height: sizes.showRightPane ? "140vh" : "100vh - 50px",
                     marginLeft: sizes.showNav ? sizes.navWidth : 0,
                     width: sizes.smallTablet
                         ? sizes.showNav

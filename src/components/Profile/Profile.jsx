@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CenterCol from "../Reusable/CenterCol";
+import BlueButton from "../Reusable/BlueButton";
 import ProfileBar from "./ProfileBar";
 import SearchBar from "../SearchBar/SearchBar";
 import Follow from "../Reusable/Follow";
@@ -10,6 +11,7 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import { GoLocation } from "react-icons/go";
 import { FiLink } from "react-icons/fi";
 import { BsCalendar } from "react-icons/bs";
+import { FaFeatherAlt } from "react-icons/fa";
 
 export class Profile extends Component {
     state = {
@@ -237,6 +239,35 @@ export class Profile extends Component {
                         </React.Fragment>
                     }
                 />
+                {sizes.showNav ? null : (
+                    <div
+                        style={{
+                            bottom: 80,
+                            right: 20,
+                            position: "fixed",
+                        }}
+                    >
+                        <BlueButton
+                            title={
+                                <IconContext.Provider
+                                    value={{
+                                        color: "white",
+                                        size: "1.25em",
+                                        style: { marginBottom: "3px" },
+                                    }}
+                                >
+                                    <FaFeatherAlt />
+                                </IconContext.Provider>
+                            }
+                            height="50px"
+                            shadow={true}
+                            width="50px"
+                            isActive={true}
+                            event={null}
+                        />
+                    </div>
+                )}
+
                 {sizes.showRightPane ? (
                     <div
                         style={{
