@@ -15,10 +15,10 @@ export class WhatsHappening extends Component {
             },
             {
                 id: 1,
-                title: "kali uchis",
-                category: "R&B and soul",
+                title: "Trump is still an idiot",
+                category: "USA",
                 status: "Trending",
-                tweets: 8267,
+                tweets: "99K",
                 image: null,
             },
             {
