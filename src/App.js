@@ -9,7 +9,7 @@ import "./App.css";
 import Nav from "./components/Nav/Nav";
 import NavSide from "./components/Nav/NavSide";
 import NavBottom from "./components/Nav/NavBottom";
-import TweetComponent from "./components/Home/TweetComponent";
+import TweetComponent from "./components/Reusable/TweetComponent";
 import Home from "./components/Home/Home";
 import Explore from "./components/Explore/Explore";
 import Notifications from "./components/Notifications";
@@ -26,7 +26,7 @@ export class App extends Component {
             handle: "@handle",
             username: "Username",
             userImg:
-                "https://icon-library.com/images/twitter-icon-images/twitter-icon-images-12.jpg",
+                "https://pbs.twimg.com/profile_images/875168307585794048/yuE68O2__400x400.jpg",
             headerImg:
                 "https://64.media.tumblr.com/95ff024ccc5563db3afa1ac6d2cdbf35/510ee8c665eda2db-e2/s640x960/5ab783f55f32dd813e512edbe4e9cbf8ed2272fd.jpg",
             numTweets: 0,
@@ -133,7 +133,10 @@ export class App extends Component {
                             <Route
                                 path="/compose/tweet"
                                 render={() => (
-                                    <TweetComponent currentUser={currentUser} />
+                                    <TweetComponent
+                                        sizes={sizes}
+                                        currentUser={currentUser}
+                                    />
                                 )}
                             />
                             <Route

@@ -25,7 +25,7 @@ https://eedelosreyes2.github.io/twitter-react/
         -   Bookmarks page: Searchbar
         -   Lists page: New List, Settings, Create a List, Searchbar
         -   Profile page: Following and Followers
-        -   What's Happening and Who to follow value are hardcoded (from when I made them), show more button in Who to follow
+        -   What's Happening and Who to follow values are hardcoded (I made them up), show more button in Who to follow
         -   Compose Tweet: image, gif, poll, emoji, and schedule buttons
     -   I will add Dim + Lights out mode
 
@@ -44,4 +44,3 @@ I'd love any feedback on my code, comments, questions, job offers ;) - [Contact 
     -   Show in home feed and profile, and likes
     -   Date posted
     -   likes and retweets, and wrappers, spacing
--   Maybe change What's Happening?

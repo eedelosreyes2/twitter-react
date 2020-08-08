@@ -172,6 +172,7 @@ export class Notifications extends Component {
                             width="50px"
                             isActive={true}
                             event={null}
+                            path="/compose/tweet"
                         />
                     </div>
                 )}

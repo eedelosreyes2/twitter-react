@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CenterCol from "../Reusable/CenterCol";
-import TweetComponent from "./TweetComponent";
+import TweetComponentHome from "./TweetComponentHome";
 import Feed from "./Feed";
 import BlueButton from "../Reusable/BlueButton";
 import Pane1 from "../Reusable/Pane1";
@@ -59,7 +59,8 @@ export class Home extends Component {
                                 </div>
                             </div>
                             {sizes.showNav ? (
-                                <TweetComponent
+                                <TweetComponentHome
+                                    sizes={sizes}
                                     currentUser={this.props.currentUser}
                                 />
                             ) : null}

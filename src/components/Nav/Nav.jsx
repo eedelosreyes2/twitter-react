@@ -126,6 +126,7 @@ export class Nav extends Component {
                     position: "fixed",
                     top: 0,
                     width: sizes.navWidth,
+                    zIndex: 1,
                 }}
             >
                 <div>

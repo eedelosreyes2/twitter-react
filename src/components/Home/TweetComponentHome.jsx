@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import BlueButton from "../Reusable/BlueButton";
 import { IconContext } from "react-icons";
 import { AiOutlineGif } from "react-icons/ai";
@@ -6,7 +7,7 @@ import { BsImage } from "react-icons/bs";
 import { GrEmoji } from "react-icons/gr";
 import { RiBarChart2Line, RiCalendarLine } from "react-icons/ri";
 
-export class WhatsHappening extends Component {
+export class TweetComponentHome extends Component {
     state = {
         items: [
             { id: 0, component: <BsImage /> },
@@ -19,7 +20,6 @@ export class WhatsHappening extends Component {
 
     render() {
         const { userImg } = this.props.currentUser;
-
         return (
             <div
                 style={{
@@ -28,16 +28,17 @@ export class WhatsHappening extends Component {
                     height: "120px",
                 }}
             >
-                <img
-                    id="tweetComponent"
-                    className="user-image mt-2"
-                    src={userImg}
-                    alt="User"
-                    style={{
-                        float: "left",
-                        marginLeft: "15px",
-                    }}
-                />
+                <Link to="/profile">
+                    <img
+                        className="user-image mt-2"
+                        src={userImg}
+                        alt="User"
+                        style={{
+                            float: "left",
+                            marginLeft: "15px",
+                        }}
+                    />
+                </Link>
                 <div
                     style={{
                         float: "left",
@@ -46,7 +47,6 @@ export class WhatsHappening extends Component {
                 >
                     <input
                         type="text"
-                        id="tweetComponentInput"
                         className="form-control-lg border-0 pt-3 ml-n2"
                         style={{
                             backgroundColor: "unset",
@@ -93,4 +93,4 @@ export class WhatsHappening extends Component {
     }
 }
 
-export default WhatsHappening;
+export default TweetComponentHome;
