@@ -55,37 +55,7 @@ export class Messages extends Component {
                                             <RiMailAddLine />
                                         </IconContext.Provider>
                                     </div>
-                                ) : (
-                                    <div
-                                        style={{
-                                            bottom: 80,
-                                            right: 20,
-                                            position: "fixed",
-                                        }}
-                                    >
-                                        <BlueButton
-                                            title={
-                                                <IconContext.Provider
-                                                    value={{
-                                                        size: "1.25em",
-                                                        style: {
-                                                            margin: "auto",
-                                                            padding: "auto",
-                                                        },
-                                                    }}
-                                                >
-                                                    <RiMailAddLine />
-                                                </IconContext.Provider>
-                                            }
-                                            height="50px"
-                                            shadow={true}
-                                            width="50px"
-                                            isActive={true}
-                                            event={null}
-                                            path={null}
-                                        />
-                                    </div>
-                                )}
+                                ) : null}
                             </div>
 
                             <div

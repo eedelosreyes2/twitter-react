@@ -78,7 +78,7 @@ export class Notifications extends Component {
                                         justifyContent: "space-between",
                                     }}
                                 >
-                                    <div className="pl-1">
+                                    <div className="pl-1 pt-1">
                                         {sizes.showNav ? null : (
                                             <img
                                                 className="user-image p-2"
