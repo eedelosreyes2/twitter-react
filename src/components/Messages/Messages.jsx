@@ -67,11 +67,10 @@ export class Messages extends Component {
                                             title={
                                                 <IconContext.Provider
                                                     value={{
-                                                        color: "white",
                                                         size: "1.25em",
                                                         style: {
-                                                            marginLeft: "-5px",
-                                                            marginRight: "0px",
+                                                            margin: "auto",
+                                                            padding: "auto",
                                                         },
                                                     }}
                                                 >
@@ -83,7 +82,7 @@ export class Messages extends Component {
                                             width="50px"
                                             isActive={true}
                                             event={null}
-                                            path="/messages"
+                                            path={null}
                                         />
                                     </div>
                                 )}

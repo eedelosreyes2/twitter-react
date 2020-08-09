@@ -72,10 +72,6 @@ button:focus {
     width: 49px;
 }
 
-.user-image:hover {
-    cursor: pointer;
-}
-
 .post-icon-wrapper {
     color: #657787;
     float: left;

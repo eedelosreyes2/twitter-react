@@ -8,7 +8,7 @@ export class Feed extends Component {
                 id: 0,
                 createdAt: Date.now(),
                 text:
-                    "Welcome to Twitter React App v1.0 😀  Make a post and they will show up here and on the profile page!",
+                    "Welcome to Twitter React App v1.0 😀  Make a post with text and they will show up here and on the profile page!",
                 user: this.props.currentUser,
                 comments: 0,
                 retweets: 0,

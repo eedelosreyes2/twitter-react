@@ -48,6 +48,7 @@ export class BlueButton extends Component {
                         fontWeight: "bold",
                         height: height,
                         outline: "none",
+                        textAlign: "center",
                         width: width,
                     }}
                 >

@@ -186,11 +186,13 @@ export class Nav extends Component {
                         )}
                     </div>
 
-                    <div
+                    <Link
+                        to="/profile"
                         className="current-user"
                         style={{
                             backgroundColor: "white",
-                            bottom: 0,
+                            bottom: 10,
+                            color: "black",
                             height: "60px",
                             margin: "0px 0px 0px 0px",
                             padding: "2px 10px 0 0",
@@ -224,7 +226,7 @@ export class Nav extends Component {
                         >
                             <IoIosArrowDown />
                         </IconContext.Provider>
-                    </div>
+                    </Link>
                 </div>
             </div>
         );

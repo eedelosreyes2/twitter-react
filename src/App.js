@@ -29,7 +29,7 @@ export class App extends Component {
                 "https://pbs.twimg.com/profile_images/875168307585794048/yuE68O2__400x400.jpg",
             headerImg:
                 "https://64.media.tumblr.com/95ff024ccc5563db3afa1ac6d2cdbf35/510ee8c665eda2db-e2/s640x960/5ab783f55f32dd813e512edbe4e9cbf8ed2272fd.jpg",
-            numTweets: 0,
+            numTweets: 2,
             isVerified: false,
             bio:
                 "This is not a real Twitter account, but you can make posts on this app and they will also show up here!",
