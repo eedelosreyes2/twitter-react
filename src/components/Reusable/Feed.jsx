@@ -9,7 +9,7 @@ export class Feed extends Component {
                 createdAt: Date.now(),
                 user: this.props.currentUser,
                 text:
-                    "Welcome to Twitter React App v1.0 😀  Make a post with text and they will show up here and on the profile page!",
+                    "Welcome to Twitter React App v1.0 😀  Make a post and they will show up here and on the profile page!",
                 comments: 0,
                 media: null,
                 retweets: 0,
@@ -24,26 +24,18 @@ export class Feed extends Component {
                 comments: 0,
                 media: null,
                 retweets: 0,
-                likes: 0,
+                likes: 1,
             },
         ],
     };
 
-    getMedia = () => {};
-
-    getLikes = () => {
-        const posts = [this.state.posts.filter((post) => post.likes > 0)];
-        return posts;
-    };
-
     render() {
-        const type = this.props;
         let posts = this.state.posts;
 
-        if (type === "media") {
-            posts = this.getMedia;
-        } else if (type === "likes") {
-            posts = this.getLikes;
+        if (this.props.type === "media") {
+            posts = [...this.state.posts.filter((post) => post.media)];
+        } else if (this.props.type === "likes") {
+            posts = [...this.state.posts.filter((post) => post.likes > 0)];
         }
 
         return (

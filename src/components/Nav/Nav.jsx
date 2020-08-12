@@ -191,9 +191,9 @@ export class Nav extends Component {
                         className="current-user"
                         style={{
                             backgroundColor: "white",
-                            bottom: 10,
+                            bottom: 0,
                             color: "black",
-                            height: "60px",
+                            height: "70px",
                             margin: "0px 0px 0px 0px",
                             padding: "2px 10px 0 0",
                             position: "fixed",

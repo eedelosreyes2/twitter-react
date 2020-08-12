@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import BlueButton from "../Reusable/BlueButton";
-import { IconContext } from "react-icons";
+// import { IconContext } from "react-icons";
 import { AiOutlineGif } from "react-icons/ai";
 import { BsImage } from "react-icons/bs";
 import { GrEmoji } from "react-icons/gr";
@@ -55,7 +55,7 @@ export class TweetComponentHome extends Component {
                         }}
                         placeholder="What's happening?"
                     />
-                    <div
+                    {/* <div
                         style={{
                             display: "inline-block",
                             marginLeft: "5px",
@@ -77,7 +77,7 @@ export class TweetComponentHome extends Component {
                                 </button>
                             );
                         })}
-                    </div>
+                    </div> */}
                     <BlueButton
                         title="Tweet"
                         height="37.5px"

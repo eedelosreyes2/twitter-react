@@ -48,7 +48,7 @@ export class TweetComponent extends Component {
                         }}
                         placeholder="What's happening?"
                     />
-                    <div
+                    {/* <div
                         style={{
                             display: "inline-block",
                             marginLeft: "5px",
@@ -70,7 +70,7 @@ export class TweetComponent extends Component {
                                 </button>
                             );
                         })}
-                    </div>
+                    </div> */}
                     {sizes.smallTablet ? null : (
                         <div
                             style={{

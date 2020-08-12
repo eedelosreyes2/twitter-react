@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import CenterCol from "../Reusable/CenterCol";
 import BlueButton from "../Reusable/BlueButton";
 import ProfileBar from "./ProfileBar";
@@ -201,7 +202,7 @@ export class Profile extends Component {
                                                             "var(--twitter-blue)",
                                                     }}
                                                 >
-                                                    {" " + link}
+                                                    {link}
                                                 </button>
                                                 <span
                                                     style={{
@@ -238,17 +239,62 @@ export class Profile extends Component {
                                 />
                             </div>
                             {/* Router */}
-                            <Feed
-                                type="all"
-                                currentUser={this.props.currentUser}
-                            />
+                            <Router>
+                                <Switch>
+                                    <Route
+                                        exact
+                                        path="/profile"
+                                        render={() => (
+                                            <Feed
+                                                type="all"
+                                                currentUser={
+                                                    this.props.currentUser
+                                                }
+                                            />
+                                        )}
+                                    />
+                                    <Route
+                                        path="/profile/with_replies"
+                                        render={() => (
+                                            <Feed
+                                                type="all"
+                                                currentUser={
+                                                    this.props.currentUser
+                                                }
+                                            />
+                                        )}
+                                    />
+                                    <Route
+                                        path="/profile/media"
+                                        render={() => (
+                                            <Feed
+                                                type="media"
+                                                currentUser={
+                                                    this.props.currentUser
+                                                }
+                                            />
+                                        )}
+                                    />
+                                    <Route
+                                        path="/profile/likes"
+                                        render={() => (
+                                            <Feed
+                                                type="likes"
+                                                currentUser={
+                                                    this.props.currentUser
+                                                }
+                                            />
+                                        )}
+                                    />
+                                </Switch>
+                            </Router>
                         </React.Fragment>
                     }
                 />
                 {sizes.showNav ? null : (
                     <div
                         style={{
-                            bottom: 80,
+                            bottom: 65,
                             right: 20,
                             position: "fixed",
                         }}
@@ -270,6 +316,7 @@ export class Profile extends Component {
                             width="50px"
                             isActive={true}
                             event={null}
+                            path="/compose/tweet"
                         />
                     </div>
                 )}

@@ -70,7 +70,6 @@ export class App extends Component {
     };
 
     render() {
-        // Add to updateDimentions()
         const { windowWidth, windowHeight, currentUser } = this.state;
         const showNav = windowWidth > 500;
         const navCollapsed = windowWidth < 1260;
