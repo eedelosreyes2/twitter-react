@@ -35,12 +35,5 @@ https://eedelosreyes2.github.io/twitter-react/
 
 ## Feedback
 
-I'd love any feedback on my code, comments, questions, job offers ;) - [Contact ->](https://eedelosreyes2.github.io/#contact)
+I'd love any feedback on my code, comments, questions, job offers ;) - [My Website](https://eedelosreyes2.github.io)
 
-### TODO
-
--   Fix weird stuff on phones
--   Post functionality:
-    -   Show in home feed and profile, and likes
-    -   Date posted
-    -   likes and retweets, and wrappers, spacing
