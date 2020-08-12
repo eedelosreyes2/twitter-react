@@ -63,7 +63,7 @@ export class Explore extends Component {
                 <CenterCol
                     sizes={sizes}
                     component={
-                        <div>
+                        <React.Fragment>
                             <div
                                 style={{
                                     borderBottom: "11px solid",
@@ -127,13 +127,13 @@ export class Explore extends Component {
                                 The developer is working hard on further
                                 implementations!
                             </p>
-                        </div>
+                        </React.Fragment>
                     }
                 />
                 {sizes.showNav ? null : (
                     <div
                         style={{
-                            bottom: 80,
+                            bottom: 65,
                             right: 20,
                             position: "fixed",
                         }}

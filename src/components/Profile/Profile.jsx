@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import CenterCol from "../Reusable/CenterCol";
 import BlueButton from "../Reusable/BlueButton";
 import ProfileBar from "./ProfileBar";
+import Feed from "../Reusable/Feed";
 import SearchBar from "../SearchBar/SearchBar";
 import Follow from "../Reusable/Follow";
 import WhatsHappening from "../Reusable/WhatsHappening";
@@ -236,6 +237,11 @@ export class Profile extends Component {
                                     onCurrent={this.handleCurrent}
                                 />
                             </div>
+                            {/* Router */}
+                            <Feed
+                                type="all"
+                                currentUser={this.props.currentUser}
+                            />
                         </React.Fragment>
                     }
                 />

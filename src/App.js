@@ -41,6 +41,8 @@ export class App extends Component {
         },
     };
 
+    // SESSION STORAGE YEAH
+
     componentDidMount = () => {
         this.updateDimensions();
         window.addEventListener("resize", this.updateDimensions);
@@ -68,6 +70,7 @@ export class App extends Component {
     };
 
     render() {
+        // Add to updateDimentions()
         const { windowWidth, windowHeight, currentUser } = this.state;
         const showNav = windowWidth > 500;
         const navCollapsed = windowWidth < 1260;

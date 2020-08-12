@@ -62,23 +62,22 @@ export class Notifications extends Component {
                     component={
                         <React.Fragment>
                             <div
-                                className="header1 border-bottom"
                                 style={{
-                                    alignItems: "stretch",
-                                    display: "flex",
-                                    flexDirection: "column",
+                                    borderBottom: "2px solid",
+                                    borderColor: "#e6ecf0",
                                     height: "104px",
-                                    justifyContent: "space-between",
                                 }}
                             >
                                 <div
+                                    className="header1 pl-1"
                                     style={{
                                         alignItems: "center",
                                         display: "flex",
+                                        height: "50px",
                                         justifyContent: "space-between",
                                     }}
                                 >
-                                    <div className="pl-1 pt-1">
+                                    <div>
                                         {sizes.showNav ? null : (
                                             <img
                                                 className="user-image p-2"
@@ -112,7 +111,7 @@ export class Notifications extends Component {
                                 </div>
                                 <div
                                     style={{
-                                        marginTop: "1px",
+                                        marginTop: "-2px",
                                         textAlign: "center",
                                     }}
                                 >
@@ -150,7 +149,7 @@ export class Notifications extends Component {
                 {sizes.showNav ? null : (
                     <div
                         style={{
-                            bottom: 80,
+                            bottom: 65,
                             right: 20,
                             position: "fixed",
                         }}

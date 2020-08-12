@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import CenterCol from "../Reusable/CenterCol";
 import TweetComponentHome from "./TweetComponentHome";
-import Feed from "./Feed";
+import Feed from "../Reusable/Feed";
 import BlueButton from "../Reusable/BlueButton";
 import Pane1 from "../Reusable/Pane1";
 import { IconContext } from "react-icons";
-import { WiStars } from "react-icons/wi";
+// import { WiStars } from "react-icons/wi";
 import { FaFeatherAlt } from "react-icons/fa";
 import "./Home.css";
 
@@ -42,7 +42,7 @@ export class Home extends Component {
                                     <span className="pl-3">Home</span>
                                 </div>
 
-                                <div
+                                {/* <div
                                     className="icon-wrapper"
                                     style={{
                                         float: "right",
@@ -56,7 +56,7 @@ export class Home extends Component {
                                     >
                                         <WiStars />
                                     </IconContext.Provider>
-                                </div>
+                                </div> */}
                             </div>
                             {sizes.showNav ? (
                                 <TweetComponentHome
@@ -64,14 +64,17 @@ export class Home extends Component {
                                     currentUser={this.props.currentUser}
                                 />
                             ) : null}
-                            <Feed currentUser={this.props.currentUser} />
+                            <Feed
+                                type="all"
+                                currentUser={this.props.currentUser}
+                            />
                         </React.Fragment>
                     }
                 />
                 {sizes.showNav ? null : (
                     <div
                         style={{
-                            bottom: 80,
+                            bottom: 65,
                             right: 20,
                             position: "fixed",
                         }}

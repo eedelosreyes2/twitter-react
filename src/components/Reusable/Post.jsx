@@ -16,7 +16,7 @@ export class Post extends Component {
 
     render() {
         const {
-            createdAt,
+            // createdAt,
             text,
             user,
             comments,
@@ -57,8 +57,8 @@ export class Post extends Component {
                             {user.username}
                         </span>{" "}
                         <span className="sub">{user.handle}</span>
-                        {" · "}
-                        <span className="sub">{createdAt}</span>
+                        {/* {" · "}
+                        <span className="sub">{createdAt}</span> */}
                     </div>
                     <div className="post-text">{text}</div>
                     <div className="pt-2">
