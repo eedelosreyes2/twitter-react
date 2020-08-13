@@ -18,7 +18,7 @@ export class NavItem extends Component {
                         title === "Help"
                             ? () => {
                                   window.open(
-                                      "https://github.com/eedelosreyes2/twitter-react#specs",
+                                      "https://github.com/eedelosreyes2/twitter-react",
                                       "_blank"
                                   );
                                   return false;

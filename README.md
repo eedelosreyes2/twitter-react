@@ -13,8 +13,8 @@ https://eedelosreyes2.github.io/twitter-react/
 ## Features
 - Rich, interactive, user-friendly UI that looks identical to Twitter.com
 - Optimization for desktop, tablet, and phone (try them all out!)
-- Simulates being logged in to Twitter for a single user
 - Basic post, retweet, and like functionality
+- Simulates being logged in to Twitter for a single user
 
 ## Specs
 
