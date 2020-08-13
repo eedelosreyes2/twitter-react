@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { v4 as uuid4 } from "uuid";
 import { Link } from "react-router-dom";
 import BlueButton from "../Reusable/BlueButton";
 // import { IconContext } from "react-icons";
@@ -23,7 +24,7 @@ export class TweetComponentHome extends Component {
 
         if (text.trim() !== "") {
             this.props.handleAddPost({
-                // id:
+                id: uuid4(),
                 createdAt: Date.now(),
                 user: {
                     handle: "@handle",

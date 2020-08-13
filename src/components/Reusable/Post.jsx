@@ -28,6 +28,7 @@ export class Post extends Component {
             <div
                 style={{
                     borderBottom: "1px solid",
+                    borderRight: "1px solid",
                     borderColor: "#e6ecf0",
                     display: "flex",
                     height: "100%",

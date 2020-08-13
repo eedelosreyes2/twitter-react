@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { v4 as uuid4 } from "uuid";
 import BlueButton from "./BlueButton";
 import { IconContext } from "react-icons";
 import { MdClose } from "react-icons/md";
@@ -24,7 +25,7 @@ export class TweetComponent extends Component {
 
         if (text.trim() !== "") {
             this.props.onAddPost({
-                // id: ,
+                id: uuid4(),
                 createdAt: Date.now(),
                 user: {
                     handle: "@handle",
@@ -40,6 +41,7 @@ export class TweetComponent extends Component {
                 likes: 0,
             });
             document.getElementById("myInput").value = "";
+            window.history.back();
         }
     };
 
@@ -110,7 +112,7 @@ export class TweetComponent extends Component {
                                 height="37.5px"
                                 width="80px"
                                 float="right"
-                                isActive={false}
+                                isActive={true}
                                 event={() => this.handleTweetClick()}
                                 path={null}
                             />
@@ -160,8 +162,8 @@ export class TweetComponent extends Component {
                                 height="30px"
                                 width="75px"
                                 float="right"
-                                isActive={false}
-                                event={null}
+                                isActive={true}
+                                event={() => this.handleTweetClick()}
                                 path="/"
                             />
                         </div>
