@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
-import { FaRegComment, FaRetweet, FaRegHeart } from "react-icons/fa";
-import { FiShare } from "react-icons/fi";
+import { FaRetweet, FaRegHeart, FaHeart } from "react-icons/fa";
+// import { FiShare } from "react-icons/fi";
 
 var moment = require("moment");
 moment().format();
@@ -19,7 +19,7 @@ export class Post extends Component {
             // createdAt,
             text,
             user,
-            comments,
+            // comments,
             retweets,
             likes,
         } = this.props.post;
@@ -74,16 +74,28 @@ export class Post extends Component {
                                 style: { marginBottom: "2px" },
                             }}
                         >
-                            <div className="post-icon-wrapper post-icon-comment">
+                            {/* <div className="post-icon-wrapper post-icon-comment">
                                 <FaRegComment /> {comments}
-                            </div>
-                            <div className="post-icon-wrapper post-icon-retweet">
-                                <FaRetweet /> {retweets}
-                            </div>
-                            <div className="post-icon-wrapper post-icon-like">
-                                <FaRegHeart /> {likes}
-                            </div>
-                            <FiShare />
+                            </div> */}
+                            {retweets > 0 ? (
+                                <div className="retweeted retweet-wrapper">
+                                    <FaRetweet /> {retweets}
+                                </div>
+                            ) : (
+                                <div className="retweet-wrapper">
+                                    <FaRetweet /> {retweets}
+                                </div>
+                            )}
+                            {likes > 0 ? (
+                                <div className="like-wrapper liked">
+                                    <FaHeart /> {likes}
+                                </div>
+                            ) : (
+                                <div className="like-wrapper">
+                                    <FaRegHeart /> {likes}
+                                </div>
+                            )}
+                            {/* <FiShare /> */}
                         </IconContext.Provider>
                     </div>
                 </div>

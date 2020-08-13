@@ -72,7 +72,7 @@ button:focus {
     width: 49px;
 }
 
-.post-icon-wrapper {
+/* .post-icon-wrapper {
     color: #657787;
     float: left;
     font-size: 15px;
@@ -94,6 +94,43 @@ button:focus {
 
 .post-icon {
     color: #657787;
+} */
+
+.retweet-wrapper {
+    color: #657787;
+    cursor: pointer;
+    float: left;
+    margin-right: 60px;
+    padding: 2px;
+    width: 35px;
+}
+
+.retweet-wrapper:hover {
+    background-color: #ebffeb;
+    border-radius: 50%;
+    color: #2ebf30;
+}
+
+.retweeted {
+    color: #2ebf30;
+}
+
+.like-wrapper {
+    color: #657787;
+    cursor: pointer;
+    float: left;
+    padding: 2px;
+    width: 35px;
+}
+
+.like-wrapper:hover {
+    background-color: #fdedf0;
+    border-radius: 50%;
+    color: #ff2647;
+}
+
+.liked {
+    color: #ff2647;
 }
 
 .tab:hover {

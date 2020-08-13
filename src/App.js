@@ -123,9 +123,39 @@ export class App extends Component {
         this.setState({ posts });
     };
 
-    handleRetweetPost = (id) => {};
+    handleRetweetPost = (id) => {
+        const posts = [
+            ...this.state.posts.map((post) => {
+                if (post.id === id) {
+                    if (post.retweets > 0) {
+                        post.retweets--;
+                    } else {
+                        post.retweets++;
+                    }
+                }
+                return post;
+            }),
+        ];
 
-    handleLikePost = (id) => {};
+        this.setState({ posts });
+    };
+
+    handleLikePost = (id) => {
+        const posts = [
+            ...this.state.posts.map((post) => {
+                if (post.id === id) {
+                    if (post.likes > 0) {
+                        post.likes--;
+                    } else {
+                        post.likes++;
+                    }
+                }
+                return post;
+            }),
+        ];
+
+        this.setState({ posts });
+    };
 
     render() {
         const { windowWidth, windowHeight, currentUser, posts } = this.state;
@@ -208,6 +238,7 @@ export class App extends Component {
                                         currentUser={currentUser}
                                         posts={posts}
                                         onProfileClick={this.handleProfileClick}
+                                        onRetweetPost={this.handleRetweetPost}
                                         onAddPost={this.handleAddPost}
                                     />
                                 )}

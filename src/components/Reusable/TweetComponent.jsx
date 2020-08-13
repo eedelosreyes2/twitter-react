@@ -128,10 +128,17 @@ export class TweetComponent extends Component {
                     <div
                         style={{
                             backgroundColor: "white",
+                            bottom: 0,
                             display: "flex",
                             flexDirection: "column",
-                            height: "100vh",
-                            position: "relative",
+                            height: "100%",
+                            left: 0,
+                            margin: 0,
+                            overflow: "auto",
+                            overscrollBehavior: "none",
+                            position: "absolute",
+                            right: 0,
+                            top: 0,
                             width: "100vw",
                             zIndex: 10,
                         }}
@@ -160,7 +167,7 @@ export class TweetComponent extends Component {
                             <BlueButton
                                 title="Tweet"
                                 height="30px"
-                                width="75px"
+                                width="80px"
                                 float="right"
                                 isActive={true}
                                 event={() => this.handleTweetClick()}

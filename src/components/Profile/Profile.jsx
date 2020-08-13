@@ -144,7 +144,9 @@ export class Profile extends Component {
                                             : "140px",
                                         marginLeft: "15px",
                                         marginTop: sizes.smallTablet
-                                            ? "-14vw"
+                                            ? sizes.showNav
+                                                ? "-15vw"
+                                                : "-11vw"
                                             : "-80px",
                                         position: "absolute",
                                         width: sizes.smallTablet
@@ -194,7 +196,7 @@ export class Profile extends Component {
                                                         );
                                                         return false;
                                                     }}
-                                                    className="link pr-3"
+                                                    className="link ml-n1 pr-3"
                                                     style={{
                                                         background: "none",
                                                         border: "none",

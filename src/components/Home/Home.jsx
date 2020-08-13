@@ -69,6 +69,7 @@ export class Home extends Component {
                                 type="all"
                                 currentUser={this.props.currentUser}
                                 posts={posts}
+                                handleRetweetPost={this.props.onRetweetPost}
                             />
                         </React.Fragment>
                     }
