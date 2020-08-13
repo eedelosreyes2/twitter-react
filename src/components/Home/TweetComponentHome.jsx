@@ -70,14 +70,18 @@ export class TweetComponentHome extends Component {
                         width: "82.5%",
                     }}
                 >
-                    <input
+                    <textarea
                         id="myInput"
                         type="text"
                         className="form-control-lg border-0 pt-3 ml-n2"
                         style={{
                             backgroundColor: "unset",
-                            width: "100%",
+                            border: "none",
+                            height: "auto",
                             marginBottom: "12px",
+                            outline: "none",
+                            resize: "none",
+                            width: "90%",
                         }}
                         placeholder="What's happening?"
                     />
@@ -104,15 +108,17 @@ export class TweetComponentHome extends Component {
                             );
                         })}
                     </div> */}
-                    <BlueButton
-                        title="Tweet"
-                        height="37.5px"
-                        width="75px"
-                        float="right"
-                        isActive={true}
-                        event={() => this.handleTweetClick()}
-                        path={null}
-                    />
+                    <div style={{ marginRight: "-25px", marginTop: "-35px" }}>
+                        <BlueButton
+                            title="Tweet"
+                            height="37.5px"
+                            width="75px"
+                            float="right"
+                            isActive={true}
+                            event={() => this.handleTweetClick()}
+                            path={null}
+                        />
+                    </div>
                 </div>
             </div>
         );

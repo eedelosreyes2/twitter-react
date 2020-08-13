@@ -1,6 +1,6 @@
 # Twitter React App
 
-I (kind of) recreated [Twitter](https://twitter.com/)! The purpose of making this app is to learn the fundamentals of [React](https://reactjs.org/) by creating reusable and reactive components, implementing basic post, like, and retweet functionality, integrating [React-Router-Dom](https://www.npmjs.com/package/react-router-dom), [Bootstrap](https://www.npmjs.com/package/react-router-dom), and responsive optimizations for all devices.
+I (kind of) recreated [Twitter](https://twitter.com/)! The purpose of making this app is to learn the fundamentals of [React](https://reactjs.org/) by creating reusable and reactive components, implementing basic post, like, and retweet functionality, integrating [React-Router-Dom](https://www.npmjs.com/package/react-router-dom), [Bootstrap](https://www.npmjs.com/package/react-router-dom), session storage, and responsive optimizations for all devices.
 
 ## Live Demo
 
@@ -15,6 +15,7 @@ https://eedelosreyes2.github.io/twitter-react/
 -   App is intended to look as close to [Twitter](https://twitter.com/) as possible
 -   Basic post, like, and retweet functionality for a single user
 -   Optimized for desktop, tablet, and phone (try them all out!)
+-   Post data is saved in [session storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) and is deleted once the tab is closed
 -   Not all icons are the same as real Twitter. All icons used in this app are imported from [react-icons](https://react-icons.github.io/react-icons/)
 -   Not every single functionality from Twitter is implemented
     -   Components that don't have functionality yet:
@@ -36,4 +37,3 @@ https://eedelosreyes2.github.io/twitter-react/
 ## Feedback
 
 I'd love any feedback on my code, comments, questions, job offers ;) - [My Website](https://eedelosreyes2.github.io)
-
