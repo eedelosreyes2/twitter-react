@@ -16,6 +16,7 @@ export class Post extends Component {
 
     render() {
         const {
+            id,
             // createdAt,
             text,
             user,
@@ -78,20 +79,32 @@ export class Post extends Component {
                                 <FaRegComment /> {comments}
                             </div> */}
                             {retweets > 0 ? (
-                                <div className="retweeted retweet-wrapper">
+                                <div
+                                    className="retweeted retweet-wrapper"
+                                    onClick={() => this.props.onRetweetPost(id)}
+                                >
                                     <FaRetweet /> {retweets}
                                 </div>
                             ) : (
-                                <div className="retweet-wrapper">
+                                <div
+                                    className="retweet-wrapper"
+                                    onClick={() => this.props.onRetweetPost(id)}
+                                >
                                     <FaRetweet /> {retweets}
                                 </div>
                             )}
                             {likes > 0 ? (
-                                <div className="like-wrapper liked">
+                                <div
+                                    className="like-wrapper liked"
+                                    onClick={() => this.props.onLikePost(id)}
+                                >
                                     <FaHeart /> {likes}
                                 </div>
                             ) : (
-                                <div className="like-wrapper">
+                                <div
+                                    className="like-wrapper"
+                                    onClick={() => this.props.onLikePost(id)}
+                                >
                                     <FaRegHeart /> {likes}
                                 </div>
                             )}

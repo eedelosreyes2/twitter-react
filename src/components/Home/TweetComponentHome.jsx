@@ -36,6 +36,7 @@ export class TweetComponentHome extends Component {
                 text,
                 comments: 0,
                 media: null,
+                isRetweet: false,
                 retweets: 0,
                 likes: 0,
             });

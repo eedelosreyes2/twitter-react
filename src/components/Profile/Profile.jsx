@@ -251,6 +251,12 @@ export class Profile extends Component {
                                                 type="all"
                                                 currentUser={currentUser}
                                                 posts={posts}
+                                                handleRetweetPost={
+                                                    this.props.onRetweetPost
+                                                }
+                                                handleLikePost={
+                                                    this.props.onLikePost
+                                                }
                                             />
                                         )}
                                     />
@@ -261,6 +267,12 @@ export class Profile extends Component {
                                                 type="all"
                                                 currentUser={currentUser}
                                                 posts={posts}
+                                                handleRetweetPost={
+                                                    this.props.onRetweetPost
+                                                }
+                                                handleLikePost={
+                                                    this.props.onLikePost
+                                                }
                                             />
                                         )}
                                     />
@@ -271,6 +283,12 @@ export class Profile extends Component {
                                                 type="media"
                                                 currentUser={currentUser}
                                                 posts={posts}
+                                                handleRetweetPost={
+                                                    this.props.onRetweetPost
+                                                }
+                                                handleLikePost={
+                                                    this.props.onLikePost
+                                                }
                                             />
                                         )}
                                     />
@@ -281,6 +299,12 @@ export class Profile extends Component {
                                                 type="likes"
                                                 currentUser={currentUser}
                                                 posts={posts}
+                                                handleRetweetPost={
+                                                    this.props.onRetweetPost
+                                                }
+                                                handleLikePost={
+                                                    this.props.onLikePost
+                                                }
                                             />
                                         )}
                                     />

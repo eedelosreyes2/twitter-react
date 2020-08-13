@@ -5,7 +5,7 @@ import {
     Route,
     Redirect,
 } from "react-router-dom";
-import "./App.css";
+import { v4 as uuid4 } from "uuid";
 import Nav from "./components/Nav/Nav";
 import NavSide from "./components/Nav/NavSide";
 import NavBottom from "./components/Nav/NavBottom";
@@ -17,6 +17,7 @@ import Messages from "./components/Messages/Messages";
 import Bookmarks from "./components/Bookmarks";
 import Lists from "./components/Lists";
 import Profile from "./components/Profile/Profile";
+import "./App.css";
 
 export class App extends Component {
     state = {
@@ -41,7 +42,7 @@ export class App extends Component {
         },
         posts: [
             {
-                id: 0,
+                id: uuid4(),
                 createdAt: Date.now(),
                 user: {
                     handle: "@handle",
@@ -54,11 +55,12 @@ export class App extends Component {
                     "Welcome to Twitter React App v1.0 😀  Make a post and they will show up here and on the profile page!",
                 comments: 0,
                 media: null,
+                isRetweet: false,
                 retweets: 0,
                 likes: 1,
             },
             {
-                id: 1,
+                id: uuid4(),
                 createdAt: Date.now() + 1,
                 user: {
                     handle: "@handle",
@@ -71,6 +73,7 @@ export class App extends Component {
                     "If you need help or want to know something about this app, click on the 'Help' tab on the left!",
                 comments: 0,
                 media: null,
+                isRetweet: false,
                 retweets: 0,
                 likes: 0,
             },
@@ -124,18 +127,28 @@ export class App extends Component {
     };
 
     handleRetweetPost = (id) => {
-        const posts = [
+        let retweetedPost;
+        let unRetweet;
+
+        let posts = [
             ...this.state.posts.map((post) => {
                 if (post.id === id) {
                     if (post.retweets > 0) {
                         post.retweets--;
+                        // then delete isretweeted post
+                        unRetweet = true;
                     } else {
                         post.retweets++;
+                        retweetedPost = { ...post };
+                        retweetedPost.isRetweet = true;
                     }
                 }
                 return post;
             }),
         ];
+
+        if (retweetedPost) posts = [...posts, retweetedPost];
+        if (unRetweet) posts = [...posts.filter((post) => !post.isRetweet)];
 
         this.setState({ posts });
     };
@@ -238,8 +251,9 @@ export class App extends Component {
                                         currentUser={currentUser}
                                         posts={posts}
                                         onProfileClick={this.handleProfileClick}
-                                        onRetweetPost={this.handleRetweetPost}
                                         onAddPost={this.handleAddPost}
+                                        onRetweetPost={this.handleRetweetPost}
+                                        onLikePost={this.handleLikePost}
                                     />
                                 )}
                             />
@@ -303,6 +317,8 @@ export class App extends Component {
                                         sizes={sizes}
                                         currentUser={currentUser}
                                         posts={posts}
+                                        onRetweetPost={this.handleRetweetPost}
+                                        onLikePost={this.handleLikePost}
                                     />
                                 )}
                             />

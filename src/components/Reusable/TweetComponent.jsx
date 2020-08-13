@@ -37,10 +37,10 @@ export class TweetComponent extends Component {
                 text,
                 comments: 0,
                 media: null,
+                isRetweet: false,
                 retweets: 0,
                 likes: 0,
             });
-            document.getElementById("myInput").value = "";
             window.history.back();
         }
     };

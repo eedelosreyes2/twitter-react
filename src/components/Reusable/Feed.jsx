@@ -21,6 +21,8 @@ export class Feed extends Component {
                             key={post.id}
                             post={post}
                             currentUser={this.props.currentUser}
+                            onRetweetPost={this.props.handleRetweetPost}
+                            onLikePost={this.props.handleLikePost}
                         />
                     );
                 })}
