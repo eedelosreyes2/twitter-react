@@ -128,19 +128,18 @@ export class App extends Component {
 
     handleRetweetPost = (id) => {
         let retweetedPost;
-        let unRetweet;
 
         let posts = [
             ...this.state.posts.map((post) => {
                 if (post.id === id) {
                     if (post.retweets > 0) {
                         post.retweets--;
-                        // then delete isretweeted post
-                        unRetweet = true;
                     } else {
                         post.retweets++;
                         retweetedPost = { ...post };
+                        retweetedPost.id = uuid4();
                         retweetedPost.isRetweet = true;
+                        retweetedPost.createdAt = Date.now();
                     }
                 }
                 return post;
@@ -148,7 +147,6 @@ export class App extends Component {
         ];
 
         if (retweetedPost) posts = [...posts, retweetedPost];
-        if (unRetweet) posts = [...posts.filter((post) => !post.isRetweet)];
 
         this.setState({ posts });
     };
