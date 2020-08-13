@@ -30,7 +30,7 @@ https://eedelosreyes2.github.io/twitter-react/
         -   Bookmarks page: Searchbar
         -   Lists page: New List, Settings, Create a List, Searchbar
         -   Profile page: Following and Followers
-        -   What's Happening and Who to follow values are hardcoded (I made them up), show more button in Who to follow
+        -   What's Happening and Who to follow values are hardcoded (I made them up) for display purposes, show more button in Who to follow
         -   Compose Tweet: image, gif, poll, emoji, and schedule buttons
     -   I will add Dim + Lights out mode
 
