@@ -196,12 +196,15 @@ export class Profile extends Component {
                                                         );
                                                         return false;
                                                     }}
-                                                    className="link ml-n1 pr-3"
+                                                    className="link pr-3"
                                                     style={{
                                                         background: "none",
                                                         border: "none",
                                                         color:
                                                             "var(--twitter-blue)",
+                                                        marginLeft: sizes.showNav
+                                                            ? "auto"
+                                                            : "-10px",
                                                     }}
                                                 >
                                                     {link}
