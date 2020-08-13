@@ -11,9 +11,11 @@ export class Feed extends Component {
             posts = [...this.props.posts.filter((post) => post.likes > 0)];
         }
 
+        posts = posts.slice().sort((a, b) => b.createdAt - a.createdAt);
+
         return (
             <div style={{ paddingBottom: "65px" }}>
-                {posts.reverse().map((post) => {
+                {posts.map((post) => {
                     return (
                         <Post
                             key={post.id}
