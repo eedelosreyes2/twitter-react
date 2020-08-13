@@ -202,9 +202,9 @@ export class Profile extends Component {
                                                         border: "none",
                                                         color:
                                                             "var(--twitter-blue)",
-                                                        marginLeft: sizes.showNav
-                                                            ? "auto"
-                                                            : "-10px",
+                                                        marginLeft: sizes.navCollapsed
+                                                            ? "-5px"
+                                                            : "auto",
                                                     }}
                                                 >
                                                     {link}
