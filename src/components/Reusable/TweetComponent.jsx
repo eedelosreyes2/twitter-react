@@ -19,6 +19,30 @@ export class TweetComponent extends Component {
         ],
     };
 
+    handleTweetClick = () => {
+        var text = document.getElementById("myInput").value;
+
+        if (text.trim() !== "") {
+            this.props.onAddPost({
+                // id: ,
+                createdAt: Date.now(),
+                user: {
+                    handle: "@handle",
+                    username: "Username",
+                    userImg:
+                        "https://pbs.twimg.com/profile_images/875168307585794048/yuE68O2__400x400.jpg",
+                    isVerified: false,
+                },
+                text,
+                comments: 0,
+                media: null,
+                retweets: 0,
+                likes: 0,
+            });
+            document.getElementById("myInput").value = "";
+        }
+    };
+
     render() {
         const { sizes } = this.props;
         const { userImg } = this.props.currentUser;
@@ -36,6 +60,7 @@ export class TweetComponent extends Component {
                 />
                 <div style={{ float: "left", width: "75%" }}>
                     <textarea
+                        id="myInput"
                         type="text"
                         className="form-control-lg"
                         style={{
@@ -83,10 +108,10 @@ export class TweetComponent extends Component {
                             <BlueButton
                                 title="Tweet"
                                 height="37.5px"
-                                width="75px"
+                                width="80px"
                                 float="right"
                                 isActive={false}
-                                event={null}
+                                event={() => this.handleTweetClick()}
                                 path={null}
                             />
                         </div>

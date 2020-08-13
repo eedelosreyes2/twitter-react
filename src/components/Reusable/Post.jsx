@@ -60,7 +60,12 @@ export class Post extends Component {
                         {/* {" · "}
                         <span className="sub">{createdAt}</span> */}
                     </div>
-                    <div className="post-text">{text}</div>
+                    <div
+                        className="post-text"
+                        style={{ overflowWrap: "anywhere" }}
+                    >
+                        {text}
+                    </div>
                     <div className="pt-2">
                         <IconContext.Provider
                             value={{

@@ -39,17 +39,57 @@ export class App extends Component {
             following: 0,
             followers: 0,
         },
+        posts: [
+            {
+                id: 0,
+                createdAt: Date.now(),
+                user: {
+                    handle: "@handle",
+                    username: "Username",
+                    userImg:
+                        "https://pbs.twimg.com/profile_images/875168307585794048/yuE68O2__400x400.jpg",
+                    isVerified: false,
+                },
+                text:
+                    "Welcome to Twitter React App v1.0 😀  Make a post and they will show up here and on the profile page!",
+                comments: 0,
+                media: null,
+                retweets: 0,
+                likes: 1,
+            },
+            {
+                id: 1,
+                createdAt: Date.now() + 1,
+                user: {
+                    handle: "@handle",
+                    username: "Username",
+                    userImg:
+                        "https://pbs.twimg.com/profile_images/875168307585794048/yuE68O2__400x400.jpg",
+                    isVerified: false,
+                },
+                text:
+                    "If you need help or want to know something about this app, click on the 'Help' tab on the left!",
+                comments: 0,
+                media: null,
+                retweets: 0,
+                likes: 0,
+            },
+        ],
     };
-
-    // SESSION STORAGE YEAH
 
     componentDidMount = () => {
         this.updateDimensions();
+        this.getPosts();
         window.addEventListener("resize", this.updateDimensions);
+        window.addEventListener("load", this.getPosts);
+        window.addEventListener("beforeunload", this.setPosts);
     };
 
     componentWillUnmount = () => {
+        this.setPosts();
         window.removeEventListener("resize", this.updateDimensions);
+        window.removeEventListener("load", this.getPosts);
+        window.removeEventListener("beforeunload", this.setPosts);
     };
 
     updateDimensions = () => {
@@ -58,6 +98,15 @@ export class App extends Component {
             typeof window !== "undefined" ? window.innerHeight : 0;
 
         this.setState({ windowWidth, windowHeight });
+    };
+
+    getPosts = () => {
+        const posts = JSON.parse(sessionStorage.getItem("posts"));
+        if (posts) this.setState({ posts });
+    };
+
+    setPosts = () => {
+        sessionStorage.setItem("posts", JSON.stringify(this.state.posts));
     };
 
     handleProfileClick = () => {
@@ -69,8 +118,17 @@ export class App extends Component {
         }
     };
 
+    handleAddPost = (post) => {
+        const posts = [...this.state.posts, post];
+        this.setState({ posts });
+    };
+
+    handleRetweetPost = (id) => {};
+
+    handleLikePost = (id) => {};
+
     render() {
-        const { windowWidth, windowHeight, currentUser } = this.state;
+        const { windowWidth, windowHeight, currentUser, posts } = this.state;
         const showNav = windowWidth > 500;
         const navCollapsed = windowWidth < 1260;
         const showRightPane = windowWidth > 1060;
@@ -138,6 +196,7 @@ export class App extends Component {
                                     <TweetComponent
                                         sizes={sizes}
                                         currentUser={currentUser}
+                                        onAddPost={this.handleAddPost}
                                     />
                                 )}
                             />
@@ -147,7 +206,9 @@ export class App extends Component {
                                     <Home
                                         sizes={sizes}
                                         currentUser={currentUser}
+                                        posts={posts}
                                         onProfileClick={this.handleProfileClick}
+                                        onAddPost={this.handleAddPost}
                                     />
                                 )}
                             />
@@ -210,6 +271,7 @@ export class App extends Component {
                                     <Profile
                                         sizes={sizes}
                                         currentUser={currentUser}
+                                        posts={posts}
                                     />
                                 )}
                             />

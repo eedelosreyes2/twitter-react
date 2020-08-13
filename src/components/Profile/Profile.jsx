@@ -75,7 +75,7 @@ export class Profile extends Component {
             dateJoined,
         } = this.props.currentUser;
 
-        const { sizes } = this.props;
+        const { sizes, currentUser, posts } = this.props;
 
         return (
             <div>
@@ -247,9 +247,8 @@ export class Profile extends Component {
                                         render={() => (
                                             <Feed
                                                 type="all"
-                                                currentUser={
-                                                    this.props.currentUser
-                                                }
+                                                currentUser={currentUser}
+                                                posts={posts}
                                             />
                                         )}
                                     />
@@ -258,9 +257,8 @@ export class Profile extends Component {
                                         render={() => (
                                             <Feed
                                                 type="all"
-                                                currentUser={
-                                                    this.props.currentUser
-                                                }
+                                                currentUser={currentUser}
+                                                posts={posts}
                                             />
                                         )}
                                     />
@@ -269,9 +267,8 @@ export class Profile extends Component {
                                         render={() => (
                                             <Feed
                                                 type="media"
-                                                currentUser={
-                                                    this.props.currentUser
-                                                }
+                                                currentUser={currentUser}
+                                                posts={posts}
                                             />
                                         )}
                                     />
@@ -280,9 +277,8 @@ export class Profile extends Component {
                                         render={() => (
                                             <Feed
                                                 type="likes"
-                                                currentUser={
-                                                    this.props.currentUser
-                                                }
+                                                currentUser={currentUser}
+                                                posts={posts}
                                             />
                                         )}
                                     />

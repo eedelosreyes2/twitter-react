@@ -18,6 +18,30 @@ export class TweetComponentHome extends Component {
         ],
     };
 
+    handleTweetClick = () => {
+        var text = document.getElementById("myInput").value;
+
+        if (text.trim() !== "") {
+            this.props.handleAddPost({
+                // id:
+                createdAt: Date.now(),
+                user: {
+                    handle: "@handle",
+                    username: "Username",
+                    userImg:
+                        "https://pbs.twimg.com/profile_images/875168307585794048/yuE68O2__400x400.jpg",
+                    isVerified: false,
+                },
+                text,
+                comments: 0,
+                media: null,
+                retweets: 0,
+                likes: 0,
+            });
+            document.getElementById("myInput").value = "";
+        }
+    };
+
     render() {
         const { userImg } = this.props.currentUser;
         return (
@@ -46,6 +70,7 @@ export class TweetComponentHome extends Component {
                     }}
                 >
                     <input
+                        id="myInput"
                         type="text"
                         className="form-control-lg border-0 pt-3 ml-n2"
                         style={{
@@ -83,9 +108,9 @@ export class TweetComponentHome extends Component {
                         height="37.5px"
                         width="75px"
                         float="right"
-                        isActive={false}
-                        event={null}
-                        path="/"
+                        isActive={true}
+                        event={() => this.handleTweetClick()}
+                        path={null}
                     />
                 </div>
             </div>

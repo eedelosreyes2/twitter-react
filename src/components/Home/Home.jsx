@@ -11,7 +11,7 @@ import "./Home.css";
 
 export class Home extends Component {
     render() {
-        const { sizes } = this.props;
+        const { sizes, posts } = this.props;
 
         return (
             <React.Fragment>
@@ -62,11 +62,13 @@ export class Home extends Component {
                                 <TweetComponentHome
                                     sizes={sizes}
                                     currentUser={this.props.currentUser}
+                                    handleAddPost={this.props.onAddPost}
                                 />
                             ) : null}
                             <Feed
                                 type="all"
                                 currentUser={this.props.currentUser}
+                                posts={posts}
                             />
                         </React.Fragment>
                     }
