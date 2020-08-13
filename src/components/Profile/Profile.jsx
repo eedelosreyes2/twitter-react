@@ -66,7 +66,7 @@ export class Profile extends Component {
             username,
             userImg,
             headerImg,
-            numTweets,
+            // numTweets,
             following,
             followers,
             bio,
@@ -110,7 +110,7 @@ export class Profile extends Component {
                                 >
                                     <p className="header1 pb-1">{username}</p>
                                     <p className="sub mt-n4">
-                                        {numTweets} Tweets
+                                        {this.props.posts.length} Tweets
                                     </p>
                                 </div>
                             </div>
