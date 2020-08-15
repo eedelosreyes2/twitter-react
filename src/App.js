@@ -52,7 +52,7 @@ export class App extends Component {
                     isVerified: false,
                 },
                 text:
-                    "Welcome to Twitter React App v1.0 😀  Make a post and they will show up here and on the profile page!",
+                    "Welcome to Twitter React App v1.0 🐦  Make a post and they will show up here and on the profile page!",
                 comments: 0,
                 media: null,
                 isRetweet: false,
@@ -70,7 +70,7 @@ export class App extends Component {
                     isVerified: false,
                 },
                 text:
-                    "If you need help or want to know something about this app, click on the 'Help' tab on the left!",
+                    "All new posts will be deleted once the session is finished. Learn more by clicking the 'Help' tab on the left.",
                 comments: 0,
                 media: null,
                 isRetweet: false,
@@ -134,12 +134,14 @@ export class App extends Component {
             ...this.state.posts.map((post) => {
                 if (post.id === id) {
                     if (post.retweets > 0) {
+                        if (post.isRetweet) {
+                            removeRetweet = post;
+                        }
                         post.retweets--;
-                        removeRetweet = post;
                     } else {
                         post.retweets++;
                         retweetedPost = { ...post };
-                        // retweetedPost.id = uuid4();
+                        retweetedPost.id = uuid4();
                         retweetedPost.isRetweet = true;
                         // retweetedPost.createdAt = Date.now();
                     }

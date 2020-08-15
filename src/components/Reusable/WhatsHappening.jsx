@@ -23,7 +23,8 @@ export class WhatsHappening extends Component {
             },
             {
                 id: 2,
-                title: "Schools are opening even though they really shouldn't",
+                title:
+                    "People in the United States still aren't social distancing",
                 category: "COVID-19",
                 status: "Trending in the United States",
                 tweets: "19K",

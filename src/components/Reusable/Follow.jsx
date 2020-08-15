@@ -7,10 +7,10 @@ export class WhoToFollow extends Component {
         users: [
             {
                 id: 0,
-                handle: "@sfchronicle",
-                username: "San Francisco Chronicle",
+                handle: "@Twitter",
+                username: "Twitter",
                 image:
-                    "https://pbs.twimg.com/profile_images/1145742752824483842/gAPc8mwO_400x400.png",
+                    "https://pbs.twimg.com/profile_images/1293262551057420293/4QMAmava_400x400.jpg",
                 isVerified: true,
             },
             {
@@ -23,10 +23,10 @@ export class WhoToFollow extends Component {
             },
             {
                 id: 2,
-                handle: "@BernieSanders",
-                username: "Bernie Sanders",
+                handle: "@sfchronicle",
+                username: "San Francisco Chronicle",
                 image:
-                    "https://pbs.twimg.com/profile_images/1097820307388334080/9ddg5F6v_400x400.png",
+                    "https://pbs.twimg.com/profile_images/1145742752824483842/gAPc8mwO_400x400.png",
                 isVerified: true,
             },
         ],
