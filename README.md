@@ -38,7 +38,7 @@ https://eedelosreyes2.github.io/twitter-react/
 ## Broswer Support
 - Chrome: yes
 - Safari: yes
-- Firefox: yes (some features not working as intended)
+- Firefox: kinda (some features not working as intended)
 - Internet Explorer: no
 
 ## Changelog
