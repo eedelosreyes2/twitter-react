@@ -29,7 +29,7 @@ export class App extends Component {
             userImg:
                 "https://pbs.twimg.com/profile_images/875168307585794048/yuE68O2__400x400.jpg",
             headerImg:
-                "https://64.media.tumblr.com/95ff024ccc5563db3afa1ac6d2cdbf35/510ee8c665eda2db-e2/s640x960/5ab783f55f32dd813e512edbe4e9cbf8ed2272fd.jpg",
+                "https://ps.w.org/twitter/assets/banner-1544x500.png?rev=1590182",
             numTweets: 2,
             isVerified: false,
             bio:
@@ -127,22 +127,22 @@ export class App extends Component {
     };
 
     handleRetweetPost = (id) => {
-        let retweetedPost;
-        let removeRetweet;
+        // let retweetedPost;
+        // let removeRetweet;
 
         let posts = [
             ...this.state.posts.map((post) => {
                 if (post.id === id) {
                     if (post.retweets > 0) {
-                        if (post.isRetweet) {
-                            removeRetweet = post;
-                        }
+                        // if (post.isRetweet) {
+                        //     removeRetweet = post;
+                        // }
                         post.retweets--;
                     } else {
                         post.retweets++;
-                        retweetedPost = { ...post };
-                        retweetedPost.id = uuid4();
-                        retweetedPost.isRetweet = true;
+                        // retweetedPost = { ...post };
+                        // retweetedPost.id = uuid4();
+                        // retweetedPost.isRetweet = true;
                         // retweetedPost.createdAt = Date.now();
                     }
                 }
@@ -150,10 +150,10 @@ export class App extends Component {
             }),
         ];
 
-        if (retweetedPost) posts = [...posts, retweetedPost];
-        if (removeRetweet) {
-            posts = [...posts.filter((post) => post !== removeRetweet)];
-        }
+        // if (retweetedPost) posts = [...posts, retweetedPost];
+        // if (removeRetweet) {
+        //     posts = [...posts.filter((post) => post !== removeRetweet)];
+        // }
 
         this.setState({ posts });
     };
