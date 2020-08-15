@@ -35,6 +35,12 @@ https://eedelosreyes2.github.io/twitter-react/
     -   I will add Dim + Lights out mode
     -   App is far from perfect, it's version 1.0 okay
 
+## Broswer Support
+- Chrome: yes
+- Safari: yes
+- Firefox: yes (some features not working as intended)
+- Internet Explorer: no
+
 ## Changelog
 
 -   v1.0 - MVP released
