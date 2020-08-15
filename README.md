@@ -32,13 +32,14 @@ https://eedelosreyes2.github.io/twitter-react/
         -   Profile page: Following and Followers
         -   What's Happening and Who to follow values are hardcoded (I made them up) for display purposes, show more button in Who to follow
         -   Compose Tweet: image, gif, poll, emoji, and schedule buttons
+    -   Posts allow text only
     -   I will add Dim + Lights out mode
     -   App is far from perfect, it's version 1.0 okay
 
 ## Broswer Support
 - Chrome: yes
 - Safari: yes
-- Firefox: yes (some features not working as intended)
+- Firefox: kinda (some features not working as intended)
 - Internet Explorer: no
 
 ## Changelog
@@ -49,6 +50,7 @@ https://eedelosreyes2.github.io/twitter-react/
 
 - Session storage is deleted on refresh for iPhones (Safari) and idk why
 - Tweet component does not close after creating post for iPhones (Safari) even though it works everywhere else
+- Flipping device to lansdcape then back to portrait doesn't resize correctly (Andriod), fixed with refresh
 - Retweeting does not make the retweeted post on top, I tried doing so but ended up having weird behavior
 - Retweeting then unretweeting multiple tweets ends up with weird behavior
 
