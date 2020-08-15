@@ -32,6 +32,7 @@ https://eedelosreyes2.github.io/twitter-react/
         -   Profile page: Following and Followers
         -   What's Happening and Who to follow values are hardcoded (I made them up) for display purposes, show more button in Who to follow
         -   Compose Tweet: image, gif, poll, emoji, and schedule buttons
+    -   Posts allow text only
     -   I will add Dim + Lights out mode
     -   App is far from perfect, it's version 1.0 okay
 
