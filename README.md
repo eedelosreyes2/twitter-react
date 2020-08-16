@@ -40,10 +40,6 @@ https://eedelosreyes2.github.io/twitter-react/
 - Firefox: kinda (some features not working as intended)
 - Internet Explorer: no
 
-## Changelog
-
--   v1.0 - MVP released
-
 ## Bugs
 
 - Session storage is deleted on refresh for iPhones (Safari) and idk why
