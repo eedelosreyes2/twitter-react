@@ -4,7 +4,7 @@ I created a replica of [Twitter](https://twitter.com/)! The purpose of making th
 
 ## Live Demo
 
-https://eedelosreyes2.github.io/twitter-react/
+https://eedelosreyes2.github.io/twitter-react
 
 ## Version
 
