@@ -23,7 +23,7 @@ https://eedelosreyes2.github.io/twitter-react/
 -   Not all icons are the same as real Twitter - all icons used in this app are imported from [react-icons](https://react-icons.github.io/react-icons/)
 -   Not every single functionality from Twitter is implemented
     -   Components that don't have functionality yet:
-        -   Homepage: Sparkle button, Searchbar
+        -   Homepage: Searchbar
         -   Explore page: Searchbar, Settings button, Explore tabs
         -   Notifications page: Settings button, Searchbar
         -   Messages page: New message icon, Searchbar, Start a conversation, New message
@@ -31,10 +31,8 @@ https://eedelosreyes2.github.io/twitter-react/
         -   Lists page: New List, Settings, Create a List, Searchbar
         -   Profile page: Following and Followers
         -   What's Happening and Who to follow values are hardcoded (I made them up) for display purposes, show more button in Who to follow
-        -   Compose Tweet: image, gif, poll, emoji, and schedule buttons
     -   Posts allow text only
-    -   I will add Dim + Lights out mode
-    -   App is far from perfect, it's version 1.0 okay
+    -   I will add Dim + Lights out mode!
 
 ## Broswer Support
 - Chrome: yes
