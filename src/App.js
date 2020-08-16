@@ -52,7 +52,7 @@ export class App extends Component {
                     isVerified: false,
                 },
                 text:
-                    "Welcome to Twitter React App v1.0 🐦  Make a post and they will show up here and on the profile page!",
+                    "Welcome to Twitter React App v1.0 🐦. Make a post and they will show up here and on the profile page!",
                 comments: 0,
                 media: null,
                 isRetweet: false,

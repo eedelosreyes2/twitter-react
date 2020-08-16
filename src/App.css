@@ -106,7 +106,7 @@ button:focus {
 }
 
 .retweet-wrapper:hover {
-    background-color: #ebffeb;
+    /* background-color: #ebffeb; */
     border-radius: 50%;
     color: #2ebf30;
 }
@@ -124,7 +124,7 @@ button:focus {
 }
 
 .like-wrapper:hover {
-    background-color: #fdedf0;
+    /* background-color: #fdedf0; */
     border-radius: 50%;
     color: #ff2647;
 }

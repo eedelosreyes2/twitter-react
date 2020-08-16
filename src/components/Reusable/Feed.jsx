@@ -14,7 +14,7 @@ export class Feed extends Component {
         posts = posts.slice().sort((a, b) => b.createdAt - a.createdAt);
 
         return (
-            <div style={{ paddingBottom: "65px" }}>
+            <div style={{ paddingBottom: "100px" }}>
                 {posts.map((post) => {
                     return (
                         <Post

@@ -138,7 +138,7 @@ export class NavSide extends Component {
                                         title === "Help"
                                             ? () => {
                                                   window.open(
-                                                      "https://github.com/eedelosreyes2/twitter-react",
+                                                      "https://github.com/eedelosreyes2/twitter-react#specs",
                                                       "_blank"
                                                   );
                                                   return false;

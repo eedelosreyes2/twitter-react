@@ -54,14 +54,14 @@ export class Post extends Component {
                     </Link>
                 </div>
                 <div>
-                    <div>
+                    <Link to="/profile" style={{ color: "black" }}>
                         <span className="font-weight-bold">
                             {user.username}
                         </span>{" "}
                         <span className="sub">{user.handle}</span>
                         {/* {" · "}
                         <span className="sub">{createdAt}</span> */}
-                    </div>
+                    </Link>
                     <div
                         className="post-text"
                         style={{ overflowWrap: "anywhere" }}
