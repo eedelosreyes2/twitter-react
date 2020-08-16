@@ -51,8 +51,6 @@ https://eedelosreyes2.github.io/twitter-react/
 - Session storage is deleted on refresh for iPhones (Safari) and idk why
 - Tweet component does not close after creating post for iPhones (Safari) even though it works everywhere else
 - Flipping device to lansdcape then back to portrait doesn't resize correctly (Andriod), fixed with refresh
-- Retweeting does not make the retweeted post on top, I tried doing so but ended up having weird behavior
-- Retweeting then unretweeting multiple tweets ends up with weird behavior
 
 ## Feedback
 
