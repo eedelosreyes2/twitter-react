@@ -34,7 +34,7 @@ https://eedelosreyes2.github.io/twitter-react
     -   Posts allow text only
     -   I will add Dim + Lights out mode!
 
-## Broswer Support
+## Browser Support
 - Safari: yes
 - Chrome: yes (best on MacOS)
 - Firefox: kinda (some features not working as intended)
