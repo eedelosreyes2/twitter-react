@@ -95,9 +95,9 @@ export class Home extends Component {
                                     <FaFeatherAlt />
                                 </IconContext.Provider>
                             }
-                            height="50px"
+                            height="55px"
                             shadow={true}
-                            width="50px"
+                            width="55px"
                             isActive={true}
                             event={null}
                             path="/compose/tweet"
