@@ -35,8 +35,8 @@ https://eedelosreyes2.github.io/twitter-react
     -   I will add Dim + Lights out mode!
 
 ## Broswer Support
-- Chrome: yes
 - Safari: yes
+- Chrome: yes (best on MacOS)
 - Firefox: kinda (some features not working as intended)
 - Internet Explorer: no
 
