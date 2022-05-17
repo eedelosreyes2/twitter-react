@@ -50,4 +50,4 @@ https://twitter-react-woad.vercel.app
 
 ## Feedback
 
-I'd love any feedback, comments, questions, help with bugs, job offers 😉 - [My Website](https://eedelosreyes2.github.io)
+I'd love any feedback, comments, questions, help with bugs, job offers 😉 - [My Website](https://elijahdr.vercel.app/)
